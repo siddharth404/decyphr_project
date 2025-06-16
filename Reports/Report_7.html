@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decyphr EDA Report</title>
+    
+    <!-- Google Fonts: Inter - clean, modern, and highly readable -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Plotly.js library -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <style>
+        /* ========================================================================== 
+           1. DESIGN SYSTEM & THEME DEFINITIONS (CSS VARIABLES)
+           ========================================================================== */
+        :root {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            
+            /* Light Theme */
+            --bg-light: #f8f9fa;
+            --sidebar-bg-light: #ffffff;
+            --card-bg-light: #ffffff;
+            --text-primary-light: #0f172a;
+            --text-secondary-light: #64748b;
+            --border-light: #e5e7eb;
+            --accent-primary-light: #2563eb;
+            --accent-secondary-light: #dbeafe;
+            --shadow-light: 0 1px 3px 0 rgb(0 0 0 / 0.07), 0 1px 2px -1px rgb(0 0 0 / 0.07);
+
+            /* Dark Theme */
+            --bg-dark: #020617;
+            --sidebar-bg-dark: #0f172a;
+            --card-bg-dark: #1e293b;
+            --text-primary-dark: #e2e8f0;
+            --text-secondary-dark: #94a3b8;
+            --border-dark: #334155;
+            --accent-primary-dark: #38bdf8;
+            --accent-secondary-dark: #1e3a8a;
+            --shadow-dark: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+
+        /* ========================================================================== 
+           2. THEME APPLICATION & RESET
+           ========================================================================== */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary-color);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        body[data-theme="light"] {
+            --bg-color: var(--bg-light);
+            --sidebar-bg-color: var(--sidebar-bg-light);
+            --card-bg-color: var(--card-bg-light);
+            --text-primary-color: var(--text-primary-light);
+            --text-secondary-color: var(--text-secondary-light);
+            --border-color: var(--border-light);
+            --accent-primary: var(--accent-primary-light);
+            --accent-secondary: var(--accent-secondary-light);
+            --shadow: var(--shadow-light);
+        }
+
+        body[data-theme="dark"] {
+            --bg-color: var(--bg-dark);
+            --sidebar-bg-color: var(--sidebar-bg-dark);
+            --card-bg-color: var(--card-bg-dark);
+            --text-primary-color: var(--text-primary-dark);
+            --text-secondary-color: var(--text-secondary-dark);
+            --border-color: var(--border-dark);
+            --accent-primary: var(--accent-primary-dark);
+            --accent-secondary: var(--accent-secondary-dark);
+            --shadow: var(--shadow-dark);
+        }
+
+        /* ========================================================================== 
+           3. LAYOUT & CORE COMPONENTS
+           ========================================================================== */
+        .main-container {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            background-color: var(--sidebar-bg-color);
+            border-right: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            padding: 1.5rem 1rem;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .sidebar-header {
+            padding: 0 0.5rem;
+            margin-bottom: 2.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-mark {
+            height: 32px;
+            width: 32px;
+            background: linear-gradient(45deg, var(--accent-primary), var(--accent-secondary));
+            border-radius: 0.5rem;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary-color);
+            letter-spacing: -0.5px;
+        }
+
+        .sidebar-nav ul { list-style: none; }
+        .sidebar-nav li a {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem 1rem;
+            margin-bottom: 0.25rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            color: var(--text-secondary-color);
+            font-weight: 500;
+            position: relative;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+        .sidebar-nav li a:hover, .sidebar-nav li a.active {
+            background-color: var(--accent-secondary);
+            color: var(--accent-primary);
+        }
+        
+        .sidebar-footer {
+            margin-top: auto;
+            padding: 1rem 0.5rem 0;
+            font-size: 0.8rem;
+            color: var(--text-secondary-color);
+            text-align: center;
+        }
+
+        .main-content {
+            padding: 2.5rem 3rem;
+            overflow-y: auto;
+        }
+
+        .main-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2.5rem;
+        }
+        .main-header h2 { font-size: 2rem; font-weight: 700; letter-spacing: -0.5px; }
+        .main-header p { color: var(--text-secondary-color); margin-top: 0.25rem; }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+            gap: 2rem;
+        }
+
+        .analysis-card {
+            background-color: var(--card-bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 1rem;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            overflow: hidden; /* Important for Plotly resizing */
+        }
+        
+        /* ========================================================================== 
+           4. HIGH-END THEME TOGGLE
+           ========================================================================== */
+        .theme-toggle-button {
+            background: none;
+            border: 1px solid var(--border-color);
+            border-radius: 50%;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+            transition: border-color 0.3s ease;
+        }
+        .theme-toggle-button svg {
+            position: absolute;
+            transition: transform 0.4s ease, opacity 0.4s ease;
+            width: 20px;
+            height: 20px;
+            stroke: var(--text-secondary-color);
+            fill: none;
+            stroke-width: 2px;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+        .sun-icon { transform: scale(1) translateY(0); opacity: 1; }
+        .moon-icon { transform: scale(0) translateY(100%); opacity: 0; }
+        
+        body[data-theme="dark"] .sun-icon { transform: scale(0) translateY(-100%); opacity: 0; }
+        body[data-theme="dark"] .moon-icon { transform: scale(1) translateY(0); opacity: 1; }
+
+        /* ========================================================================== 
+           5. RESPONSIVENESS & SCROLLBAR
+           ========================================================================== */
+        @media (max-width: 1024px) {
+            .main-container { grid-template-columns: 1fr; }
+            .sidebar { display: none; }
+            .main-content { padding: 1.5rem; }
+        }
+        
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-color); }
+        ::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--text-secondary-color); }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        
+        <aside class="sidebar" id="sidebar">
+            <header class="sidebar-header">
+                <div class="logo-mark"></div>
+                <span class="logo-text">Decyphr</span>
+            </header>
+            <nav class="sidebar-nav">
+                <ul>
+                    <!-- JINJA2: Dynamically populated sidebar links -->
+                    
+                        <li><a href="#p01_overview">Overview</a></li>
+                    
+                        <li><a href="#p03_data_quality">Data Quality</a></li>
+                    
+                        <li><a href="#p04_advanced_outliers">Outlier Analysis</a></li>
+                    
+                        <li><a href="#p06_correlations">Correlations</a></li>
+                    
+                        <li><a href="#p07_interactions">Feature Interactions</a></li>
+                    
+                        <li><a href="#p08_hypothesis_testing">Hypothesis Tests</a></li>
+                    
+                        <li><a href="#p09_pca">PCA</a></li>
+                    
+                        <li><a href="#p10_clustering">Clustering</a></li>
+                    
+                        <li><a href="#p16_geospatial">Geospatial</a></li>
+                    
+                </ul>
+            </nav>
+            <footer class="sidebar-footer">
+                <p>v0.1.0 by Ayush Singh</p>
+            </footer>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <div>
+                    <h2>Analysis Dashboard</h2>
+                    <p>Dataset: <strong>sample_data.csv</strong> &nbsp;&middot;&nbsp; Generated: 2025-06-07 14:37:58</p>
+                </div>
+                <button class="theme-toggle-button" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+            </header>
+            
+            <div class="content-grid">
+                <!-- JINJA2: Dynamically injected analysis cards -->
+                
+            </div>
+        </main>
+        
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggleButton = document.getElementById('theme-toggle');
+            
+            // Function to set the theme
+            const applyTheme = (theme) => {
+                document.body.setAttribute('data-theme', theme);
+                localStorage.setItem('decyphrTheme', theme);
+            };
+
+            // Listener for the toggle button
+            themeToggleButton.addEventListener('click', () => {
+                const newTheme = document.body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+                applyTheme(newTheme);
+            });
+
+            // Apply theme on initial load
+            const savedTheme = localStorage.getItem('decyphrTheme') || 'dark'; // Default to dark
+            applyTheme(savedTheme);
+        });
+    </script>
+
+</body>
+</html>
