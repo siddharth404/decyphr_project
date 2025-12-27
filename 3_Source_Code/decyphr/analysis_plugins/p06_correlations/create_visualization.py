@@ -7,13 +7,10 @@
 import plotly.graph_objects as go
 import pandas as pd
 from typing import Dict, Any, Optional, List
+from decyphr.utils.plotting import apply_antigravity_theme, get_theme_colors
 
-# Define consistent colors and templates for the dark theme
-THEME_COLORS = {
-    "background": "#0f0f1a",
-    "plot_background": "#1e293b",
-    "text": "#ffffff",
-}
+# Get standard colors
+THEME_COLORS = get_theme_colors()
 
 def _create_intro_details_html() -> str:
     """Generates an introductory HTML block explaining the correlation analyses."""
@@ -44,13 +41,8 @@ def _create_heatmap(corr_matrix: pd.DataFrame, title: str) -> go.Figure:
         hoverongaps=False,
         hovertemplate='Correlation between %{y} and %{x}: %{z:.3f}<extra></extra>'
     ))
-    fig.update_layout(
-        title_text=title,
-        xaxis_showgrid=False,
-        yaxis_showgrid=False,
-        yaxis_autorange='reversed',
-        margin=dict(l=40, r=40, t=60, b=40)
-    )
+    fig = apply_antigravity_theme(fig, height=450)
+    fig.update_layout(title_text=title) # Maintain title if needed, though card has it.
     return fig
 
 def create_visuals(analysis_results: Dict[str, Any]) -> Optional[Dict[str, Any]]:

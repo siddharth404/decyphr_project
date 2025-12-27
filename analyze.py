@@ -6,10 +6,16 @@
 # ==============================================================================
 
 # --- Step 1: Import the Required Libraries ---
+import sys
+import os
+
+# Ensure we use the local version of the code
+sys.path.insert(0, os.path.abspath("3_Source_Code"))
+
 import decyphr
 import pandas as pd
 import numpy as np  # <-- CORRECTED: Import numpy directly
-import os
+
 
 def create_sample_dataset(filepath="sample_data.csv"):
     """

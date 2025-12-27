@@ -8,11 +8,11 @@ import plotly.graph_objects as go
 import pandas as pd
 from typing import Dict, Any, Optional, List
 
-# Define consistent colors and templates for the dark theme
-THEME_COLORS = {
-    "background": "#0f0f1a",
-    "text": "#ffffff",
-}
+from typing import Dict, Any, Optional, List
+from decyphr.utils.plotting import apply_antigravity_theme, get_theme_colors
+
+# Get standard colors
+THEME_COLORS = get_theme_colors()
 
 def _create_geospatial_details_html(lat_col: str, lon_col: str) -> str:
     """Generates an introductory HTML block explaining the map visualization."""
@@ -83,7 +83,7 @@ def create_visuals(analysis_results: Dict[str, Any]) -> Optional[Dict[str, Any]]
             mode='markers',
             marker=go.scattermapbox.Marker(
                 size=9,
-                color=geo_df[target_col] if target_col and pd.api.types.is_numeric_dtype(geo_df[target_col]) else '#1f77b4',
+                color=geo_df[target_col] if target_col and pd.api.types.is_numeric_dtype(geo_df[target_col]) else THEME_COLORS['primary_accent'],
                 colorscale='Viridis',
                 showscale=True if target_col and pd.api.types.is_numeric_dtype(geo_df[target_col]) else False,
                 colorbar_title_text=target_col if target_col else ""
@@ -92,17 +92,17 @@ def create_visuals(analysis_results: Dict[str, Any]) -> Optional[Dict[str, Any]]
             text=hover_texts # Use the safely generated hover texts
         ))
 
+        fig = apply_antigravity_theme(fig, height=500)
         fig.update_layout(
             title_text='Geospatial Data Distribution',
             autosize=True,
             hovermode='closest',
             mapbox=dict(
-                style='carto-darkmatter',
+                style='carto-positron',
                 center=dict(lat=geo_df[lat_col].mean(), lon=geo_df[lon_col].mean()),
                 pitch=0,
                 zoom=3
-            ),
-            margin={"r":0,"t":40,"l":0,"b":0}
+            )
         )
         
         print("     ... Details and visualization for geospatial analysis complete.")

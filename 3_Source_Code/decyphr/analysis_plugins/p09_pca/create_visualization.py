@@ -8,15 +8,11 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 from typing import Dict, Any, Optional, List
 
-# Define consistent colors and templates for the dark theme
-THEME_COLORS = {
-    "background": "#0f0f1a",
-    "plot_background": "#1e293b",
-    "text": "#ffffff",
-    "grid": "#4a4a58",
-    "bar_color": "#1f77b4",
-    "line_color": "#ff7f0e",
-}
+from typing import Dict, Any, Optional, List
+from decyphr.utils.plotting import apply_antigravity_theme, get_theme_colors
+
+# Get standard colors
+THEME_COLORS = get_theme_colors()
 
 def _create_pca_details_html(analysis_results: Dict[str, Any]) -> str:
     """Generates an introductory text block and a summary table for PCA results."""
@@ -82,23 +78,23 @@ def create_visuals(analysis_results: Dict[str, Any]) -> Optional[Dict[str, Any]]
         fig.add_trace(
             go.Bar(
                 x=component_labels, y=explained_variance, name='Individual Variance',
-                marker_color=THEME_COLORS["bar_color"],
+                marker_color=THEME_COLORS["primary_accent"],
                 hovertemplate='<b>%{x}</b><br>Explained Variance: %{y:.2%}<extra></extra>'
             ), secondary_y=False
         )
         fig.add_trace(
             go.Scatter(
                 x=component_labels, y=cumulative_variance, name='Cumulative Variance',
-                mode='lines+markers', line=dict(color=THEME_COLORS["line_color"], width=3),
+                mode='lines+markers', line=dict(color=THEME_COLORS["warning"], width=3),
                 hovertemplate='<b>%{x}</b><br>Cumulative Variance: %{y:.2%}<extra></extra>'
             ), secondary_y=True
         )
 
+        fig = apply_antigravity_theme(fig)
         fig.update_layout(
-            title_text='Explained Variance by Principal Component',
-            xaxis_title="Principal Components",
-            margin=dict(l=20, r=20, t=60, b=20),
-            legend=dict(x=0.02, y=0.98, bgcolor='rgba(0,0,0,0.3)')
+             title_text='Explained Variance by Principal Component',
+             xaxis_title="Principal Components",
+             legend=dict(x=0.02, y=0.98, bgcolor='rgba(255,255,255,0.8)')
         )
         fig.update_yaxes(title_text="Explained Variance", secondary_y=False, tickformat=".0%")
         fig.update_yaxes(title_text="Cumulative Variance", secondary_y=True, tickformat=".0%", showgrid=False)

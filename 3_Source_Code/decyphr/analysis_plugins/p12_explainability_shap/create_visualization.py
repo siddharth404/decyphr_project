@@ -9,13 +9,11 @@ import pandas as pd
 import numpy as np
 from typing import Dict, Any, Optional, List
 
-# Define consistent colors and templates for the dark theme
-THEME_COLORS = {
-    "background": "#0f0f1a",
-    "plot_background": "#1e293b",
-    "text": "#ffffff",
-    "grid": "#4a4a58",
-}
+from typing import Dict, Any, Optional, List
+from decyphr.utils.plotting import apply_antigravity_theme, get_theme_colors
+
+# Get standard colors
+THEME_COLORS = get_theme_colors()
 
 def _create_shap_details_html() -> str:
     """Generates an introductory HTML block explaining SHAP values."""
@@ -103,11 +101,12 @@ def create_visuals(analysis_results: Dict[str, Any]) -> Optional[Dict[str, Any]]
                 name=''
             ))
 
+        fig = apply_antigravity_theme(fig)
         fig.update_layout(
             title_text='SHAP Summary Plot: Feature Impact on Model Output',
             xaxis_title="SHAP Value (impact on model output)",
             yaxis=dict(tickvals=list(range(len(sorted_features))), ticktext=sorted_features, autorange='reversed'),
-            showlegend=False, margin=dict(l=40, r=40, t=60, b=40)
+            showlegend=False
         )
         
         print("     ... Details and visualization for SHAP analysis complete.")

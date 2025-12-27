@@ -8,13 +8,11 @@ import plotly.graph_objects as go
 from typing import Dict, Any, Optional, List
 
 # Define consistent colors and templates for the dark theme
-THEME_COLORS = {
-    "background": "#0f0f1a",
-    "plot_background": "#1e293b",
-    "text": "#ffffff",
-    "grid": "#4a4a58",
-    "primary_accent": "#d62728" # A distinct red for warnings/missing data
-}
+from typing import Dict, Any, Optional, List
+from decyphr.utils.plotting import apply_antigravity_theme, get_theme_colors
+
+# Get standard colors
+THEME_COLORS = get_theme_colors()
 
 def _create_missing_details_html(analysis_results: Dict[str, Any]) -> str:
     """Generates a detailed HTML table for columns with missing values."""
@@ -73,14 +71,14 @@ def create_visuals(analysis_results: Dict[str, Any]) -> Optional[Dict[str, Any]]
             x=percentages,
             y=col_names,
             orientation='h',
-            marker_color=THEME_COLORS["primary_accent"]
+            marker_color=THEME_COLORS["error"]
         )])
         
+        fig = apply_antigravity_theme(fig)
         fig.update_layout(
             title_text='Percentage of Missing Values per Column',
             xaxis_title_text='Percentage Missing (%)',
-            yaxis={'autorange': 'reversed'},
-            margin=dict(l=20, r=20, t=40, b=20)
+            yaxis={'autorange': 'reversed'}
         )
         all_visuals.append(fig)
 

@@ -32,11 +32,10 @@ def load_dataframe_from_file(filepath: str) -> Optional[DataFrameType]:
         if filepath.lower().endswith('.csv'):
             print("Decyphr 🔮: Detected CSV file. Loading with Dask backend...")
             
-            # CORRECTED: Added dtype='object' to prevent Dask's dtype inference
-            # from failing on mixed-type columns. This is a much more robust
-            # way to load messy, real-world CSV files. Our own type classification
-            # in the p01_overview plugin will handle determining the actual types later.
-            ddf = dd.read_csv(filepath, dtype='object', blocksize=None)
+            # CORRECTED: Dask's type inference is generally good. Forcing object type
+            # prevents numeric analysis in p01/p02. We rely on Dask's inference.
+            # If specific issues arise, users should specify dtypes in loading config.
+            ddf = dd.read_csv(filepath, blocksize=None)
             
             print("Decyphr 🔮: Successfully created Dask DataFrame.")
             return ddf

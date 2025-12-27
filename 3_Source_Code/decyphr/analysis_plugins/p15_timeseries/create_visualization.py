@@ -8,15 +8,10 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import pandas as pd
 from typing import Dict, Any, Optional, List
+from decyphr.utils.plotting import apply_antigravity_theme, get_theme_colors
 
-# Define consistent colors and templates for the dark theme
-THEME_COLORS = {
-    "background": "#0f0f1a",
-    "plot_background": "#1e293b",
-    "text": "#ffffff",
-    "grid": "#4a4a58",
-    "primary_accent": "#00D2FF",  # A cyan accent for time-series
-}
+# Get standard colors
+THEME_COLORS = get_theme_colors()
 P_VALUE_THRESHOLD = 0.05
 
 def _create_timeseries_details_html(analysis_results: Dict[str, Any]) -> str:
@@ -93,15 +88,13 @@ def create_visuals(ddf, overview_results: Dict[str, Any], analysis_results: Dict
                 subplot_titles=("Original Series", "Trend Component", "Seasonal Component", "Residuals")
             )
 
-            fig.add_trace(go.Scatter(x=original_series.index, y=original_series, mode='lines', name='Original', line=dict(color='grey')), row=1, col=1)
+            fig.add_trace(go.Scatter(x=original_series.index, y=original_series, mode='lines', name='Original', line=dict(color=THEME_COLORS['secondary_text'])), row=1, col=1)
             fig.add_trace(go.Scatter(x=trend.index, y=trend, mode='lines', name='Trend', line=dict(color=THEME_COLORS["primary_accent"])), row=2, col=1)
-            fig.add_trace(go.Scatter(x=seasonal.index, y=seasonal, mode='lines', name='Seasonal', line=dict(color='#2ca02c')), row=3, col=1)
-            fig.add_trace(go.Scatter(x=resid.index, y=resid, mode='markers', name='Residuals', marker=dict(color='#d62728', size=3, opacity=0.6)), row=4, col=1)
+            fig.add_trace(go.Scatter(x=seasonal.index, y=seasonal, mode='lines', name='Seasonal', line=dict(color=THEME_COLORS["success"])), row=3, col=1)
+            fig.add_trace(go.Scatter(x=resid.index, y=resid, mode='markers', name='Residuals', marker=dict(color=THEME_COLORS["error"], size=3, opacity=0.6)), row=4, col=1)
 
-            fig.update_layout(
-                title_text='Time-Series Decomposition', showlegend=False,
-                margin=dict(l=20, r=20, t=60, b=20)
-            )
+            fig = apply_antigravity_theme(fig, height=800)
+            fig.update_layout(title_text='Time-Series Decomposition', showlegend=False)
             all_visuals.append(fig)
 
         print("     ... Details and visualizations for time-series analysis complete.")

@@ -6,15 +6,10 @@
 
 import plotly.graph_objects as go
 from typing import Dict, Any, Optional, List
+from decyphr.utils.plotting import apply_antigravity_theme, get_theme_colors
 
-# Define consistent colors and templates for the dark theme
-THEME_COLORS = {
-    "background": "#0f0f1a",
-    "plot_background": "#1e293b",
-    "text": "#ffffff",
-    "grid": "#4a4a58",
-    "primary_accent": "#1f77b4"
-}
+# Get standard colors
+THEME_COLORS = get_theme_colors()
 
 def _create_outlier_details_html(col_name: str, stats: Dict[str, float]) -> str:
     """Generates a detailed HTML summary table for a column's outlier analysis."""
@@ -69,10 +64,8 @@ def create_visuals(ddf, analysis_results: Dict[str, Any]) -> Optional[Dict[str, 
                 jitter=0.3
             )])
             
-            fig.update_layout(
-                title_text=f'Outlier Analysis for {col_name}',
-                margin=dict(l=20, r=20, t=40, b=20)
-            )
+            fig = apply_antigravity_theme(fig)
+            fig.update_layout(title_text=f'Outlier Analysis for {col_name}')
             all_visuals.append(fig)
 
         if not all_visuals:

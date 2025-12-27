@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: decyphr
-Version: 1.1.0
+Version: 1.1.1
 Summary: An all-encompassing, automated toolkit for deep Exploratory Data Analysis and reporting.
 Author-email: Ayush Singh <emailtoayushsingh@gmail.com>
 License: MIT License
@@ -41,6 +41,7 @@ Classifier: Topic :: Scientific/Engineering :: Information Analysis
 Classifier: Topic :: Scientific/Engineering :: Visualization
 Requires-Python: >=3.9
 Description-Content-Type: text/markdown
+License-File: LICENSE
 Requires-Dist: pandas>=2.0.0
 Requires-Dist: dask[dataframe]>=2024.1.0
 Requires-Dist: numpy>=1.24.0
@@ -65,6 +66,7 @@ Provides-Extra: all
 Requires-Dist: decyphr[text]; extra == "all"
 Requires-Dist: decyphr[xai]; extra == "all"
 Requires-Dist: decyphr[geo]; extra == "all"
+Dynamic: license-file
 
 # Decyphr
 

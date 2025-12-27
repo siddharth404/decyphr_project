@@ -8,13 +8,11 @@ import plotly.graph_objects as go
 from typing import Dict, Any, Optional, List
 
 # Define consistent colors and templates for the dark theme
-THEME_COLORS = {
-    "background": "#0f0f1a",
-    "plot_background": "#1e293b",
-    "text": "#ffffff",
-    "grid": "#4a4a58",
-    "primary_accent": "#2ca02c", # A distinct green for importance
-}
+from typing import Dict, Any, Optional, List
+from decyphr.utils.plotting import apply_antigravity_theme, get_theme_colors
+
+# Get standard colors
+THEME_COLORS = get_theme_colors()
 
 def _create_target_analysis_details_html(problem_type: str) -> str:
     """Generates an introductory HTML block explaining feature importance."""
@@ -73,11 +71,11 @@ def create_visuals(analysis_results: Dict[str, Any]) -> Optional[Dict[str, Any]]
             hovertemplate='<b>%{y}</b><br>Importance: %{x}<extra></extra>'
         )])
         
+        fig = apply_antigravity_theme(fig)
         fig.update_layout(
             title_text=f'Top Feature Importances for Predicting "{problem_type}"',
             xaxis_title_text='Importance Score (from LightGBM model)',
-            yaxis_title_text='Feature',
-            margin=dict(l=40, r=20, t=60, b=40)
+            yaxis_title_text='Feature'
         )
         
         print("     ... Details and visualization for feature importance complete.")

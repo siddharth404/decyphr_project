@@ -59,7 +59,17 @@ def build_html_report(
     base_dir = os.path.dirname(__file__)
     template_dir = os.path.join(base_dir, 'templates')
     env = Environment(loader=FileSystemLoader(template_dir), autoescape=True)
-    template = env.get_template('base_layout.html')
+    try:
+        template = env.get_template('base_layout.html')
+    except Exception as e:
+        # If template loading fails, we still need to load assets to potentially render an error page or log.
+        # The original instruction moved asset loading here, which might be intended for a fallback.
+        with open(os.path.join(base_dir, 'assets', 'styles', 'main_theme.css'), 'r', encoding='utf-8') as f:
+            css_styles = f.read()
+        with open(os.path.join(base_dir, 'assets', 'scripts', 'interactivity.js'), 'r', encoding='utf-8') as f:
+            js_script = f.read()
+        print(f"Decyphr ❌: Failed to load report template: {e}. Cannot build report.")
+        return
 
     try:
         with open(os.path.join(base_dir, 'assets', 'styles', 'main_theme.css'), 'r', encoding='utf-8') as f:
@@ -96,11 +106,16 @@ def build_html_report(
                 # Store the plot data in a separate dict, keyed by section_id
                 all_plots_data[section_id] = visuals_json
 
+                # Check if the plugin wants to suppress the automatic grid generation
+                # (allowing it to place plot placeholders manually in details_html)
+                suppress_grid = processed_content.get("suppress_plot_grid", False)
+                
                 sections_data[section_id] = {
                     "title": section_title,
                     "details_html": processed_content.get("details_html", ""),
-                    # The 'visuals' key now just indicates how many plot placeholders to create
-                    "visuals_count": len(visuals_json)
+                    # If grid is suppressed, tell template there are 0 visuals to render automatically
+                    # The JS will still find the plot data via section_id and the IDs we manually placed.
+                    "visuals_count": 0 if suppress_grid else len(visuals_json)
                 }
 
     final_html = template.render(

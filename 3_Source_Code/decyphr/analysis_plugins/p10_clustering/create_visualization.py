@@ -10,14 +10,11 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
 from typing import Dict, Any, Optional, List
 
-# Define consistent colors and templates for the dark theme
-THEME_COLORS = {
-    "background": "#0f0f1a",
-    "plot_background": "#1e293b",
-    "text": "#ffffff",
-    "grid": "#4a4a58",
-    "primary_accent": "#ff7f0e",
-}
+from typing import Dict, Any, Optional, List
+from decyphr.utils.plotting import apply_antigravity_theme, get_theme_colors
+
+# Get standard colors
+THEME_COLORS = get_theme_colors()
 
 def _create_clustering_details_html(analysis_results: Dict[str, Any]) -> str:
     """Generates an introductory text block and a summary table for clustering results."""
@@ -80,10 +77,10 @@ def create_visuals(ddf, overview_results: Dict[str, Any], analysis_results: Dict
                 mode='lines+markers', marker=dict(size=10, color=THEME_COLORS["primary_accent"]),
                 line=dict(width=3, color=THEME_COLORS["primary_accent"])
             ))
+            fig_elbow = apply_antigravity_theme(fig_elbow)
             fig_elbow.update_layout(
                 title_text='Elbow Plot for K-Means Inertia',
-                xaxis_title="Number of Clusters (k)", yaxis_title="Inertia",
-                margin=dict(l=20, r=20, t=60, b=20)
+                xaxis_title="Number of Clusters (k)", yaxis_title="Inertia"
             )
             all_visuals.append(fig_elbow)
 
@@ -107,10 +104,12 @@ def create_visuals(ddf, overview_results: Dict[str, Any], analysis_results: Dict
                     marker=dict(size=8, opacity=0.7),
                     hovertemplate='<b>PC 1:</b> %{x:.2f}<br><b>PC 2:</b> %{y:.2f}<extra></extra>'
                 ))
+            
+            fig_scatter = apply_antigravity_theme(fig_scatter)
             fig_scatter.update_layout(
                 title_text=f'2D Visualization of Clusters (k={analysis_results.get("suggested_k")})',
                 xaxis_title="Principal Component 1", yaxis_title="Principal Component 2",
-                legend_title_text='Clusters', margin=dict(l=20, r=20, t=60, b=20)
+                legend_title_text='Clusters'
             )
             all_visuals.append(fig_scatter)
 
