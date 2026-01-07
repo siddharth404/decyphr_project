@@ -1,0 +1,90 @@
+Decyphr 🔮 v0.1.0: Ready to analyze.
+Creating a sample dataset to analyze...
+Sample dataset saved to 'sample_data.csv'
+
+================================================================================
+                    RUNNING DECYPHR ANALYSIS
+================================================================================
+
+Decyphr 🔮: Initializing data loading for 'sample_data.csv'...
+Decyphr 🔮: Detected CSV file. Loading with Dask backend...
+Decyphr 🔮: Successfully created Dask DataFrame.
+
+Decyphr ⚙️: Starting analysis pipeline...
+  -> Running plugin [1/17]: p01_overview
+     -> Running Enhanced Overview Analysis (30+ Features)...
+     ... Overview analysis complete.
+  -> Running plugin [2/17]: p02_univariate
+     -> Performing univariate analysis on numeric and categorical columns...
+DEBUG: Column Details: {'user_id': {'dtype': 'string', 'decyphr_type': 'Unique ID', 'nunique': 500, 'missing': 0, 'memory_bytes': 7890, 'date_stats': {}, 'distribution_shape': 'N/A', 'string_stats': {}}, 'age': {'dtype': 'string', 'decyphr_type': 'Categorical', 'nunique': 50, 'missing': 0, 'memory_bytes': 5000, 'date_stats': {}, 'distribution_shape': 'N/A', 'string_stats': {'min_len': 2, 'max_len': 2, 'avg_len': 2.0}}, 'country': {'dtype': 'string', 'decyphr_type': 'Categorical', 'nunique': 4, 'missing': 0, 'memory_bytes': 6011, 'date_stats': {}, 'distribution_shape': 'N/A', 'string_stats': {'min_len': 2, 'max_len': 9, 'avg_len': 4.0}}, 'subscription_tier': {'dtype': 'string', 'decyphr_type': 'Categorical', 'nunique': 3, 'missing': 0, 'memory_bytes': 6504, 'date_stats': {}, 'distribution_shape': 'N/A', 'string_stats': {'min_len': 4, 'max_len': 7, 'avg_len': 5.0}}, 'monthly_spend': {'dtype': 'string', 'decyphr_type': 'High Cardinality ID', 'nunique': 488, 'missing': 0, 'memory_bytes': 12401, 'date_stats': {}, 'distribution_shape': 'N/A', 'string_stats': {}}, 'last_login_date': {'dtype': 'string', 'decyphr_type': 'Unique ID', 'nunique': 500, 'missing': 0, 'memory_bytes': 13500, 'date_stats': {}, 'distribution_shape': 'N/A', 'string_stats': {}}, 'satisfaction_score': {'dtype': 'string', 'decyphr_type': 'Categorical', 'nunique': 5, 'missing': 0, 'memory_bytes': 4500, 'date_stats': {}, 'distribution_shape': 'N/A', 'string_stats': {'min_len': 1, 'max_len': 1, 'avg_len': 1.0}}, 'feedback_text': {'dtype': 'string', 'decyphr_type': 'Categorical', 'nunique': 10, 'missing': 0, 'memory_bytes': 18850, 'date_stats': {}, 'distribution_shape': 'N/A', 'string_stats': {'min_len': 16, 'max_len': 40, 'avg_len': 29.7}}, 'churned': {'dtype': 'string', 'decyphr_type': 'Boolean', 'nunique': 2, 'missing': 0, 'memory_bytes': 4500, 'date_stats': {}, 'distribution_shape': 'N/A', 'string_stats': {}}, 'latitude': {'dtype': 'string', 'decyphr_type': 'Unique ID', 'nunique': 500, 'missing': 0, 'memory_bytes': 12660, 'date_stats': {}, 'distribution_shape': 'N/A', 'string_stats': {}}, 'longitude': {'dtype': 'string', 'decyphr_type': 'Unique ID', 'nunique': 500, 'missing': 0, 'memory_bytes': 13155, 'date_stats': {}, 'distribution_shape': 'N/A', 'string_stats': {}}, 'static_column': {'dtype': 'string', 'decyphr_type': 'Constant', 'nunique': 1, 'missing': 0, 'memory_bytes': 11000, 'date_stats': {}, 'distribution_shape': 'N/A', 'string_stats': {}}}
+     ... Analyzing 6 categorical columns.
+     ... Univariate analysis complete.
+  -> Running plugin [3/17]: p03_data_quality
+     -> Performing data quality scan (constants, whitespace)...
+     ... Found 1 constant column(s).
+     ... Checking 5 text/categorical columns for whitespace.
+     ... Data quality scan complete.
+  -> Running plugin [4/17]: p04_advanced_outliers
+     -> Performing outlier detection scan (IQR method)...
+     ... No numeric columns found to analyze for outliers.
+  -> Running plugin [5/17]: p05_missing_values
+     -> Performing missing values scan...
+     ... No missing values found in the dataset. Excellent!
+  -> Running plugin [6/17]: p06_correlations
+     -> Performing correlation analysis (Pearson, Phik)...
+     ... Skipping Pearson correlation, not enough numeric columns.
+     ... Excluding 4 high-cardinality columns from Phik analysis for performance.
+     ... Calculating Phik correlation on a sample of the data.
+     ... Correlation analysis complete.
+  -> Running plugin [7/17]: p07_interactions
+     -> Identifying potential feature interactions...
+     ... Analyzing 6 categorical columns for interactions.
+     ... Feature interaction analysis complete.
+  -> Running plugin [8/17]: p08_hypothesis_testing
+     -> Performing hypothesis testing (Chi-Squared, T-Test, ANOVA)...
+     ... Using a sample of up to 20000 rows for testing.
+     ... Running Chi-Squared tests on 6 categorical columns.
+     ... Hypothesis testing complete.
+  -> Running plugin [9/17]: p09_pca
+     -> Performing Principal Component Analysis (PCA)...
+     ... Skipping PCA, requires at least 2 numeric columns.
+  -> Running plugin [10/17]: p10_clustering
+     -> Performing unsupervised clustering (K-Means)...
+     ... Skipping clustering, requires at least 2 numeric columns.
+  -> Running plugin [11/17]: p11_target_analysis
+     ... Skipping 'p11_target_analysis', no target variable provided.
+  -> Running plugin [12/17]: p12_explainability_shap
+     ... Skipping 'p12_explainability_shap', no target variable provided.
+  -> Running plugin [13/17]: p14_deep_text_analysis
+     -> Performing deep text analysis (Sentiment, NER, Topics)...
+     ... Skipping text analysis. Install with 'pip install "decyphr[text]"' to enable.
+  -> Running plugin [14/17]: p15_timeseries
+     -> Performing time-series analysis...
+     ... Skipping time-series analysis. Expected 1 datetime column, but found 0.
+  -> Running plugin [15/17]: p16_geospatial
+     -> Performing geospatial analysis...
+     ... Skipping geospatial analysis. Install with 'pip install "decyphr[geo]"' to enable.
+Decyphr ✅: Analysis pipeline complete.
+Decyphr 🏗️: Assembling high-performance HTML report...
+     -> Generating details & visualizations for overview...
+     ... Details for overview complete.
+     -> Generating details & visualizations for univariate analysis...
+        - Creating details & bar chart for 'age'
+        - Creating details & bar chart for 'country'
+        - Creating details & bar chart for 'subscription_tier'
+        - Creating details & bar chart for 'satisfaction_score'
+        - Creating details & bar chart for 'feedback_text'
+        - Creating details & bar chart for 'churned'
+     ... Details and visualizations for univariate analysis complete.
+     -> Generating details for data quality issues...
+     ... Details for data quality complete.
+     -> Generating details & visualizations for correlation analysis...
+        - Creating Phik (φk) correlation heatmap.
+     ... Details and visualizations for correlation analysis complete.
+     -> Generating details for feature interaction suggestions...
+     ... Details for feature interactions complete.
+     -> Generating details for hypothesis testing results...
+     ... Details for hypothesis testing complete.
+Decyphr ✅: Report successfully generated at 'Reports/Report_21.html'
+
+Decyphr 📄: Report successfully saved to '/Users/ayushsingh/decyphr_project/Reports/Report_21.html'

@@ -1,0 +1,144 @@
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dask/_expr.py", line 833, in __getattr__
+    return object.__getattribute__(self, key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Projection' object has no attribute 'agg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dask/dataframe/dask_expr/_collection.py", line 609, in __getattr__
+    val = getattr(self.expr, key)
+          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dask/dataframe/dask_expr/_expr.py", line 155, in __getattr__
+    return super().__getattr__(key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dask/_expr.py", line 851, in __getattr__
+    raise AttributeError(
+AttributeError: 'Projection' object has no attribute 'agg'
+
+This often means that you are attempting to use an unsupported API function..
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ayushsingh/decyphr_project/3_Source_Code/decyphr/analysis_plugins/p02_univariate/run_analysis.py", line 73, in analyze
+    desc_stats = ddf[numeric_cols].agg(aggs).compute()
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dask/dataframe/dask_expr/_collection.py", line 3092, in __getattr__
+    return super().__getattr__(key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dask/dataframe/dask_expr/_collection.py", line 615, in __getattr__
+    raise err
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dask/dataframe/dask_expr/_collection.py", line 604, in __getattr__
+    return object.__getattribute__(self, key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DataFrame' object has no attribute 'agg'. Did you mean: 'age'?
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:557: RuntimeWarning: Mean of empty slice.
+  avg = a.mean(axis, **keepdims_kw)
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/numpy/_core/_methods.py:130: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pandas/core/frame.py:11211: RuntimeWarning: Degrees of freedom <= 0 for slice
+  base_cov = np.cov(mat.T, ddof=ddof)
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:2773: RuntimeWarning: divide by zero encountered in divide
+  c *= np.true_divide(1, fact)
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:2773: RuntimeWarning: invalid value encountered in multiply
+  c *= np.true_divide(1, fact)
+Decyphr 🔮 v0.1.0: Ready to analyze.
+Creating a sample dataset to analyze...
+Sample dataset saved to 'sample_data.csv'
+
+================================================================================
+                    RUNNING DECYPHR ANALYSIS
+================================================================================
+
+Decyphr 🔮: Initializing data loading for 'sample_data.csv'...
+Decyphr 🔮: Detected CSV file. Loading with Dask backend...
+Decyphr 🔮: Successfully created Dask DataFrame.
+
+Decyphr ⚙️: Starting analysis pipeline...
+  -> Running plugin [1/17]: p01_overview
+     -> Running Enhanced Overview Analysis (30+ Features)...
+     ... Overview analysis complete.
+  -> Running plugin [2/17]: p02_univariate
+     -> Performing univariate analysis on numeric and categorical columns...
+DEBUG: Column Details: {'user_id': {'dtype': 'string', 'decyphr_type': 'Unique ID', 'nunique': 500, 'missing': 0, 'memory_bytes': 7890, 'date_stats': {}, 'distribution_shape': 'N/A', 'string_stats': {}}, 'age': {'dtype': 'int64', 'decyphr_type': 'Numeric', 'nunique': 56, 'missing': 0, 'memory_bytes': 4000, 'date_stats': {}, 'distribution_shape': 'Normal (Gaussian)', 'string_stats': {}}, 'country': {'dtype': 'string', 'decyphr_type': 'Categorical', 'nunique': 4, 'missing': 0, 'memory_bytes': 6019, 'date_stats': {}, 'distribution_shape': 'N/A', 'string_stats': {'min_len': 2, 'max_len': 9, 'avg_len': 4.0}}, 'subscription_tier': {'dtype': 'string', 'decyphr_type': 'Categorical', 'nunique': 3, 'missing': 0, 'memory_bytes': 6487, 'date_stats': {}, 'distribution_shape': 'N/A', 'string_stats': {'min_len': 4, 'max_len': 7, 'avg_len': 5.0}}, 'monthly_spend': {'dtype': 'float64', 'decyphr_type': 'Numeric', 'nunique': 483, 'missing': 0, 'memory_bytes': 4000, 'date_stats': {}, 'distribution_shape': 'Non-Normal', 'string_stats': {}}, 'last_login_date': {'dtype': 'string', 'decyphr_type': 'Unique ID', 'nunique': 500, 'missing': 0, 'memory_bytes': 13500, 'date_stats': {}, 'distribution_shape': 'N/A', 'string_stats': {}}, 'satisfaction_score': {'dtype': 'int64', 'decyphr_type': 'Categorical (Numeric)', 'nunique': 5, 'missing': 0, 'memory_bytes': 4000, 'date_stats': {}, 'distribution_shape': 'N/A', 'string_stats': {}}, 'feedback_text': {'dtype': 'string', 'decyphr_type': 'Categorical', 'nunique': 10, 'missing': 0, 'memory_bytes': 18850, 'date_stats': {}, 'distribution_shape': 'N/A', 'string_stats': {'min_len': 16, 'max_len': 40, 'avg_len': 29.7}}, 'churned': {'dtype': 'int64', 'decyphr_type': 'Boolean', 'nunique': 2, 'missing': 0, 'memory_bytes': 4000, 'date_stats': {}, 'distribution_shape': 'N/A', 'string_stats': {}}, 'latitude': {'dtype': 'float64', 'decyphr_type': 'Numeric', 'nunique': 500, 'missing': 0, 'memory_bytes': 4000, 'date_stats': {}, 'distribution_shape': 'Non-Normal', 'string_stats': {}}, 'longitude': {'dtype': 'float64', 'decyphr_type': 'Numeric', 'nunique': 500, 'missing': 0, 'memory_bytes': 4000, 'date_stats': {}, 'distribution_shape': 'Non-Normal', 'string_stats': {}}, 'static_column': {'dtype': 'string', 'decyphr_type': 'Constant', 'nunique': 1, 'missing': 0, 'memory_bytes': 11000, 'date_stats': {}, 'distribution_shape': 'N/A', 'string_stats': {}}}
+     ... Analyzing 4 numeric columns.
+     ... Failed during univariate analysis: 'DataFrame' object has no attribute 'agg'
+  -> Running plugin [3/17]: p03_data_quality
+     -> Performing data quality scan (constants, whitespace)...
+     ... Found 1 constant column(s).
+     ... Checking 3 text/categorical columns for whitespace.
+     ... Data quality scan complete.
+  -> Running plugin [4/17]: p04_advanced_outliers
+     -> Performing outlier detection scan (IQR method)...
+     ... Calculating quantiles for 4 numeric columns.
+     ... Outlier detection scan complete.
+  -> Running plugin [5/17]: p05_missing_values
+     -> Performing missing values scan...
+     ... No missing values found in the dataset. Excellent!
+  -> Running plugin [6/17]: p06_correlations
+     -> Performing correlation analysis (Pearson, Phik)...
+     ... Calculating Pearson correlation for 4 numeric columns.
+     ... Excluding 2 high-cardinality columns from Phik analysis for performance.
+     ... Calculating Phik correlation on a sample of the data.
+     ... Correlation analysis complete.
+  -> Running plugin [7/17]: p07_interactions
+     -> Identifying potential feature interactions...
+     ... Analyzing 4 numeric columns for interactions.
+     ... Analyzing 4 categorical columns for interactions.
+     ... Feature interaction analysis complete.
+  -> Running plugin [8/17]: p08_hypothesis_testing
+     -> Performing hypothesis testing (Chi-Squared, T-Test, ANOVA)...
+     ... Using a sample of up to 20000 rows for testing.
+     ... Running Chi-Squared tests on 4 categorical columns.
+     ... Running T-Tests/ANOVA on numeric/categorical pairs.
+     ... Hypothesis testing complete.
+  -> Running plugin [9/17]: p09_pca
+     -> Performing Principal Component Analysis (PCA)...
+     ... Analyzing 4 numeric columns for PCA.
+     ... PCA analysis complete.
+  -> Running plugin [10/17]: p10_clustering
+     -> Performing unsupervised clustering (K-Means)...
+     ... Analyzing 4 numeric columns for clustering.
+     ... Clustering analysis complete. Suggested k=4.
+  -> Running plugin [11/17]: p11_target_analysis
+     ... Skipping 'p11_target_analysis', no target variable provided.
+  -> Running plugin [12/17]: p12_explainability_shap
+     ... Skipping 'p12_explainability_shap', no target variable provided.
+  -> Running plugin [13/17]: p14_deep_text_analysis
+     -> Performing deep text analysis (Sentiment, NER, Topics)...
+     ... Skipping text analysis. Install with 'pip install "decyphr[text]"' to enable.
+  -> Running plugin [14/17]: p15_timeseries
+     -> Performing time-series analysis...
+     ... Skipping time-series analysis. Expected 1 datetime column, but found 0.
+  -> Running plugin [15/17]: p16_geospatial
+     -> Performing geospatial analysis...
+     ... Skipping geospatial analysis. Install with 'pip install "decyphr[geo]"' to enable.
+Decyphr ✅: Analysis pipeline complete.
+Decyphr 🏗️: Assembling high-performance HTML report...
+     -> Generating details & visualizations for overview...
+     ... Details for overview complete.
+     -> Generating details for data quality issues...
+     ... Details for data quality complete.
+     -> Generating details & visualizations for outlier analysis...
+        - Creating details & box plot for 'age'
+        - Creating details & box plot for 'monthly_spend'
+        - Creating details & box plot for 'latitude'
+        - Creating details & box plot for 'longitude'
+     ... Details and visualizations for outlier analysis complete.
+     -> Generating details & visualizations for correlation analysis...
+        - Creating Pearson correlation heatmap.
+        - Creating Phik (φk) correlation heatmap.
+     ... Details and visualizations for correlation analysis complete.
+     -> Generating details for feature interaction suggestions...
+     ... Details for feature interactions complete.
+     -> Generating details for hypothesis testing results...
+     ... Details for hypothesis testing complete.
+     -> Generating details & visualizations for PCA results...
+     ... Details and visualizations for PCA complete.
+     -> Generating details & visualizations for clustering analysis...
+     ... Details and visualizations for clustering complete.
+Decyphr ✅: Report successfully generated at 'Reports/Report_22.html'
+
+Decyphr 📄: Report successfully saved to '/Users/ayushsingh/decyphr_project/Reports/Report_22.html'
