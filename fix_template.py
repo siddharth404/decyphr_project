@@ -1,8 +1,9 @@
 
 import os
 
-# Content with the requested text change and correct Jinja syntax
-content = """<!DOCTYPE html>
+target_path = '/Users/siddharthkaushik/Decypher/decyphr_project/3_Source_Code/decyphr/report_builder/templates/base_layout.html'
+
+new_content = """<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -117,7 +118,7 @@ content = """<!DOCTYPE html>
     </main>
 
     <footer class="app-footer" style="text-align: center; padding: 40px; color: var(--text-tertiary);">
-        <p>Decyphr v{{ decyphr_version }} &middot; Designed in Bengaluru, Created by Ayush.</p>
+        <p>Decyphr v{{ decyphr_version }} &middot; MSDSM Capstone project By Ayush, Siddharth, Saif, Ujjawal</p>
     </footer>
 
     <script id="plot-data" type="application/json">
@@ -131,9 +132,7 @@ content = """<!DOCTYPE html>
 
 </html>"""
 
-# Writing to the STANDARD base_layout.html file
-file_path = "/Users/ayushsingh/decyphr_project/3_Source_Code/decyphr/report_builder/templates/base_layout.html"
-with open(file_path, "w") as f:
-    f.write(content)
+with open(target_path, 'w') as f:
+    f.write(new_content)
 
-print(f"Written updated final content to {file_path}")
+print(f"Successfully overwrote {target_path}")
