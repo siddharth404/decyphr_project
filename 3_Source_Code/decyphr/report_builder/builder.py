@@ -195,7 +195,8 @@ def build_html_report(
         all_plots_data_json=json.dumps(all_plots_data),
         embedded_css=css_styles,
         embedded_js=js_script,
-        executive_summary_html=executive_summary_html
+        executive_summary_html=executive_summary_html,
+        system_metrics=all_analysis_results.get("system_metrics")
     )
 
     try:

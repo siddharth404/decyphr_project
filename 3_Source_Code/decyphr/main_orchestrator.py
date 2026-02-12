@@ -6,6 +6,10 @@
 
 import os
 import json
+import os
+import json
+import time
+import numpy as np
 from typing import Dict, Any, Optional
 
 # --- Import Core Modules (Using Absolute Imports) ---
@@ -46,6 +50,8 @@ def run_analysis_pipeline(filepath: str, target: Optional[str] = None, compare_f
         return None
 
     print("\nDecyphr ⚙️: Starting analysis pipeline...")
+    start_time = time.time()
+    
     print("  -> Running plugin [1/19]: p01_overview")
     overview_results = overview_analysis.analyze(ddf)
     
@@ -90,6 +96,74 @@ def run_analysis_pipeline(filepath: str, target: Optional[str] = None, compare_f
         pass
 
     print("Decyphr ✅: Analysis pipeline complete.")
+    end_time = time.time()
+    execution_time = round(end_time - start_time, 2)
+
+    # --- System Metrics Collection ---
+    try:
+        # Insights Count
+        p17_results = analysis_results.get("p17_business_insights", {})
+        insights_count = len(p17_results.get("insights", [])) if "insights" in p17_results else 0
+
+        # Recommendations Count
+        p18_results = analysis_results.get("p18_decision_engine", {})
+        recommendations_count = len(p18_results.get("recommendations", [])) if "recommendations" in p18_results else 0
+
+        # Anomaly Count (from p04 or p17 summary is easier if p04 output structure varies)
+        # Using p04 results directly
+        p04_results = analysis_results.get("p04_advanced_outliers", {})
+        anomaly_count = 0
+        if p04_results and "error" not in p04_results and "message" not in p04_results:
+             for col, res in p04_results.items():
+                 if isinstance(res, dict):
+                     anomaly_count += res.get("total_outliers", 0)
+
+        # Dataset Stats
+        p01_stats = analysis_results.get("p01_overview", {}).get("dataset_stats", {})
+        
+        # Top Feature Importance (from p17 key_drivers if available, else p06)
+        top_feature = "N/A"
+        key_drivers = p17_results.get("key_drivers", [])
+        if key_drivers:
+            top_feature = key_drivers[0].get("feature", "N/A")
+
+        system_metrics = {
+             "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
+             "runtime_execution_time": execution_time,
+             "number_of_insights_generated": insights_count,
+             "number_of_recommendations_generated": recommendations_count,
+             "anomaly_count": anomaly_count,
+             "top_feature_importance": top_feature,
+             "dataset_statistics": p01_stats
+        }
+
+        # Store in analysis_results for builder to use
+        analysis_results["system_metrics"] = system_metrics
+
+        # Export to JSON
+        json_output_dir = "Reports"
+        os.makedirs(json_output_dir, exist_ok=True)
+        json_filename = f"metrics_{int(time.time())}.json"
+        json_path = os.path.join(json_output_dir, json_filename)
+        
+        # Helper for JSON serialization of numpy types
+        class NpEncoder(json.JSONEncoder):
+            def default(self, obj):
+                if isinstance(obj, np.integer):
+                    return int(obj)
+                if isinstance(obj, np.floating):
+                    return float(obj)
+                if isinstance(obj, np.ndarray):
+                    return obj.tolist()
+                return super(NpEncoder, self).default(obj)
+
+        with open(json_path, 'w') as f:
+            json.dump(system_metrics, f, cls=NpEncoder, indent=4)
+        print(f"Decyphr 📊: System metrics saved to {json_path}")
+
+    except Exception as e:
+        print(f"Decyphr ⚠️: Failed to collect or save system metrics: {e}")
+
 
     from decyphr import __version__ as decyphr_version
     
