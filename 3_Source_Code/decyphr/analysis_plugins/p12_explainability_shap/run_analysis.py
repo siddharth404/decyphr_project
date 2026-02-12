@@ -6,8 +6,6 @@
 
 import dask.dataframe as dd
 import pandas as pd
-import lightgbm as lgb
-import shap
 from typing import Dict, Any, Optional, List
 
 def analyze(ddf: dd.DataFrame, overview_results: Dict[str, Any], target_column: Optional[str] = None) -> Dict[str, Any]:
@@ -38,6 +36,15 @@ def analyze(ddf: dd.DataFrame, overview_results: Dict[str, Any], target_column: 
 
     try:
         print(f"     ... Preparing data and retraining baseline model for SHAP.")
+
+        # Lazy import to handle missing libomp/lightgbm
+        try:
+             import lightgbm as lgb
+             import shap
+        except ImportError as e:
+             return {"error": f"SHAP analysis skipped: Missing dependency ({e})"}
+        except Exception as e:
+             return {"error": f"SHAP analysis skipped: Initialization failed ({e})"}
 
         # --- 1. Prepare Data for Modeling (Consistent with p11) ---
         feature_cols = [col for col in ddf.columns if col != target_column]

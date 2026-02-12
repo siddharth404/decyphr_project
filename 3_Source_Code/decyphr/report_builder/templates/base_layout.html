@@ -14,7 +14,11 @@
     <script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
 
     <style>
-        {{ embedded_css | safe }}
+        {
+                {
+                embedded_css | safe
+            }
+        }
     </style>
 </head>
 
@@ -34,10 +38,28 @@
                     </li>
                     {% endif %}
 
+                    <!-- Prioritized Links -->
                     {% for section_id, section_title in sections %}
-                    <li><a href="#" data-section-id="{{ section_id }}"
-                            class="nav-link {% if loop.first and not executive_summary_html %}active{% endif %}">{{
-                            section_title }}</a></li>
+                    {% if section_id == 'p17_business_insights' %}
+                    <li><a href="#" data-section-id="{{ section_id }}" class="nav-link">{{ section_title }}</a></li>
+                    {% endif %}
+                    {% endfor %}
+
+                    {% for section_id, section_title in sections %}
+                    {% if section_id == 'p18_decision_engine' %}
+                    <li><a href="#" data-section-id="{{ section_id }}" class="nav-link">{{ section_title }}</a></li>
+                    {% endif %}
+                    {% endfor %}
+
+                    {% if system_metrics %}
+                    <li><a href="#" data-section-id="system_metrics" class="nav-link">System Performance</a></li>
+                    {% endif %}
+
+                    <!-- Remaining Links -->
+                    {% for section_id, section_title in sections %}
+                    {% if section_id not in ['p17_business_insights', 'p18_decision_engine', 'p01_overview'] %}
+                    <li><a href="#" data-section-id="{{ section_id }}" class="nav-link">{{ section_title }}</a></li>
+                    {% endif %}
                     {% endfor %}
                 </ul>
             </nav>
@@ -97,14 +119,122 @@
         {{ executive_summary_html | safe }}
         {% endif %}
 
-        {% for section_id, section_content in sections_data.items() %}
-        <div class="content-panel {% if loop.first and not executive_summary_html %}active{% endif %}"
-            id="panel-{{ section_id }}"
-            style="display: {% if loop.first and not executive_summary_html %}block{% else %}none{% endif %};">
-            <!-- Only show title if it's not Overview (Overview has its own internal structure) -->
-            {% if section_id != 'p01_overview' %}
+        <!-- 1. Business Insights (Prioritized) -->
+        {% if 'p17_business_insights' in sections_data %}
+        {% set section_content = sections_data['p17_business_insights'] %}
+        <div class="content-panel" id="panel-p17_business_insights" style="display: block;">
             <h3 class="section-title">{{ section_content.title }}</h3>
-            {% endif %}
+            <div class="details-container">{{ section_content.details_html | safe }}</div>
+        </div>
+        {% endif %}
+
+        <!-- 2. Decision Engine (Prioritized) -->
+        {% if 'p18_decision_engine' in sections_data %}
+        {% set section_content = sections_data['p18_decision_engine'] %}
+        <div class="content-panel" id="panel-p18_decision_engine" style="display: block;">
+            <h3 class="section-title">{{ section_content.title }}</h3>
+            <div class="details-container">{{ section_content.details_html | safe }}</div>
+        </div>
+        {% endif %}
+
+        <!-- 3. System Performance Summary (NEW SECTION) -->
+        {% if system_metrics %}
+        <div class="content-panel" id="panel-system_metrics"
+            style="display: block; margin-top: 40px; border-top: 1px solid var(--border-light); padding-top: 40px;">
+            <h3 class="section-title" style="font-size: 1.5rem; margin-bottom: 24px;">System Performance Summary</h3>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+
+                <!-- System Metrics Card -->
+                <div class="kpi-card" style="padding: 24px;">
+                    <h4
+                        style="margin: 0 0 16px 0; color: var(--text-secondary); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em;">
+                        System Metrics</h4>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                        <div>
+                            <div class="kpi-label">Execution Time</div>
+                            <div class="kpi-number" style="font-size: 1.5rem;">{{ system_metrics.runtime_execution_time
+                                }}s</div>
+                        </div>
+                        <div>
+                            <div class="kpi-label">Anomalies Detected</div>
+                            <div class="kpi-number" style="font-size: 1.5rem;">{{ system_metrics.anomaly_count }}</div>
+                        </div>
+                        <div>
+                            <div class="kpi-label">Insights Generated</div>
+                            <div class="kpi-number" style="font-size: 1.5rem;">{{
+                                system_metrics.number_of_insights_generated }}</div>
+                        </div>
+                        <div>
+                            <div class="kpi-label">Recommendations</div>
+                            <div class="kpi-number" style="font-size: 1.5rem;">{{
+                                system_metrics.number_of_recommendations_generated }}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dataset Health Card -->
+                <div class="kpi-card" style="padding: 24px;">
+                    <h4
+                        style="margin: 0 0 16px 0; color: var(--text-secondary); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em;">
+                        Dataset Health</h4>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                        <div>
+                            <div class="kpi-label">Health Score</div>
+                            <div class="kpi-number"
+                                style="font-size: 1.5rem; color: {% if system_metrics.dataset_statistics.get('Health Score', 0) >= 90 %}#10b981{% elif system_metrics.dataset_statistics.get('Health Score', 0) >= 70 %}#f59e0b{% else %}#ef4444{% endif %};">
+                                {{ system_metrics.dataset_statistics.get('Health Score', 'N/A') }}
+                            </div>
+                        </div>
+                        <div>
+                            <div class="kpi-label">Memory Usage</div>
+                            <div class="kpi-number" style="font-size: 1.5rem;">{{
+                                system_metrics.dataset_statistics.get('Memory Usage (MB)', 0) }} MB</div>
+                        </div>
+                        <div>
+                            <div class="kpi-label">Missing Values</div>
+                            <div class="kpi-number" style="font-size: 1.5rem;">{{
+                                system_metrics.dataset_statistics.get('Missing Cells (%)', '0%') }}</div>
+                        </div>
+                        <div>
+                            <div class="kpi-label">Duplicate Rows</div>
+                            <div class="kpi-number" style="font-size: 1.5rem;">{{
+                                system_metrics.dataset_statistics.get('Duplicate Rows (%)', '0%') }}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature Importance Card -->
+                <div class="kpi-card" style="padding: 24px;">
+                    <h4
+                        style="margin: 0 0 16px 0; color: var(--text-secondary); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em;">
+                        Key Driver</h4>
+                    <div>
+                        <div class="kpi-label">Top Feature Importance</div>
+                        <div class="kpi-number" style="font-size: 1.2rem; word-break: break-all;">{{
+                            system_metrics.top_feature_importance }}</div>
+                        <div class="kpi-subtext" style="margin-top: 8px;">Identified as the primary driver of variance
+                            in the dataset.</div>
+                    </div>
+                    <div style="margin-top: 24px;">
+                        <div class="kpi-label">Dataset Dimensions</div>
+                        <div class="kpi-number" style="font-size: 1.2rem;">
+                            {% set rows = system_metrics.dataset_statistics.get('Number of Rows', 0) %}
+                            {% set cols = system_metrics.dataset_statistics.get('Number of Columns', 0) %}
+                            {{ "{:,}".format(rows) }} x {{ cols }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- 4. Detailed Statistical Analysis (The Rest) -->
+        {% for section_id, section_content in sections_data.items() %}
+        <!-- Skip sections we've already rendered or don't want in the detailed list -->
+        {% if section_id not in ['p17_business_insights', 'p18_decision_engine', 'p01_overview'] %}
+        <div class="content-panel" id="panel-{{ section_id }}" style="display: none;">
+            <h3 class="section-title">{{ section_content.title }}</h3>
 
             {% if section_content.details_html %}
             <div class="details-container">
@@ -122,6 +252,7 @@
             </div>
             {% endif %}
         </div>
+        {% endif %}
         {% endfor %}
     </main>
 
@@ -134,7 +265,7 @@
     </script>
 
     <script>
-        {{ embedded_js | safe }}
+        { { embedded_js | safe } }
     </script>
 </body>
 

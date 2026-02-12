@@ -6,8 +6,9 @@
 
 import dask.dataframe as dd
 import pandas as pd
-import lightgbm as lgb
-from sklearn.model_selection import train_test_split
+import pandas as pd
+# LightGBM import moved inside analyze to prevent crash on systems without libomp
+from typing import Dict, Any, Optional, List
 from typing import Dict, Any, Optional, List
 
 def analyze(ddf: dd.DataFrame, overview_results: Dict[str, Any], target_column: Optional[str] = None) -> Dict[str, Any]:
@@ -38,6 +39,15 @@ def analyze(ddf: dd.DataFrame, overview_results: Dict[str, Any], target_column: 
 
     try:
         print(f"     ... Using '{target_column}' as the target variable.")
+        
+        # Lazy import to handle missing libomp/lightgbm
+        try:
+            import lightgbm as lgb
+            from sklearn.model_selection import train_test_split
+        except ImportError as e:
+            return {"error": f"Target analysis skipped: Missing dependency ({e})"}
+        except Exception as e:
+            return {"error": f"Target analysis skipped: Initialization failed ({e})"}
 
         # --- 1. Prepare Data for Modeling ---
         # Select features: use all columns except the target itself

@@ -121,11 +121,28 @@ def run_analysis_pipeline(filepath: str, target: Optional[str] = None, compare_f
         # Dataset Stats
         p01_stats = analysis_results.get("p01_overview", {}).get("dataset_stats", {})
         
-        # Top Feature Importance (from p17 key_drivers if available, else p06)
+        # Top Feature Importance
         top_feature = "N/A"
-        key_drivers = p17_results.get("key_drivers", [])
-        if key_drivers:
-            top_feature = key_drivers[0].get("feature", "N/A")
+        
+        # 1. Try direct from p11 (Target Analysis)
+        p11_results = analysis_results.get("p11_target_analysis", {})
+        if "feature_importances" in p11_results:
+            importances = p11_results["feature_importances"]
+            if importances:
+                # p11 returns sorted ascending (smallest -> largest)
+                # So the last key is the most important feature
+                top_feature = list(importances.keys())[-1]
+        
+        # 2. Fallback: Parse p17 Insights
+        if top_feature == "N/A":
+             for insight in p17_results.get("insights", []):
+                 if insight.get("category") == "Key Drivers":
+                     # Text: "The primary factors... are: FeatureA, FeatureB."
+                     import re
+                     match = re.search(r"are:\s*(.*?)(\.|,)", insight.get("insight", ""))
+                     if match:
+                         top_feature = match.group(1).split(',')[0].strip()
+                     break
 
         system_metrics = {
              "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
