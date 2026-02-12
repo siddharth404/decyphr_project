@@ -178,6 +178,7 @@ def analyze(ddf: dd.DataFrame, overview_results: Dict[str, Any], target_column: 
                     is_high_cardinality = True
 
                 results["categorical_stats"][col] = {
+                    "count": non_null_count, # [FIX] Add explicit count for visualization
                     "value_counts": value_counts_data, # Updated structure
                     "total_unique": unique_count,
                     "is_high_cardinality": is_high_cardinality,
