@@ -123,15 +123,79 @@ def build_html_report(
                     "visuals_count": 0 if suppress_grid else len(visuals_json)
                 }
 
+    # --- EXECUTIVE SUMMARY PREPARATION ---
+    try:
+        exec_summary_template = env.get_template('business_executive_summary.html')
+        
+        # 1. Gather Stats
+        p01 = all_analysis_results.get("p01_overview", {})
+        
+        p17 = all_analysis_results.get("p17_business_insights", {})
+        p18 = all_analysis_results.get("p18_decision_engine", {})
+        
+        # Correctly access total rows from dataset_stats
+        total_rows = p01.get("dataset_stats", {}).get("Number of Rows", 0)
+        
+        # Count anomalies from p17 insights
+        anomalies_count = 0
+        for insight in p17.get("insights", []):
+            if insight.get("category") == "Risk & Quality" and "potential anomalies" in insight.get("insight", ""):
+                # Extract number from text if possible, else default to 1 per insight
+                import re
+                match = re.search(r"Detected (\d+)", insight.get("insight", ""))
+                if match:
+                    anomalies_count += int(match.group(1))
+        
+        # Count segments from p10 clustering
+        p10 = all_analysis_results.get("p10_clustering", {})
+        # Correctly access segment count
+        segments_count = p10.get("suggested_k", 0)
+
+        # 2. Key Insights (High Confidence & Severity)
+        critical_insights = []
+        for insight in p17.get("insights", []):
+            if insight.get("confidence_score", 0) > 0.8:
+                critical_insights.append(insight)
+        critical_insights = sorted(critical_insights, key=lambda x: x.get("confidence_score", 0), reverse=True)[:3]
+
+        # 3. Top Recommendations (High Impact)
+        top_recommendations = []
+        for rec in p18.get("recommendations", []):
+            if rec.get("impact_level") == "High":
+                top_recommendations.append(rec)
+        # If no high impact, take top medium
+        if not top_recommendations:
+             for rec in p18.get("recommendations", []):
+                if rec.get("impact_level") == "Medium":
+                    top_recommendations.append(rec)
+        top_recommendations = top_recommendations[:3]
+
+        exec_data = {
+            "data_stats": {
+                "total_rows": f"{total_rows:,}",
+                "anomalies_count": anomalies_count,
+                "segments_count": segments_count
+            },
+            "critical_insights": critical_insights,
+            "top_recommendations": top_recommendations
+        }
+        
+        executive_summary_html = exec_summary_template.render(**exec_data)
+        
+    except Exception as e:
+        print(f"Decyphr ⚠️: Failed to generate Executive Summary: {e}")
+        executive_summary_html = ""
+
     final_html = template.render(
         decyphr_version=decyphr_version, dataset_name=dataset_name,
         generation_date=datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         sections=sidebar_sections,
         all_columns=all_columns,
         sections_data=sections_data,
-        all_plots_data_json=json.dumps(all_plots_data), # Embed all plot data as a single JSON string
+        all_plots_data_json=json.dumps(all_plots_data),
         embedded_css=css_styles,
-        embedded_js=js_script
+        embedded_js=js_script,
+        executive_summary_html=executive_summary_html
     )
 
     try:

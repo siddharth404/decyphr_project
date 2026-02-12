@@ -14,7 +14,11 @@
     <script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
 
     <style>
-        {{ embedded_css | safe }}
+        {
+                {
+                embedded_css | safe
+            }
+        }
     </style>
 </head>
 
@@ -28,9 +32,16 @@
         <div class="nav-scroll-wrapper">
             <nav class="top-nav" id="top-nav-scroll">
                 <ul>
+                    <!-- Fixed Executive Summary Link -->
+                    {% if executive_summary_html %}
+                    <li><a href="#" data-section-id="executive_summary" class="nav-link active">Executive Summary</a>
+                    </li>
+                    {% endif %}
+
                     {% for section_id, section_title in sections %}
                     <li><a href="#" data-section-id="{{ section_id }}"
-                            class="nav-link {% if loop.first %}active{% endif %}">{{ section_title }}</a></li>
+                            class="nav-link {% if loop.first and not executive_summary_html %}active{% endif %}">{{
+                            section_title }}</a></li>
                     {% endfor %}
                 </ul>
             </nav>
@@ -85,9 +96,15 @@
             <p>Analysis for <strong>{{ dataset_name }}</strong> successfully generated.</p>
         </div>
 
+        <!-- Executive Summary Injection -->
+        {% if executive_summary_html %}
+        {{ executive_summary_html | safe }}
+        {% endif %}
+
         {% for section_id, section_content in sections_data.items() %}
-        <div class="content-panel {% if loop.first %}active{% endif %}" id="panel-{{ section_id }}"
-            style="display: {% if loop.first %}block{% else %}none{% endif %};">
+        <div class="content-panel {% if loop.first and not executive_summary_html %}active{% endif %}"
+            id="panel-{{ section_id }}"
+            style="display: {% if loop.first and not executive_summary_html %}block{% else %}none{% endif %};">
             <!-- Only show title if it's not Overview (Overview has its own internal structure) -->
             {% if section_id != 'p01_overview' %}
             <h3 class="section-title">{{ section_content.title }}</h3>
@@ -121,7 +138,7 @@
     </script>
 
     <script>
-        {{ embedded_js | safe }}
+        { { embedded_js | safe } }
     </script>
 </body>
 
