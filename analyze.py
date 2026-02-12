@@ -9,6 +9,8 @@
 import sys
 import os
 
+print("DEBUG: Starting analyze.py...", flush=True)
+
 # Ensure we use the local version of the code
 sys.path.insert(0, os.path.abspath("3_Source_Code"))
 

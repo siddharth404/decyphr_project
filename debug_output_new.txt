@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/Users/siddharthkaushik/Decypher/decyphr_project/analyze.py", line 15, in <module>
+    import decyphr
+  File "/Users/siddharthkaushik/Decypher/decyphr_project/3_Source_Code/decyphr/__init__.py", line 15, in <module>
+    from .main_orchestrator import run_analysis_pipeline
+  File "/Users/siddharthkaushik/Decypher/decyphr_project/3_Source_Code/decyphr/main_orchestrator.py", line 21, in <module>
+    from decyphr.analysis_plugins.p06_correlations import run_analysis as correlations_analysis
+  File "/Users/siddharthkaushik/Decypher/decyphr_project/3_Source_Code/decyphr/analysis_plugins/p06_correlations/run_analysis.py", line 10, in <module>
+    from phik import phik_matrix
+ModuleNotFoundError: No module named 'phik'

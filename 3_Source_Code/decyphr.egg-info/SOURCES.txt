@@ -61,9 +61,16 @@ pyproject.toml
 3_Source_Code/decyphr/analysis_plugins/p16_geospatial/__init__.py
 3_Source_Code/decyphr/analysis_plugins/p16_geospatial/create_visualization.py
 3_Source_Code/decyphr/analysis_plugins/p16_geospatial/run_analysis.py
+3_Source_Code/decyphr/analysis_plugins/p17_business_insights/__init__.py
+3_Source_Code/decyphr/analysis_plugins/p17_business_insights/create_visualization.py
+3_Source_Code/decyphr/analysis_plugins/p17_business_insights/run_analysis.py
+3_Source_Code/decyphr/analysis_plugins/p18_decision_engine/__init__.py
+3_Source_Code/decyphr/analysis_plugins/p18_decision_engine/create_visualization.py
+3_Source_Code/decyphr/analysis_plugins/p18_decision_engine/run_analysis.py
 3_Source_Code/decyphr/backends/dask_backend.py
 3_Source_Code/decyphr/report_builder/builder.py
 3_Source_Code/decyphr/report_builder/assets/scripts/interactivity.js
 3_Source_Code/decyphr/report_builder/assets/styles/main_theme.css
 3_Source_Code/decyphr/report_builder/templates/base_layout.html
 3_Source_Code/decyphr/utils/helpers.py
+3_Source_Code/decyphr/utils/plotting.py
