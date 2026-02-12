@@ -64,8 +64,8 @@ def _create_numeric_details_html(col_name: str, stats: Dict[str, float]) -> str:
 def _create_categorical_details_html(col_name: str, stats: Dict[str, Any]) -> str:
     """Generates stats table for categorical columns."""
     rows = []
-    rows.append(("Top Category", str(stats.get('top', 'N/A'))))
-    rows.append(("Frequency", f"{stats.get('freq', 0):,}"))
+    rows.append(("Top Category", str(stats.get('mode', 'N/A'))))
+    rows.append(("Frequency", f"{stats.get('mode_freq', 0):,}"))
     
     table_html = "<table class='details-table'>"
     for label, val in rows:
