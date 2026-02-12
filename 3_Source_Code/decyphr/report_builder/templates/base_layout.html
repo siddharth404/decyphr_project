@@ -14,7 +14,11 @@
     <script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
 
     <style>
-        {{ embedded_css | safe }}
+        {
+                {
+                embedded_css | safe
+            }
+        }
     </style>
 </head>
 
@@ -113,7 +117,7 @@
     </main>
 
     <footer class="app-footer" style="text-align: center; padding: 40px; color: var(--text-tertiary);">
-        <p>Decyphr v{{ decyphr_version }} &middot; Designed in Bengaluru, Created by Ayush.</p>
+        <p>Decyphr v{{ decyphr_version }} &middot; MSDSM Capstone project By Ayush, Siddharth, Saif, Ujjawal</p>
     </footer>
 
     <script id="plot-data" type="application/json">
@@ -121,7 +125,7 @@
     </script>
 
     <script>
-        {{ embedded_js | safe }}
+        { { embedded_js | safe } }
     </script>
 </body>
 
