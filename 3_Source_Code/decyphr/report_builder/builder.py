@@ -69,7 +69,7 @@ def build_html_report(
     except Exception as e:
         # If template loading fails, we still need to load assets to potentially render an error page or log.
         # The original instruction moved asset loading here, which might be intended for a fallback.
-        with open(os.path.join(base_dir, 'assets', 'styles', 'main_theme.css'), 'r', encoding='utf-8') as f:
+        with open(os.path.join(base_dir, 'assets', 'styles', 'report_theme.css'), 'r', encoding='utf-8') as f:
             css_styles = f.read()
         with open(os.path.join(base_dir, 'assets', 'scripts', 'interactivity.js'), 'r', encoding='utf-8') as f:
             js_script = f.read()
@@ -77,7 +77,7 @@ def build_html_report(
         return
 
     try:
-        with open(os.path.join(base_dir, 'assets', 'styles', 'main_theme.css'), 'r', encoding='utf-8') as f:
+        with open(os.path.join(base_dir, 'assets', 'styles', 'report_theme.css'), 'r', encoding='utf-8') as f:
             css_styles = f.read()
         with open(os.path.join(base_dir, 'assets', 'scripts', 'interactivity.js'), 'r', encoding='utf-8') as f:
             js_script = f.read()

@@ -22,30 +22,26 @@ def create_visuals(ddf, analysis_results: Dict[str, Any]) -> Dict[str, Any]:
         conf_percent = int(confidence * 100)
         conf_reason = insight.get("confidence_reason", "No specific reason provided.")
         
-        # Color coding based on severity
-        border_color = "#ccc"
-        if severity == "critical": border_color = "#ff4444"
-        elif severity == "high": border_color = "#ff8800"
-        elif severity == "medium": border_color = "#ffbb33"
-        elif severity == "low": border_color = "#00C851"
-
+        # Severity class mapping (ensure lowercase)
+        sev_class = severity
+        
         html_content += f"""
-        <div style="border-left: 5px solid {border_color}; background-color: #f9f9f9; padding: 15px; margin-bottom: 10px; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
-                <h4 style="margin: 0; color: #333; font-weight: 600;">{category}</h4>
-                <div style="display: flex; flex-direction: column; align-items: flex-end;">
-                    <div style="display: flex; align-items: center; gap: 8px;">
-                        <span style="font-size: 0.8em; color: #666;">Confidence: {conf_percent}%</span>
-                        <span style="font-size: 0.8em; font-weight: bold; color: {border_color}; text-transform: uppercase;">{severity}</span>
+        <div class="insight-card {sev_class}">
+            <div class="insight-header">
+                <h4 class="insight-title">{category}</h4>
+                <div class="insight-meta">
+                    <div class="confidence-wrapper">
+                        <span class="confidence-label">Confidence: {conf_percent}%</span>
+                        <span class="severity-badge {sev_class}">{severity}</span>
                     </div>
                 </div>
             </div>
-            <div style="width: 100%; background-color: #e0e0e0; height: 4px; border-radius: 2px; margin-bottom: 4px;">
-                <div style="width: {conf_percent}%; background-color: {border_color}; height: 100%; border-radius: 2px;"></div>
+            <div class="confidence-bar-container">
+                <div class="confidence-bar-fill" style="width: {conf_percent}%;"></div>
             </div>
-            <p style="margin: 0 0 8px 0; font-size: 0.75em; color: #888; font-style: italic;">{conf_reason}</p>
-            <p style="margin: 5px 0; font-size: 1.1em; color: #000;">{text}</p>
-            <p style="margin: 0; font-size: 0.9em; color: #666;">{detail}</p>
+            <p class="insight-reason"><em>{conf_reason}</em></p>
+            <p class="insight-text">{text}</p>
+            <p class="insight-detail">{detail}</p>
         </div>
         """
     

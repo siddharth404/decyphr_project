@@ -1,0 +1,631 @@
+/* ==========================================================================
+   FILE: 3_Source_Code/decyphr/report_builder/assets/styles/report_theme.css
+   PURPOSE: Antigravity Theme - Strict Google Antigravity Aesthetic.
+   VERSION: 9.0 (Unified & Centralized)
+   ========================================================================== */
+
+/* ==========================================================================
+   1. DESIGN SYSTEM & THEME DEFINITIONS (CSS VARIABLES)
+   ========================================================================== */
+:root {
+    /* Typography */
+    --font-family: 'Outfit', 'Google Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+    /* Colors - Antigravity Palette */
+    --bg-page: #FFFFFF;
+    /* Pure White Background */
+    --bg-card: #F8F9FC;
+    /* Light Blue-Grey Card Background */
+    --bg-nav: rgba(255, 255, 255, 0.8);
+
+    --text-primary: #121317;
+    /* Nearly Black */
+    --text-secondary: #5F6368;
+    /* Dark Grey */
+    --text-tertiary: #80868B;
+    /* Light Grey */
+
+    --border-light: rgba(33, 34, 38, 0.06);
+    /* Very subtle border */
+
+    /* Brand Colors */
+    --accent-primary: #1A73E8;
+    /* Google Blue */
+    --accent-secondary: #E8F0FE;
+    /* Light Blue Tint */
+
+    /* Severity/Impact Colors */
+    --color-critical: #d93025;
+    --color-high: #ea8600;
+    --color-medium: #fbbc04;
+    --color-low: #34a853;
+
+    --bg-critical: #fce8e6;
+    --bg-high: #fef7e0;
+    --bg-medium: #fff7e0;
+    /* light yellow */
+    --bg-low: #e6f4ea;
+
+    /* Metrics & Spacing */
+    --radius-card: 24px;
+    /* Updated to 24px from 36px for tighter look */
+    --radius-pill: 9999px;
+    --spacing-card: 32px;
+}
+
+/* ==========================================================================
+   2. GLOBAL RESET & BASE STYLES
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    font-family: var(--font-family);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Plotly Reset */
+.js-plotly-plot .plotly {
+    background-color: transparent !important;
+}
+
+/* ==========================================================================
+   3. HEADER & NAVIGATION
+   ========================================================================== */
+.app-header {
+    position: sticky;
+    top: 20px;
+    width: 95%;
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: var(--bg-nav);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: var(--radius-pill);
+    z-index: 1000;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.nav-scroll-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    min-width: 0;
+    margin-right: 16px;
+    position: relative;
+}
+
+.top-nav {
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    white-space: nowrap;
+    width: 100%;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.top-nav::-webkit-scrollbar {
+    display: none;
+}
+
+.top-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 8px;
+    padding-right: 8px;
+    margin: 0;
+}
+
+.top-nav li a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    padding: 10px 20px;
+    border-radius: var(--radius-pill);
+    transition: all 0.2s ease;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.top-nav li a:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+    color: var(--text-primary);
+}
+
+.top-nav li a.active {
+    background-color: var(--text-primary);
+    color: #FFFFFF;
+}
+
+.nav-scroll-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 50%;
+    transition: all 0.2s;
+    flex-shrink: 0;
+}
+
+.nav-scroll-btn:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: var(--text-primary);
+    transform: translateX(2px);
+}
+
+/* ==========================================================================
+   4. LAYOUT & TYPOGRAPHY
+   ========================================================================== */
+.main-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 80px 20px 120px 20px;
+}
+
+.report-header {
+    margin-bottom: 80px;
+    text-align: left;
+}
+
+.report-header h2 {
+    font-size: 4rem;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 24px;
+    color: var(--text-primary);
+}
+
+.report-header p {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 32px;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+}
+
+.content-panel {
+    margin-bottom: 60px;
+    display: none;
+    /* Default hidden */
+}
+
+.content-panel.active {
+    display: block;
+}
+
+/* ==========================================================================
+   5. CARDS & CONTAINERS
+   ========================================================================== */
+.details-card,
+.analysis-card {
+    background-color: var(--bg-card);
+    border-radius: var(--radius-card);
+    padding: var(--spacing-card);
+    margin-bottom: 32px;
+    border: none;
+    box-shadow: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.analysis-card .plot-placeholder {
+    width: 100%;
+    min-height: 400px;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 32px;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 32px;
+}
+
+/* ==========================================================================
+   6. TABLES
+   ========================================================================== */
+.details-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 0.95rem;
+}
+
+.details-table th {
+    text-align: left;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    color: var(--text-secondary);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+}
+
+.details-table td {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    color: var(--text-primary);
+}
+
+/* ==========================================================================
+   7. REUSABLE UI COMPONENTS (NEW)
+   ========================================================================== */
+
+/* --- KPI Cards --- */
+.kpi-card {
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    border: 1px solid var(--border-light);
+}
+
+.kpi-label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.kpi-number {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    line-height: 1.2;
+}
+
+.kpi-subtext {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-top: 6px;
+}
+
+/* --- Insight Cards (p17) --- */
+.insight-card {
+    background-color: var(--bg-card);
+    padding: 24px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    border-left: 5px solid #ccc;
+    /* Default */
+    transition: transform 0.2s ease;
+}
+
+.insight-card:hover {
+    transform: translateX(4px);
+}
+
+.insight-card.critical {
+    border-left-color: var(--color-critical);
+    background-color: #fff5f5;
+}
+
+.insight-card.high {
+    border-left-color: var(--color-high);
+}
+
+.insight-card.medium {
+    border-left-color: var(--color-medium);
+}
+
+.insight-card.low {
+    border-left-color: var(--color-low);
+}
+
+.insight-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.insight-title {
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+}
+
+.insight-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.confidence-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.confidence-label {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.severity-badge {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.severity-badge.critical {
+    color: var(--color-critical);
+}
+
+.severity-badge.high {
+    color: var(--color-high);
+}
+
+.severity-badge.medium {
+    color: var(--color-medium);
+}
+
+.severity-badge.low {
+    color: var(--color-low);
+}
+
+
+.insight-reason {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    font-style: italic;
+    margin-bottom: 8px;
+}
+
+.insight-text {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+    line-height: 1.4;
+}
+
+.insight-detail {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* --- Recommendation Cards (p18) --- */
+.recommendation-card {
+    padding: 24px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    border-left: 5px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+}
+
+.recommendation-card.technical {
+    background-color: #f0f9ff;
+    border-left-color: #0ea5e9;
+}
+
+.recommendation-card.strategic {
+    background-color: #faf5ff;
+    border-left-color: #8b5cf6;
+}
+
+.recommendation-card.marketing {
+    background-color: #fffbeb;
+    border-left-color: #f59e0b;
+}
+
+.recommendation-card.operational {
+    background-color: #fef2f2;
+    border-left-color: #ef4444;
+}
+
+.rec-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.rec-type-badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    margin-right: 12px;
+}
+
+.rec-title {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.impact-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-left: 12px;
+}
+
+.impact-badge.high {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.impact-badge.medium {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.impact-badge.low {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+/* --- Confidence Bars --- */
+.confidence-bar-container {
+    width: 100px;
+    height: 6px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.confidence-bar-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.5s ease-out;
+}
+
+/* Insight Bar Colors */
+.insight-card.critical .confidence-bar-fill {
+    background-color: var(--color-critical);
+}
+
+.insight-card.high .confidence-bar-fill {
+    background-color: var(--color-high);
+}
+
+.insight-card.medium .confidence-bar-fill {
+    background-color: var(--color-medium);
+}
+
+.insight-card.low .confidence-bar-fill {
+    background-color: var(--color-low);
+}
+
+/* Recommendation Bar Colors */
+.recommendation-card.technical .confidence-bar-fill {
+    background-color: #0ea5e9;
+}
+
+.recommendation-card.strategic .confidence-bar-fill {
+    background-color: #8b5cf6;
+}
+
+.recommendation-card.marketing .confidence-bar-fill {
+    background-color: #f59e0b;
+}
+
+.recommendation-card.operational .confidence-bar-fill {
+    background-color: #ef4444;
+}
+
+.recommendation-card.technical .rec-type-badge {
+    background-color: #0ea5e9;
+}
+
+.recommendation-card.strategic .rec-type-badge {
+    background-color: #8b5cf6;
+}
+
+.recommendation-card.marketing .rec-type-badge {
+    background-color: #f59e0b;
+}
+
+.recommendation-card.operational .rec-type-badge {
+    background-color: #ef4444;
+}
+
+/* --- System Metrics Dashboard (Refined) --- */
+.system-dashboard {
+    margin-top: 40px;
+    border-top: 1px solid var(--border-light);
+    padding-top: 40px;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.footer {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-tertiary);
+    font-size: 0.9rem;
+}
+
+/* --- Utility Classes --- */
+.text-critical {
+    color: var(--color-critical) !important;
+}
+
+.text-high {
+    color: var(--color-high) !important;
+}
+
+.text-medium {
+    color: var(--color-medium) !important;
+}
+
+.text-low {
+    color: var(--color-low) !important;
+}
+
+.text-success {
+    color: var(--status-success-text) !important;
+}
+
+.text-warning {
+    color: var(--status-warning-text) !important;
+}
+
+.text-error {
+    color: var(--status-error-text) !important;
+}
