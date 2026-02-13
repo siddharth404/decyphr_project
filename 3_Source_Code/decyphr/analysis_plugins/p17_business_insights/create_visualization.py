@@ -26,7 +26,7 @@ def create_visuals(ddf, analysis_results: Dict[str, Any]) -> Dict[str, Any]:
         sev_class = severity
         
         html_content += f"""
-        <div class="insight-card {sev_class}">
+        <div class="card-insight {sev_class}">
             <div class="insight-header">
                 <h4 class="insight-title">{category}</h4>
                 <div class="insight-meta">

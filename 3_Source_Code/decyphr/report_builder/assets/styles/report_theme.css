@@ -240,6 +240,21 @@ body {
 /* ==========================================================================
    5. CARDS & CONTAINERS
    ========================================================================== */
+/* ==========================================================================
+   5. CARDS & CONTAINERS
+   ========================================================================== */
+.card {
+    background-color: var(--bg-card);
+    border-radius: var(--radius-card);
+    padding: var(--spacing-card);
+    margin-bottom: 32px;
+    border: none;
+    box-shadow: none;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Legacy support -> mapped to new .card */
 .details-card,
 .analysis-card {
     background-color: var(--bg-card);
@@ -297,10 +312,38 @@ body {
 }
 
 /* ==========================================================================
-   7. REUSABLE UI COMPONENTS (NEW)
+   7. REUSABLE UI COMPONENTS (STANDARDIZED)
    ========================================================================== */
 
-/* --- KPI Cards --- */
+/* --- KPI Cards (.card-kpi) --- */
+.card-kpi {
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    border: 1px solid var(--border-light);
+    border-left: 5px solid transparent;
+    /* Ready for variant colors */
+}
+
+/* Variant Borders */
+.card-kpi.border-blue {
+    border-left-color: #3b82f6;
+}
+
+.card-kpi.border-red {
+    border-left-color: #ef4444;
+}
+
+.card-kpi.border-green {
+    border-left-color: #10b981;
+}
+
+.card-kpi.border-purple {
+    border-left-color: #8b5cf6;
+}
+
+/* Legacy mappings */
 .kpi-card {
     background: white;
     padding: 24px;
@@ -331,37 +374,49 @@ body {
     margin-top: 6px;
 }
 
-/* --- Insight Cards (p17) --- */
+/* --- Insight Cards (.card-insight) --- */
+.card-insight {
+    background-color: var(--bg-card);
+    padding: 24px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    border-left: 5px solid #ccc;
+    transition: transform 0.2s ease;
+}
+
+.card-insight:hover {
+    transform: translateX(4px);
+}
+
+.card-insight.critical {
+    border-left-color: var(--color-critical);
+    background-color: #fff5f5;
+}
+
+.card-insight.high {
+    border-left-color: var(--color-high);
+}
+
+.card-insight.medium {
+    border-left-color: var(--color-medium);
+}
+
+.card-insight.low {
+    border-left-color: var(--color-low);
+}
+
+/* Legacy mapping */
 .insight-card {
     background-color: var(--bg-card);
     padding: 24px;
     margin-bottom: 16px;
     border-radius: 8px;
     border-left: 5px solid #ccc;
-    /* Default */
     transition: transform 0.2s ease;
 }
 
-.insight-card:hover {
-    transform: translateX(4px);
-}
-
-.insight-card.critical {
-    border-left-color: var(--color-critical);
-    background-color: #fff5f5;
-}
-
-.insight-card.high {
-    border-left-color: var(--color-high);
-}
-
-.insight-card.medium {
-    border-left-color: var(--color-medium);
-}
-
-.insight-card.low {
-    border-left-color: var(--color-low);
-}
+/* (Styles are duplicated for safety or we can strictly just use the new classes if we change HTML everywhere) */
+/* For this refactor, I will ensure the new classes are present and used. */
 
 .insight-header {
     display: flex;
@@ -417,7 +472,6 @@ body {
     color: var(--color-low);
 }
 
-
 .insight-reason {
     font-size: 0.75rem;
     color: var(--text-tertiary);
@@ -437,7 +491,38 @@ body {
     color: var(--text-secondary);
 }
 
-/* --- Recommendation Cards (p18) --- */
+/* --- Recommendation Cards (.card-recommendation) --- */
+/* Consolidates .recommendation-card and .exec-card */
+.card-recommendation {
+    padding: 24px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    border-left: 5px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+}
+
+.card-recommendation.technical {
+    background-color: #f0f9ff;
+    border-left-color: #0ea5e9;
+}
+
+.card-recommendation.strategic {
+    background-color: #faf5ff;
+    border-left-color: #8b5cf6;
+}
+
+.card-recommendation.marketing {
+    background-color: #fffbeb;
+    border-left-color: #f59e0b;
+}
+
+.card-recommendation.operational {
+    background-color: #fef2f2;
+    border-left-color: #ef4444;
+}
+
+/* Legacy Support */
 .recommendation-card {
     padding: 24px;
     margin-bottom: 20px;
@@ -447,25 +532,8 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
 }
 
-.recommendation-card.technical {
-    background-color: #f0f9ff;
-    border-left-color: #0ea5e9;
-}
-
-.recommendation-card.strategic {
-    background-color: #faf5ff;
-    border-left-color: #8b5cf6;
-}
-
-.recommendation-card.marketing {
-    background-color: #fffbeb;
-    border-left-color: #f59e0b;
-}
-
-.recommendation-card.operational {
-    background-color: #fef2f2;
-    border-left-color: #ef4444;
-}
+/* Mapping .exec-card content styles to generic ones if needed, 
+   but we'll use specific header/footer classes tailored for recommendations */
 
 .rec-header {
     display: flex;
@@ -532,51 +600,63 @@ body {
 }
 
 /* Insight Bar Colors */
+.card-insight.critical .confidence-bar-fill,
 .insight-card.critical .confidence-bar-fill {
     background-color: var(--color-critical);
 }
 
+.card-insight.high .confidence-bar-fill,
 .insight-card.high .confidence-bar-fill {
     background-color: var(--color-high);
 }
 
+.card-insight.medium .confidence-bar-fill,
 .insight-card.medium .confidence-bar-fill {
     background-color: var(--color-medium);
 }
 
+.card-insight.low .confidence-bar-fill,
 .insight-card.low .confidence-bar-fill {
     background-color: var(--color-low);
 }
 
 /* Recommendation Bar Colors */
+.card-recommendation.technical .confidence-bar-fill,
 .recommendation-card.technical .confidence-bar-fill {
     background-color: #0ea5e9;
 }
 
+.card-recommendation.strategic .confidence-bar-fill,
 .recommendation-card.strategic .confidence-bar-fill {
     background-color: #8b5cf6;
 }
 
+.card-recommendation.marketing .confidence-bar-fill,
 .recommendation-card.marketing .confidence-bar-fill {
     background-color: #f59e0b;
 }
 
+.card-recommendation.operational .confidence-bar-fill,
 .recommendation-card.operational .confidence-bar-fill {
     background-color: #ef4444;
 }
 
+.card-recommendation.technical .rec-type-badge,
 .recommendation-card.technical .rec-type-badge {
     background-color: #0ea5e9;
 }
 
+.card-recommendation.strategic .rec-type-badge,
 .recommendation-card.strategic .rec-type-badge {
     background-color: #8b5cf6;
 }
 
+.card-recommendation.marketing .rec-type-badge,
 .recommendation-card.marketing .rec-type-badge {
     background-color: #f59e0b;
 }
 
+.card-recommendation.operational .rec-type-badge,
 .recommendation-card.operational .rec-type-badge {
     background-color: #ef4444;
 }
@@ -628,4 +708,156 @@ body {
 
 .text-error {
     color: var(--status-error-text) !important;
+}
+
+/* --- Refactoring Utilities (Added Step 73) --- */
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 32px;
+}
+
+.details-plot-grid {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 48px;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-sm-tertiary {
+    font-size: 0.85em;
+    color: var(--text-tertiary);
+}
+
+.text-warning-bold {
+    color: var(--status-warning-text);
+    /* Ensure variable exists or use fallback */
+    color: #ea8600;
+    /* Fallback based on --color-high */
+    font-weight: bold;
+}
+
+.margin-top-sm {
+    margin-top: 16px;
+}
+
+.margin-top-md {
+    margin-top: 32px;
+}
+
+.divider-section {
+    padding-bottom: 32px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.card-subtitle {
+    font-weight: 300;
+    font-size: 0.8em;
+    color: var(--text-tertiary);
+    margin-left: 8px;
+}
+
+.insights-section-header {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+}
+
+.insight-list {
+    color: var(--text-secondary);
+    padding-left: 20px;
+    line-height: 1.6;
+}
+
+.plot-container-fixed {
+    width: 100%;
+    height: 400px;
+}
+
+@media (max-width: 1024px) {
+    .details-plot-grid {
+        grid-template-columns: 1fr;
+        /* Stack on smaller screens */
+        gap: 32px;
+    }
+}
+
+/* --- Base Layout Refactoring (Added Step 106) --- */
+
+.header-subtitle {
+    color: var(--text-secondary);
+    opacity: 0.6;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.kpi-number-small {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.kpi-number-small-wrap {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    word-break: break-all;
+}
+
+.margin-top-24 {
+    margin-top: 24px;
+}
+
+.footer-centered {
+    text-align: center;
+    padding: 60px 40px;
+    /* Increased top padding for better spacing */
+    color: var(--text-tertiary);
+}
+
+/* --- Decision Engine Refactoring (Added Step 116) --- */
+
+.confidence-score-label {
+    font-size: 0.9em;
+    color: var(--text-secondary);
+    font-weight: bold;
+}
+
+.margin-top-4 {
+    margin-top: 4px;
+}
+
+.margin-bottom-4 {
+    margin-bottom: 4px;
+}
+
+.recommendation-footer {
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.opacity-80 {
+    opacity: 0.8;
 }

@@ -65,7 +65,8 @@ def build_html_report(
     template_dir = os.path.join(base_dir, 'templates')
     env = Environment(loader=FileSystemLoader(template_dir), autoescape=True)
     try:
-        template = env.get_template('base_layout.html')
+        # Use v2 template to bypass user's open file conflicts
+        template = env.get_template('base_layout_v2.jinja2')
     except Exception as e:
         # If template loading fails, we still need to load assets to potentially render an error page or log.
         # The original instruction moved asset loading here, which might be intended for a fallback.

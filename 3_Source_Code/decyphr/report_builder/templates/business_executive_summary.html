@@ -6,17 +6,17 @@
 
     <!-- KPI Dashboard -->
     <div class="exec-dashboard-grid">
-        <div class="kpi-card border-blue">
+        <div class="card-kpi border-blue">
             <div class="kpi-label">Total Records Analyzed</div>
             <div class="kpi-number">{{ data_stats.total_rows }}</div>
         </div>
-        <div class="kpi-card {% if data_stats.anomalies_count > 0 %}border-red{% else %}border-green{% endif %}">
+        <div class="card-kpi {% if data_stats.anomalies_count > 0 %}border-red{% else %}border-green{% endif %}">
             <div class="kpi-label">Anomalies Detected</div>
             <div class="kpi-number">{{ data_stats.anomalies_count }}</div>
             <div class="kpi-subtext">{{ "Requires Attention" if data_stats.anomalies_count > 0 else "Clean Data" }}
             </div>
         </div>
-        <div class="kpi-card border-purple">
+        <div class="card-kpi border-purple">
             <div class="kpi-label">Identified Segments</div>
             <div class="kpi-number">{{ data_stats.segments_count }}</div>
             <div class="kpi-subtext">Distinct Customer Groups</div>
@@ -30,15 +30,15 @@
 
             {% if top_recommendations %}
             {% for rec in top_recommendations %}
-            <div class="exec-card">
-                <div class="exec-card-header">
+            <div class="card-recommendation">
+                <div class="rec-header">
                     <span class="badge blue">{{ rec.type | upper }}</span>
                     <span class="badge {% if rec.impact_level == 'High' %}red{% else %}yellow{% endif %}">
                         IMPACT: {{ rec.impact_level | upper }}
                     </span>
                 </div>
-                <div class="exec-card-title">{{ rec.action }}</div>
-                <p class="exec-card-footer">
+                <div class="rec-title">{{ rec.action }}</div>
+                <p class="recommendation-footer">
                     Business Value: {{ rec.estimated_business_impact }}
                 </p>
             </div>
@@ -56,11 +56,11 @@
 
             {% if critical_insights %}
             {% for insight in critical_insights %}
-            <div class="exec-card">
-                <div class="exec-card-header">
+            <div class="card-insight">
+                <div class="insight-header">
                     <span class="kpi-label" style="margin:0; font-size: 0.8rem;">{{ insight.category }}</span>
                 </div>
-                <div class="exec-card-text">{{ insight.insight }}</div>
+                <div class="insight-text">{{ insight.insight }}</div>
 
                 <div class="confidence-bar-bg">
                     <div class="confidence-bar-fill" style="width: {{ insight.confidence_score * 100 }}%;"></div>

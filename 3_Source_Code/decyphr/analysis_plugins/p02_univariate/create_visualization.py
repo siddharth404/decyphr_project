@@ -17,10 +17,10 @@ def _create_kpi_metrics(stats: Dict[str, float]) -> str:
     """Generates a row of Big Number KPIs for the top of the card."""
     def _kpi_item(label, value, subtext=""):
         return f"""
-        <div style='display: flex; flex-direction: column;'>
+        <div class='flex-col'>
             <span class='kpi-label'>{label}</span>
             <span class='kpi-value'>{value}</span>
-            {f"<span style='font-size: 0.85em; color: var(--text-tertiary);'>{subtext}</span>" if subtext else ""}
+            {f"<span class='text-sm-tertiary'>{subtext}</span>" if subtext else ""}
         </div>
         """
     
@@ -42,7 +42,7 @@ def _create_kpi_metrics(stats: Dict[str, float]) -> str:
         kpis.append(_kpi_item("Mean", f"{stats['mean']:,.2f}"))
         
     kpi_html = "".join(kpis)
-    return f"<div style='display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 32px; padding-bottom: 32px; margin-bottom: 32px; border-bottom: 1px solid var(--border-light);'>{kpi_html}</div>"
+    return f"<div class='grid-layout divider-section'>{kpi_html}</div>"
 
 
 def _create_numeric_details_html(col_name: str, stats: Dict[str, float]) -> str:
@@ -57,7 +57,7 @@ def _create_numeric_details_html(col_name: str, stats: Dict[str, float]) -> str:
     
     table_html = "<table class='details-table'>"
     for label, val in rows:
-        table_html += f"<tr><td>{label}</td><td style='text-align: right;'><strong>{val}</strong></td></tr>"
+        table_html += f"<tr><td>{label}</td><td class='text-right'><strong>{val}</strong></td></tr>"
     table_html += "</table>"
     return table_html
 
@@ -69,7 +69,7 @@ def _create_categorical_details_html(col_name: str, stats: Dict[str, Any]) -> st
     
     table_html = "<table class='details-table'>"
     for label, val in rows:
-        table_html += f"<tr><td>{label}</td><td style='text-align: right;'><strong>{val}</strong></td></tr>"
+        table_html += f"<tr><td>{label}</td><td class='text-right'><strong>{val}</strong></td></tr>"
     table_html += "</table>"
     return table_html
 
@@ -86,7 +86,7 @@ def _generate_numeric_insights(col_name: str, stats: Dict[str, float]) -> str:
     
     # Missing Data
     if stats.get('missing_pct', 0) > 5:
-        insights.append(f"Missing <span style='color: var(--status-warning-text); font-weight: bold;'>{stats.get('missing_pct'):.1f}%</span> of data.")
+        insights.append(f"Missing <span class='text-warning-bold'>{stats.get('missing_pct'):.1f}%</span> of data.")
     
     # Outliers
     if stats.get('outliers', 0) > 0:
@@ -94,7 +94,7 @@ def _generate_numeric_insights(col_name: str, stats: Dict[str, float]) -> str:
         insights.append(f"Detected <strong>{stats.get('outliers', 0):,.0f}</strong> outliers ({outlier_pct:.1f}%).")
         
     if not insights: return ""
-    return "<ul style='color: var(--text-secondary); padding-left: 20px; line-height: 1.6;'>" + "".join([f"<li>{x}</li>" for x in insights]) + "</ul>"
+    return "<ul class='insight-list'>" + "".join([f"<li>{x}</li>" for x in insights]) + "</ul>"
 
 def create_visuals(ddf, analysis_results: Dict[str, Any]) -> Optional[Dict[str, Any]]:
     """
@@ -231,18 +231,18 @@ def create_visuals(ddf, analysis_results: Dict[str, Any]) -> Optional[Dict[str, 
             # AND explicitly place the plot placeholder with the correct ID
             html_sections_list.append(f"""
             <div class='details-card' id='col-{col_name}'>
-                <h3>{col_name} <span style='font-weight:300; font-size: 0.8em; color: var(--text-tertiary);'>Numeric</span></h3>
+                <h3>{col_name} <span class='card-subtitle'>Numeric</span></h3>
                 {kpi_section}
-                <div style='display: grid; grid-template-columns: 350px 1fr; gap: 48px;'>
+                <div class='details-plot-grid'>
                     <div>
-                        <h4 style='font-size: 0.9rem; text-transform:uppercase; color:var(--text-secondary); margin-bottom:16px;'>Automated Insights</h4>
+                        <h4 class='insights-section-header'>Automated Insights</h4>
                         {insights_html}
-                        <div style="margin-top: 32px;">
+                        <div class="margin-top-md">
                             {details_html}
                         </div>
                     </div>
                     <div>
-                         <div class="plot-placeholder" id="plot-p02_univariate-{current_plot_index}" style="width:100%; height:400px;"></div>
+                         <div class="plot-placeholder plot-container-fixed" id="plot-p02_univariate-{current_plot_index}"></div>
                     </div>
                 </div>
             </div>
@@ -320,18 +320,18 @@ def create_visuals(ddf, analysis_results: Dict[str, Any]) -> Optional[Dict[str, 
 
             html_sections_list.append(f"""
             <div class='details-card' id='col-{col_name}'>
-                <h3>{col_name} <span style='font-weight:300; font-size: 0.8em; color: var(--text-tertiary);'>Categorical</span></h3>
+                <h3>{col_name} <span class='card-subtitle'>Categorical</span></h3>
                 {kpi_section}
-                <div style='display: grid; grid-template-columns: 350px 1fr; gap: 48px;'>
+                <div class='details-plot-grid'>
                     <div>
-                         <h4 style='font-size: 0.9rem; text-transform:uppercase; color:var(--text-secondary); margin-bottom:16px;'>Automated Insights</h4>
+                         <h4 class='insights-section-header'>Automated Insights</h4>
                          {insights_html}
-                         <div style="margin-top: 32px;">
+                         <div class="margin-top-md">
                             {details_html}
                          </div>
                     </div>
                     <div>
-                         <div class="plot-placeholder" id="plot-p02_univariate-{current_plot_index}" style="width:100%; height:400px;"></div>
+                         <div class="plot-placeholder plot-container-fixed" id="plot-p02_univariate-{current_plot_index}"></div>
                     </div>
                 </div>
             </div>

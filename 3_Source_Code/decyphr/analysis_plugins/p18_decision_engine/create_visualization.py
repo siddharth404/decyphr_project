@@ -32,17 +32,17 @@ def create_visuals(ddf, analysis_results: Dict[str, Any]) -> Dict[str, Any]:
         impact_class = impact_level.lower()
 
         html_content += f"""
-        <div class="recommendation-card {type_class}">
+        <div class="card-recommendation {type_class}">
             <div class="rec-header">
-                <div style="display: flex; align-items: center;">
+                <div class="flex-row">
                     <span class="rec-type-badge">{rec_type}</span> 
                     <!-- Badge color is now handled by CSS based on card type -->
                     <h3 class="rec-title">{action}</h3>
                     <span class="impact-badge {impact_class}">Impact: {impact_level}</span>
                 </div>
-                 <div style="text-align: right;">
-                    <span style="font-size: 0.9em; color: var(--text-secondary); font-weight: bold;">Conf: {conf_percent}%</span>
-                    <div class="confidence-bar-container" style="margin-top: 4px;">
+                 <div class="text-right">
+                    <span class="confidence-score-label">Conf: {conf_percent}%</span>
+                    <div class="confidence-bar-container margin-top-4">
                         <div class="confidence-bar-fill" style="width: {conf_percent}%;"></div>
                     </div>
                 </div>
@@ -52,12 +52,12 @@ def create_visuals(ddf, analysis_results: Dict[str, Any]) -> Dict[str, Any]:
                 <strong>Rationale:</strong> {rationale}
             </p>
             
-            <div style="margin-top: 12px; padding-top: 10px; border-top: 1px solid rgba(0,0,0,0.05);">
-                 <div class="insight-detail" style="margin-bottom: 4px;">
+            <div class="recommendation-footer">
+                 <div class="insight-detail margin-bottom-4">
                     <strong>Business Impact:</strong> <em>{impact_desc}</em>
                 </div>
                 <div class="insight-reason">
-                     <span style="opacity: 0.8;">Confidence Source: {conf_reason}</span>
+                     <span class="opacity-80">Confidence Source: {conf_reason}</span>
                 </div>
             </div>
         </div>
