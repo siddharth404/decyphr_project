@@ -131,7 +131,10 @@ def run_analysis_pipeline(filepath: str, target: Optional[str] = None, compare_f
             if importances:
                 # p11 returns sorted ascending (smallest -> largest)
                 # So the last key is the most important feature
-                top_feature = list(importances.keys())[-1]
+                # Store as tuple (name, score) if possible, or just name
+                top_feature_name = list(importances.keys())[-1]
+                top_feature_score = importances[top_feature_name]
+                top_feature = {"name": top_feature_name, "score": top_feature_score}
         
         # 2. Fallback: Parse p17 Insights
         if top_feature == "N/A":
@@ -141,8 +144,16 @@ def run_analysis_pipeline(filepath: str, target: Optional[str] = None, compare_f
                      import re
                      match = re.search(r"are:\s*(.*?)(\.|,)", insight.get("insight", ""))
                      if match:
-                         top_feature = match.group(1).split(',')[0].strip()
+                         # Heuristic extraction, set score to None
+                         top_feature = {"name": match.group(1).split(',')[0].strip(), "score": None}
                      break
+        
+        # 3. Last Resort: p06 Correlations
+        if top_feature == "N/A":
+            p06_results = analysis_results.get("p06_correlations", {})
+            if "top_correlations" in p06_results:
+                # heuristic: grab first significant correlation pair
+                pass # implementation detail omitted for brevity, stick to "N/A" if p11/p17 fail
 
         # --- Health Score Calculation ---
         try:
@@ -166,10 +177,10 @@ def run_analysis_pipeline(filepath: str, target: Optional[str] = None, compare_f
             raw_score = 100 - missing_pct - duplicate_pct - (0.5 * anomaly_pct)
             health_score = max(0, min(100, round(raw_score, 1)))
 
-            # Determine Label
-            if health_score >= 90:
+            # Determine Label (Updated Thresholds)
+            if health_score >= 80:
                 health_label = "Good"
-            elif health_score >= 70:
+            elif health_score >= 50:
                 health_label = "Moderate"
             else:
                 health_label = "Poor"
@@ -180,8 +191,10 @@ def run_analysis_pipeline(filepath: str, target: Optional[str] = None, compare_f
             
         except Exception as e:
             print(f"Decyphr ⚠️: Health score calculation failed: {e}")
-            health_score = 0
-            health_label = "N/A"
+            # If calculation fails, ensure consistent "N/A" state
+            p01_stats["Health Score"] = None  # None triggers "Not Available" in template
+            p01_stats["Health Label"] = None  # Explicitly None to trigger hiding in template
+
 
         system_metrics = {
              "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),

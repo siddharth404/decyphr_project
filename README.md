@@ -10,111 +10,74 @@ The system leverages a multi-stage pipeline to ingest structured data, perform r
 
 ## 2. Key Features
 
-Decyphr integrates a suite of advanced capabilities to deliver a holistic analysis experience:
+Decyphr provides a comprehensive suite of analyses, intelligently triggered based on your data's characteristics:
 
-*   **Automated EDA Pipeline**: autonomously executes a comprehensive battery of statistical tests, including univariate analysis, correlation mapping (Pearson/Phik), and hypothesis testing.
-*   **Business Insight Generator**: Transforms abstract statistical patterns into clear, actionable business insights, detailing the "what" and "why" behind data trends.
-*   **Decision Recommendation Engine**: Maps synthesized insights to concrete strategic actions, categorized by domain (e.g., Strategic, Operational, Marketing).
-*   **Confidence Scoring**: Assigns a reliability score to every insight and recommendation based on data quality, sample size, and statistical significance, ensuring transparency.
-*   **Business Impact Estimation**: Predicts the potential impact (High/Medium/Low) of implementing recommended actions, helping prioritize initiatives.
-*   **Executive Summary Dashboard**: A high-level, interactive HTML report that presents the most critical findings at a glance, designed for C-level consumption.
-*   **System Performance Evaluation**: Tracks the efficiency of the analysis pipeline itself, monitoring execution time and resource utilization.
-*   **Dataset Health Monitoring**: continuously evaluates data quality through a proprietary "Health Score" (0-100), factoring in missingness, duplication, and anomaly ratios.
+Complete Overview: Instant summary of dataset shape, memory usage, variable types, and data quality warnings.
 
----
+Deep Univariate Analysis: Detailed statistical profiles, histograms, and frequency charts for every variable.
 
-## 3. System Architecture
+Multivariate Analysis: Stunning, interactive heatmaps for both linear (Pearson) and non-linear (Phik) correlations.
 
-The Decyphr architecture is built upon a modular plugin system (`p01`–`p18`), ensuring extensibility and maintainability.
+Advanced Data Quality: Automatically detects constant columns, whitespace issues, and potential outliers using multiple methods (IQR, Isolation Forest).
 
-### Core Analysis Pipeline
-*   **p01_overview**: Initial schema inference and dataset statistics.
-*   **p02_univariate**: Distribution analysis for numeric and categorical variables.
-*   **p03_data_quality**: Detection of constants, mixed types, and whitespace issues.
-*   **p04_advanced_outliers**: IQR and Z-score based anomaly detection.
-*   **p05_missing_values**: Nullity correlation and pattern analysis.
-*   **p06_correlations**: Non-linear (Phik) and linear (Pearson) relationship mapping.
+Statistical Inference: Performs automated Hypothesis Testing (T-Tests, ANOVA, Chi-Squared) to uncover statistically significant relationships.
 
-### Advanced Analytics
-*   **p09_pca**: Dimensionality reduction for variance explanation.
-*   **p10_clustering**: Unsupervised learning (K-Means/DBSCAN) for segmentation.
-*   **p11_target_analysis**: Predictive power score (PPS) and feature importance relative to a target.
-*   **p12_explainability_shap**: Model-agnostic explanations for driver analysis.
+Machine Learning Insights:
+PCA: Analyzes dimensionality reduction possibilities.
+Clustering: Automatically finds hidden segments in your data using K-Means.
+Feature Importance: Trains a baseline model to identify the most predictive features when a target is provided.
+Explainable AI (XAI): Generates SHAP summary plots to explain how your features impact model predictions.
 
-### Intelligence Layer
-*   **p17_business_insights**: Synthesizes output from p01-p16 into narrative insights using heuristic logic.
-*   **p18_decision_engine**: The apex module that derives final recommendations and calculates impact/confidence scores.
+Specialized Analysis: Includes dedicated modules for Deep Text Analysis (Sentiment, NER, Topics), Time-Series Decomposition, and Geospatial Mapping.
 
----
+Data Drift Detection: Compare two datasets to quantify changes in data distribution over time.
 
-## 4. Installation
+High-End Interactive Report: A beautiful, modern dashboard with a toggleable light/dark theme, responsive charts, and a professional UI/UX.
 
-Decyphr requires Python 3.9+ and can be installed via pip (assuming local package availability) or by cloning the repository.
+## Quick Start
 
-```bash
-# Clone the repository
-git clone https://github.com/your-org/decyphr.git
-cd decyphr
+1. Installation
 
-# Install dependencies (including Dask, Plotly, Jinja2, Scikit-learn)
-pip install -r requirements.txt
+!pip install decyphr
 
-# detailed installation for development
-pip install -e "."
-```
+2. Importing
 
----
-
-## 5. Usage
-
-Decyphr is designed for "one-line" execution. The primary entry point is the `analyze` function on the `main_orchestrator`.
-
-```python
 import decyphr
 
-# Run the complete analysis pipeline
-report_path = decyphr.analyze(
-    filepath="data/customer_churn.csv",
-    target="churned"  # Optional: Specify a target variable for supervised analysis
-)
+3. Running Analysis
 
-print(f"Analysis complete. Report generated at: {report_path}")
-```
+decyphr.analyze(filepath="data/your_data.csv")
 
----
+4. Generating Report (Jupyter Notebook)
 
-## 6. Example Outputs
+import os, webbrowser
+path = os.path.abspath('Reports/your_generated_report_name.html')
+webbrowser.open(f'file://{path}')
 
-Decyphr generates a rich HTML report containing interactive visualizations and text-based intelligence. Key outputs include:
+5. Generating Report (Google Colab)
 
-### automated Insights
-> "High correlation (φk = 0.82) detected between **Monthly Spend** and **Customer Lifetime Value**. This suggests that early monetization strategies are effectively compounding over time."
+from google.colab import files
+files.download("reports/your_report_name.html")
 
-### Strategic Recommendations
-> **Action**: Implement tiered loyalty rewards for high-spend cohorts.
-> **Impact**: HIGH | **Confidence**: 92% (Robust statistical evidence)
-> **Rationale**: Top-decile spenders show a 40% lower churn probability (p < 0.05).
+# Generated Your First Report
 
-### System Metrics
-*   **Execution Time**: 2.01s (High-Performance Dask Backend)
-*   **Dataset Health**: 99.9/100 (Label: **Good**)
-*   **Anomalies Detected**: 1 (0.2% of dataset)
+Create a Python script add the above code. Just point it to your dataset and let Decyphr do the rest.
 
----
+Your professional, interactive HTML report will be automatically saved in a new decyphr_reports/ directory.
 
-## 7. Research Motivation
+## Project Structure
 
-The exponential growth of data availability has outpaced the human capacity for manual analysis. While statistical learning provides the tools to find patterns, bridging the "last mile" from pattern to decision remains a bottleneck.
+This project uses a highly modular "plugin" architecture to ensure it is robust, maintainable, and easy to extend. All analysis and visualization logic is separated into self-contained modules located in the src/decyphr/analysis_plugins/ directory.
 
-**Decyphr** was motivated by the need for an automated **Decision Support System (DSS)** that does not merely present charts but "thinks" alongside the analyst. By encoding expert heuristics into a modular pipeline, Decyphr aims to standardize the quality of business analysis and democratize access to advanced data science techniques.
+## Capabilities
 
----
+While there is no end of this vast ocean but as of now Decyphr can process more than 1 lakh rows with over 1 lakh cells in less than 3 mins. Isn't that amazing !
 
-## 8. Technology Stack
+## Contributing
 
-*   **Language**: Python 3.10+
-*   **Compute Engine**: Dask (Parallelized Dataframe functionality)
-*   **Visualization**: Plotly (Interactive Web-GL charts)
-*   **Machine Learning**: Scikit-learn, XGBoost, SHAP
-*   **Statistical Analysis**: Phik, SciPy, Statsmodels
-*   **Reporting**: Jinja2 Templating Engine, HTML5/CSS3 (Grid/Flexbox)
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated. Please feel free to fork the repo and create a pull request, or open an issue with suggestions.
+
+## License
+
+Distributed under the MIT License. See LICENSE file for more information.
+Designed and Created by - Ayush Singh

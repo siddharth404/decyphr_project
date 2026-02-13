@@ -86,7 +86,7 @@
         <!-- 1. Business Insights (Prioritized) -->
         {% if 'p17_business_insights' in sections_data %}
         {% set section_content = sections_data['p17_business_insights'] %}
-        <div class="content-panel active" id="panel-p17_business_insights">
+        <div class="content-panel" id="panel-p17_business_insights">
             <h3 class="section-title">{{ section_content.title }}</h3>
             <div class="details-container">{{ section_content.details_html | safe }}</div>
         </div>
@@ -95,7 +95,7 @@
         <!-- 2. Decision Engine (Prioritized) -->
         {% if 'p18_decision_engine' in sections_data %}
         {% set section_content = sections_data['p18_decision_engine'] %}
-        <div class="content-panel active" id="panel-p18_decision_engine">
+        <div class="content-panel" id="panel-p18_decision_engine">
             <h3 class="section-title">{{ section_content.title }}</h3>
             <div class="details-container">{{ section_content.details_html | safe }}</div>
         </div>
@@ -139,8 +139,14 @@
                             <div class="kpi-label">Health Score</div>
                             <div
                                 class="kpi-number {% if system_metrics.dataset_statistics.get('Health Score', 0) >= 90 %}text-success{% elif system_metrics.dataset_statistics.get('Health Score', 0) >= 70 %}text-warning{% else %}text-error{% endif %}">
-                                {{ system_metrics.dataset_statistics.get('Health Score', 'N/A') }}
-                                <span style="font-size: 0.6em; margin-left: 4px;">{{ system_metrics.dataset_statistics.get('Health Label', '') }}</span>
+                                {% if system_metrics.dataset_statistics.get('Health Score') is not none %}
+                                    {{ system_metrics.dataset_statistics.get('Health Score') }}
+                                    {% if system_metrics.dataset_statistics.get('Health Label') %}
+                                    <span style="font-size: 0.6em; margin-left: 4px;">{{ system_metrics.dataset_statistics.get('Health Label') }}</span>
+                                    {% endif %}
+                                {% else %}
+                                    Not Available
+                                {% endif %}
                             </div>
                         </div>
                         <div>
@@ -162,13 +168,25 @@
                 </div>
 
                 <!-- Feature Importance Card -->
+                {% if system_metrics.top_feature != "N/A" %}
                 <div class="card-kpi">
-                    <h4 class="kpi-label">Key Driver</h4>
+                    <h4 class="kpi-label">Primary Driver</h4>
                     <div>
                         <div class="kpi-label">Top Feature Importance</div>
-                        <div class="kpi-number kpi-number-small-wrap">{{
-                            system_metrics.top_feature_importance }}</div>
-                        <div class="kpi-subtext">Identified as the primary driver of variance in the dataset.</div>
+                        <div class="kpi-number kpi-number-small-wrap">
+                            {% if system_metrics.top_feature is mapping %}
+                                {{ system_metrics.top_feature.name }}
+                            {% else %}
+                                {{ system_metrics.top_feature }}
+                            {% endif %}
+                        </div>
+                        <div class="kpi-subtext">
+                            {% if system_metrics.top_feature is mapping and system_metrics.top_feature.score %}
+                                Importance Score: {{ "%.2f"|format(system_metrics.top_feature.score) }}
+                            {% else %}
+                                Identified as the primary driver of variance.
+                            {% endif %}
+                        </div>
                     </div>
                     <div class="margin-top-24">
                         <div class="kpi-label">Dataset Dimensions</div>
@@ -178,7 +196,9 @@
                             {{ "{:,}".format(rows) }} x {{ cols }}
                         </div>
                     </div>
+                    </div>
                 </div>
+                {% endif %}
             </div>
         </div>
         {% endif %}

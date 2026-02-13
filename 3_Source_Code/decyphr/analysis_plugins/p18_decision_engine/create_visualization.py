@@ -43,7 +43,7 @@ def create_visuals(ddf, analysis_results: Dict[str, Any]) -> Dict[str, Any]:
                  <div class="text-right">
                     <span class="confidence-score-label">Conf: {conf_percent}%</span>
                     <div class="confidence-bar-container margin-top-4">
-                        <div class="confidence-bar-fill" style="width: {conf_percent}%;"></div>
+                        <div class="confidence-bar-fill" style="--confidence-width: {conf_percent}%;"></div>
                     </div>
                 </div>
             </div>

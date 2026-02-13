@@ -596,6 +596,7 @@ body {
 .confidence-bar-fill {
     height: 100%;
     border-radius: 3px;
+    width: var(--confidence-width, 0%);
     transition: width 0.5s ease-out;
 }
 

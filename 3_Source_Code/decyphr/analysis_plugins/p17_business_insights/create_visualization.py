@@ -37,7 +37,7 @@ def create_visuals(ddf, analysis_results: Dict[str, Any]) -> Dict[str, Any]:
                 </div>
             </div>
             <div class="confidence-bar-container">
-                <div class="confidence-bar-fill" style="width: {conf_percent}%;"></div>
+                <div class="confidence-bar-fill" style="--confidence-width: {conf_percent}%;"></div>
             </div>
             <p class="insight-reason"><em>{conf_reason}</em></p>
             <p class="insight-text">{text}</p>
