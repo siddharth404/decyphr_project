@@ -144,6 +144,45 @@ def run_analysis_pipeline(filepath: str, target: Optional[str] = None, compare_f
                          top_feature = match.group(1).split(',')[0].strip()
                      break
 
+        # --- Health Score Calculation ---
+        try:
+            # Parse metrics from string "X%" to float
+            def parse_pct(val):
+                if isinstance(val, (int, float)): return float(val)
+                if isinstance(val, str) and '%' in val:
+                    return float(val.replace('%', ''))
+                return 0.0
+
+            missing_pct = parse_pct(p01_stats.get("Missing Cells (%)", 0))
+            duplicate_pct = parse_pct(p01_stats.get("Duplicate Rows (%)", 0))
+            
+            num_rows = p01_stats.get("Number of Rows", 0)
+            if num_rows > 0:
+                anomaly_pct = (anomaly_count / num_rows) * 100
+            else:
+                anomaly_pct = 0
+
+            # Formula: 100 - (missing) - (duplicate) - (0.5 * anomaly)
+            raw_score = 100 - missing_pct - duplicate_pct - (0.5 * anomaly_pct)
+            health_score = max(0, min(100, round(raw_score, 1)))
+
+            # Determine Label
+            if health_score >= 90:
+                health_label = "Good"
+            elif health_score >= 70:
+                health_label = "Moderate"
+            else:
+                health_label = "Poor"
+
+            # Update p01_stats so valid value appears in report
+            p01_stats["Health Score"] = health_score
+            p01_stats["Health Label"] = health_label
+            
+        except Exception as e:
+            print(f"Decyphr ⚠️: Health score calculation failed: {e}")
+            health_score = 0
+            health_label = "N/A"
+
         system_metrics = {
              "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
              "runtime_execution_time": execution_time,

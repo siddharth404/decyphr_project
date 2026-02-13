@@ -140,6 +140,7 @@
                             <div
                                 class="kpi-number {% if system_metrics.dataset_statistics.get('Health Score', 0) >= 90 %}text-success{% elif system_metrics.dataset_statistics.get('Health Score', 0) >= 70 %}text-warning{% else %}text-error{% endif %}">
                                 {{ system_metrics.dataset_statistics.get('Health Score', 'N/A') }}
+                                <span style="font-size: 0.6em; margin-left: 4px;">{{ system_metrics.dataset_statistics.get('Health Label', '') }}</span>
                             </div>
                         </div>
                         <div>
