@@ -1,82 +1,120 @@
-# Decyphr
+# Decyphr: AI-Driven Business Decision Intelligence System
 
-An all-encompassing, automated toolkit for generating deep, professional, and interactive Deep Data Analysis reports with a single line of code. It's not just a normal EDA.
+## 1. Project Overview
 
-Decyphr is designed to accelerate the data science workflow by automating the tedious and time-consuming process of initial data exploration. It goes beyond basic profiling to provide deep statistical insights, advanced machine learning-driven analysis, and a stunning, presentation-ready report that is as beautiful as it is informative.
+**Decyphr** is an advanced, AI-driven decision intelligence system designed to bridge the gap between raw statistical analysis and actionable business strategy. Unlike traditional Exploratory Data Analysis (EDA) tools that simply visualize data, Decyphr autonomously interprets complex datasets, generating high-level business insights and strategic recommendations.
 
-![Dashboard Example](image.png)
-![Dashboard Example](image-1.png)
+The system leverages a multi-stage pipeline to ingest structured data, perform rigorous statistical testing, and synthesize findings into a coherent "System Performance Dashboard." By converting technical metrics—such as correlation coefficients, anomaly scores, and feature importance—into plain-language business narratives, Decyphr empowers stakeholders to make data-informed decisions with confidence.
 
-## Key Features
+---
 
-Decyphr provides a comprehensive suite of analyses, intelligently triggered based on your data's characteristics:
+## 2. Key Features
 
-Complete Overview: Instant summary of dataset shape, memory usage, variable types, and data quality warnings.
+Decyphr integrates a suite of advanced capabilities to deliver a holistic analysis experience:
 
-Deep Univariate Analysis: Detailed statistical profiles, histograms, and frequency charts for every variable.
+*   **Automated EDA Pipeline**: autonomously executes a comprehensive battery of statistical tests, including univariate analysis, correlation mapping (Pearson/Phik), and hypothesis testing.
+*   **Business Insight Generator**: Transforms abstract statistical patterns into clear, actionable business insights, detailing the "what" and "why" behind data trends.
+*   **Decision Recommendation Engine**: Maps synthesized insights to concrete strategic actions, categorized by domain (e.g., Strategic, Operational, Marketing).
+*   **Confidence Scoring**: Assigns a reliability score to every insight and recommendation based on data quality, sample size, and statistical significance, ensuring transparency.
+*   **Business Impact Estimation**: Predicts the potential impact (High/Medium/Low) of implementing recommended actions, helping prioritize initiatives.
+*   **Executive Summary Dashboard**: A high-level, interactive HTML report that presents the most critical findings at a glance, designed for C-level consumption.
+*   **System Performance Evaluation**: Tracks the efficiency of the analysis pipeline itself, monitoring execution time and resource utilization.
+*   **Dataset Health Monitoring**: continuously evaluates data quality through a proprietary "Health Score" (0-100), factoring in missingness, duplication, and anomaly ratios.
 
-Multivariate Analysis: Stunning, interactive heatmaps for both linear (Pearson) and non-linear (Phik) correlations.
+---
 
-Advanced Data Quality: Automatically detects constant columns, whitespace issues, and potential outliers using multiple methods (IQR, Isolation Forest).
+## 3. System Architecture
 
-Statistical Inference: Performs automated Hypothesis Testing (T-Tests, ANOVA, Chi-Squared) to uncover statistically significant relationships.
+The Decyphr architecture is built upon a modular plugin system (`p01`–`p18`), ensuring extensibility and maintainability.
 
-Machine Learning Insights:
-PCA: Analyzes dimensionality reduction possibilities.
-Clustering: Automatically finds hidden segments in your data using K-Means.
-Feature Importance: Trains a baseline model to identify the most predictive features when a target is provided.
-Explainable AI (XAI): Generates SHAP summary plots to explain how your features impact model predictions.
+### Core Analysis Pipeline
+*   **p01_overview**: Initial schema inference and dataset statistics.
+*   **p02_univariate**: Distribution analysis for numeric and categorical variables.
+*   **p03_data_quality**: Detection of constants, mixed types, and whitespace issues.
+*   **p04_advanced_outliers**: IQR and Z-score based anomaly detection.
+*   **p05_missing_values**: Nullity correlation and pattern analysis.
+*   **p06_correlations**: Non-linear (Phik) and linear (Pearson) relationship mapping.
 
-Specialized Analysis: Includes dedicated modules for Deep Text Analysis (Sentiment, NER, Topics), Time-Series Decomposition, and Geospatial Mapping.
+### Advanced Analytics
+*   **p09_pca**: Dimensionality reduction for variance explanation.
+*   **p10_clustering**: Unsupervised learning (K-Means/DBSCAN) for segmentation.
+*   **p11_target_analysis**: Predictive power score (PPS) and feature importance relative to a target.
+*   **p12_explainability_shap**: Model-agnostic explanations for driver analysis.
 
-Data Drift Detection: Compare two datasets to quantify changes in data distribution over time.
+### Intelligence Layer
+*   **p17_business_insights**: Synthesizes output from p01-p16 into narrative insights using heuristic logic.
+*   **p18_decision_engine**: The apex module that derives final recommendations and calculates impact/confidence scores.
 
-High-End Interactive Report: A beautiful, modern dashboard with a toggleable light/dark theme, responsive charts, and a professional UI/UX.
+---
 
-## Quick Start
+## 4. Installation
 
-1. Installation
+Decyphr requires Python 3.9+ and can be installed via pip (assuming local package availability) or by cloning the repository.
 
-!pip install decyphr
+```bash
+# Clone the repository
+git clone https://github.com/your-org/decyphr.git
+cd decyphr
 
-2. Importing
+# Install dependencies (including Dask, Plotly, Jinja2, Scikit-learn)
+pip install -r requirements.txt
 
+# detailed installation for development
+pip install -e "."
+```
+
+---
+
+## 5. Usage
+
+Decyphr is designed for "one-line" execution. The primary entry point is the `analyze` function on the `main_orchestrator`.
+
+```python
 import decyphr
 
-3. Running Analysis
+# Run the complete analysis pipeline
+report_path = decyphr.analyze(
+    filepath="data/customer_churn.csv",
+    target="churned"  # Optional: Specify a target variable for supervised analysis
+)
 
-decyphr.analyze(filepath="data/your_data.csv")
+print(f"Analysis complete. Report generated at: {report_path}")
+```
 
-4. Generating Report (Jupyter Notebook)
+---
 
-import os, webbrowser
-path = os.path.abspath('Reports/your_generated_report_name.html')
-webbrowser.open(f'file://{path}')
+## 6. Example Outputs
 
-5. Generating Report (Google Colab)
+Decyphr generates a rich HTML report containing interactive visualizations and text-based intelligence. Key outputs include:
 
-from google.colab import files
-files.download("reports/your_report_name.html")
+### automated Insights
+> "High correlation (φk = 0.82) detected between **Monthly Spend** and **Customer Lifetime Value**. This suggests that early monetization strategies are effectively compounding over time."
 
-# Generated Your First Report
+### Strategic Recommendations
+> **Action**: Implement tiered loyalty rewards for high-spend cohorts.
+> **Impact**: HIGH | **Confidence**: 92% (Robust statistical evidence)
+> **Rationale**: Top-decile spenders show a 40% lower churn probability (p < 0.05).
 
-Create a Python script add the above code. Just point it to your dataset and let Decyphr do the rest.
+### System Metrics
+*   **Execution Time**: 2.01s (High-Performance Dask Backend)
+*   **Dataset Health**: 99.9/100 (Label: **Good**)
+*   **Anomalies Detected**: 1 (0.2% of dataset)
 
-Your professional, interactive HTML report will be automatically saved in a new decyphr_reports/ directory.
+---
 
-## Project Structure
+## 7. Research Motivation
 
-This project uses a highly modular "plugin" architecture to ensure it is robust, maintainable, and easy to extend. All analysis and visualization logic is separated into self-contained modules located in the src/decyphr/analysis_plugins/ directory.
+The exponential growth of data availability has outpaced the human capacity for manual analysis. While statistical learning provides the tools to find patterns, bridging the "last mile" from pattern to decision remains a bottleneck.
 
-## Capabilities
+**Decyphr** was motivated by the need for an automated **Decision Support System (DSS)** that does not merely present charts but "thinks" alongside the analyst. By encoding expert heuristics into a modular pipeline, Decyphr aims to standardize the quality of business analysis and democratize access to advanced data science techniques.
 
-While there is no end of this vast ocean but as of now Decyphr can process more than 1 lakh rows with over 1 lakh cells in less than 3 mins. Isn't that amazing !
+---
 
-## Contributing
+## 8. Technology Stack
 
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated. Please feel free to fork the repo and create a pull request, or open an issue with suggestions.
-
-## License
-
-Distributed under the MIT License. See LICENSE file for more information.
-Designed and Created by - Ayush Singh
+*   **Language**: Python 3.10+
+*   **Compute Engine**: Dask (Parallelized Dataframe functionality)
+*   **Visualization**: Plotly (Interactive Web-GL charts)
+*   **Machine Learning**: Scikit-learn, XGBoost, SHAP
+*   **Statistical Analysis**: Phik, SciPy, Statsmodels
+*   **Reporting**: Jinja2 Templating Engine, HTML5/CSS3 (Grid/Flexbox)
