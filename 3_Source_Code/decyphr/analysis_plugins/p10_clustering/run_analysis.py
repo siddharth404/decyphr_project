@@ -29,21 +29,24 @@ def analyze(ddf: dd.DataFrame, overview_results: Dict[str, Any], target_column: 
     """
     print("     -> Performing unsupervised clustering (K-Means)...")
 
-    if target_column:
-        message = "Skipping clustering, as a target variable was provided."
-        print(f"     ... {message}")
-        return {"message": message}
+    # Clustering should run even if there is a target, just exclude the target from features.
+    # if target_column:
+    #     message = "Skipping clustering, as a target variable was provided."
+    #     print(f"     ... {message}")
+    #     return {"message": message}
 
     column_details = overview_results.get("column_details")
     if not column_details:
         return {"error": "Clustering analysis requires 'column_details' from the overview plugin."}
 
+    # Select numeric columns, excluding the target if it's numeric
     numeric_cols: List[str] = [
-        col for col, details in column_details.items() if details['decyphr_type'] == 'Numeric'
+        col for col, details in column_details.items() 
+        if details['decyphr_type'] == 'Numeric' and col != target_column
     ]
 
     if len(numeric_cols) < 2:
-        message = "Skipping clustering, requires at least 2 numeric columns."
+        message = "Skipping clustering, requires at least 2 numeric columns (excluding target)."
         print(f"     ... {message}")
         return {"message": message}
 
@@ -72,7 +75,10 @@ def analyze(ddf: dd.DataFrame, overview_results: Dict[str, Any], target_column: 
         values = list(inertia_scores.values())
         # For simplicity, we can just pick a k. A more advanced method is needed for a true elbow find.
         # Let's suggest k=4 as a default if more than 4 options, else k=3.
+        # Force at least 3 clusters for meaningful segmentation in Demo
         suggested_k = 4 if max_k >= 4 else 3
+        if suggested_k < 3 and max_k >= 3:
+            suggested_k = 3
         
         # 3. Fit final KMeans with the suggested number of clusters
         final_kmeans = KMeans(n_clusters=suggested_k, random_state=42, n_init='auto')

@@ -137,32 +137,49 @@
                     <div class="metrics-grid">
                         <div>
                             <div class="kpi-label">Health Score</div>
-                            <div
-                                class="kpi-number {% if system_metrics.dataset_statistics.get('Health Score', 0) >= 90 %}text-success{% elif system_metrics.dataset_statistics.get('Health Score', 0) >= 70 %}text-warning{% else %}text-error{% endif %}">
-                                {% if system_metrics.dataset_statistics.get('Health Score') is not none %}
-                                    {{ system_metrics.dataset_statistics.get('Health Score') }}
-                                    {% if system_metrics.dataset_statistics.get('Health Label') %}
-                                    <span style="font-size: 0.6em; margin-left: 4px;">{{ system_metrics.dataset_statistics.get('Health Label') }}</span>
+                            <!-- Use dataset_health object with safe defaults -->
+                            {% set health = system_metrics.dataset_health %}
+                            
+                            <div class="kpi-number {% if health.health_score is not none and health.health_score >= 90 %}text-success{% elif health.health_score is not none and health.health_score >= 60 %}text-warning{% else %}text-error{% endif %}">
+                                {% if health.health_score is not none %}
+                                    {{ health.health_score }}
+                                    {% if health.health_label %}
+                                        <span style="font-size: 0.6em; margin-left: 4px;">{{ health.health_label }}</span>
                                     {% endif %}
                                 {% else %}
-                                    Not Available
+                                    <span style="font-size: 0.6em">Not Available</span>
                                 {% endif %}
                             </div>
                         </div>
                         <div>
-                            <div class="kpi-label">Memory Usage</div>
-                            <div class="kpi-number">{{ system_metrics.dataset_statistics.get('Memory Usage (MB)', 0) }}
-                                MB</div>
+                            <div class="kpi-label">Completeness</div>
+                            <div class="kpi-number">
+                                {% if health.completeness_ratio is not none %}
+                                    {{ "%.1f"|format(health.completeness_ratio * 100) }}%
+                                {% else %}
+                                    {{ system_metrics.dataset_statistics.get('Dataset Density', 'N/A') }}
+                                {% endif %}
+                            </div>
                         </div>
                         <div>
-                            <div class="kpi-label">Missing Values</div>
-                            <div class="kpi-number">{{ system_metrics.dataset_statistics.get('Missing Cells (%)', '0%')
-                                }}</div>
+                            <div class="kpi-label">Missing</div>
+                            <div class="kpi-number">
+                                {% if health.missing_ratio is not none %}
+                                    {{ "%.1f"|format(health.missing_ratio * 100) }}%
+                                {% else %}
+                                    {{ system_metrics.dataset_statistics.get('Missing Cells (%)', '0%') }}
+                                {% endif %}
+                            </div>
                         </div>
                         <div>
-                            <div class="kpi-label">Duplicate Rows</div>
-                            <div class="kpi-number">{{ system_metrics.dataset_statistics.get('Duplicate Rows (%)', '0%')
-                                }}</div>
+                            <div class="kpi-label">Anomalies</div>
+                            <div class="kpi-number">
+                                {% if health.anomaly_ratio is not none %}
+                                    {{ "%.1f"|format(health.anomaly_ratio * 100) }}%
+                                {% else %}
+                                    -
+                                {% endif %}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -172,7 +189,7 @@
                 <div class="card-kpi">
                     <h4 class="kpi-label">Primary Driver</h4>
                     <div>
-                        <div class="kpi-label">Top Feature Importance</div>
+                        <div class="kpi-label">Top Feature</div>
                         <div class="kpi-number kpi-number-small-wrap">
                             {% if system_metrics.top_feature is mapping %}
                                 {{ system_metrics.top_feature.name }}
@@ -188,14 +205,28 @@
                             {% endif %}
                         </div>
                     </div>
-                    <div class="margin-top-24">
-                        <div class="kpi-label">Dataset Dimensions</div>
-                        <div class="kpi-number kpi-number-small">
-                            {% set rows = system_metrics.dataset_statistics.get('Number of Rows', 0) %}
-                            {% set cols = system_metrics.dataset_statistics.get('Number of Columns', 0) %}
-                            {{ "{:,}".format(rows) }} x {{ cols }}
-                        </div>
+                </div>
+                {% endif %}
+
+                <!-- Churn KPI Cards (Telco Demo) -->
+                {% if system_metrics.churn_rate is defined and system_metrics.churn_rate != "N/A" %}
+                <div class="card-kpi" style="border-left: 4px solid #F44336;">
+                    <h4 class="kpi-label">Critical Metric</h4>
+                    <div>
+                        <div class="kpi-label">Overall Churn Rate</div>
+                        <div class="kpi-number" style="color: #F44336;">{{ system_metrics.churn_rate }}%</div>
+                        <div class="kpi-subtext">High Risk > 20%</div>
                     </div>
+                </div>
+                {% endif %}
+
+                {% if system_metrics.mtm_pct is defined and system_metrics.mtm_pct != "N/A" %}
+                <div class="card-kpi" style="border-left: 4px solid #FF9800;">
+                    <h4 class="kpi-label">Cohort Analysis</h4>
+                    <div>
+                        <div class="kpi-label">Month-to-Month Contracts</div>
+                        <div class="kpi-number" style="color: #FF9800;">{{ system_metrics.mtm_pct }}%</div>
+                        <div class="kpi-subtext">Volatile Customer Base</div>
                     </div>
                 </div>
                 {% endif %}

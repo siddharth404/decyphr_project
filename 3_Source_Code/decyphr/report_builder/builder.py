@@ -187,18 +187,22 @@ def build_html_report(
         print(f"Decyphr ⚠️: Failed to generate Executive Summary: {e}")
         executive_summary_html = ""
 
-    final_html = template.render(
-        decyphr_version=decyphr_version, dataset_name=dataset_name,
-        generation_date=datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-        sections=sidebar_sections,
-        all_columns=all_columns,
-        sections_data=sections_data,
-        all_plots_data_json=json.dumps(all_plots_data),
-        embedded_css=css_styles,
-        embedded_js=js_script,
-        executive_summary_html=executive_summary_html,
-        system_metrics=all_analysis_results.get("system_metrics")
-    )
+    # Prepare context for the main template rendering
+    context = {
+        "decyphr_version": decyphr_version,
+        "dataset_name": dataset_name,
+        "generation_date": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "sections": sidebar_sections,
+        "all_columns": all_columns,
+        "sections_data": sections_data,
+        "all_plots_data_json": json.dumps(all_plots_data),
+        "embedded_css": css_styles,
+        "embedded_js": js_script,
+        "executive_summary_html": executive_summary_html,
+        "system_metrics": all_analysis_results.get("system_metrics")
+    }
+    
+    final_html = template.render(**context)
 
     try:
         with open(output_path, 'w', encoding='utf-8') as f:

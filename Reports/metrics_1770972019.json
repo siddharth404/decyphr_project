@@ -1,0 +1,36 @@
+{
+    "timestamp": "2026-02-13 14:10:19",
+    "runtime_execution_time": 2.76,
+    "number_of_insights_generated": 3,
+    "number_of_recommendations_generated": 3,
+    "anomaly_count": 4,
+    "top_feature_importance": {
+        "name": "Contract_Month-to-month",
+        "score": 0.09367461507663621
+    },
+    "churn_rate": 42.5,
+    "mtm_pct": 51.0,
+    "dataset_statistics": {
+        "Number of Rows": 1000,
+        "Number of Columns": 21,
+        "Total Cells": 21000,
+        "Memory Usage (MB)": 0.27,
+        "Missing Cells": 0,
+        "Missing Cells (%)": "0.00%",
+        "Duplicate Rows": 0,
+        "Duplicate Rows (%)": "0.00%",
+        "Dataset Density": "100.00%",
+        "Health Score": 99.8,
+        "Dataset Fingerprint": "4ec6af2d73b0bbb71ea9047f3d8704c0",
+        "Partitions": 1,
+        "Health Label": "Excellent"
+    },
+    "dataset_health": {
+        "health_score": 99.8,
+        "health_label": "Excellent",
+        "missing_ratio": 0.0,
+        "duplicate_ratio": 0.0,
+        "anomaly_ratio": 0.004,
+        "completeness_ratio": 1.0
+    }
+}

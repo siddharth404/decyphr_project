@@ -61,16 +61,12 @@ def main():
     print("="*80 + "\n")
 
     try:
-        # --- UNCOMMENT THE ANALYSIS YOU WANT TO RUN ---
-
-        # Option 1: A comprehensive analysis on a single dataset.
-        decyphr.analyze(filepath=sample_filepath)
-
-        # Option 2: An analysis that includes a target variable.
-        # decyphr.analyze(
-        #     filepath=sample_filepath,
-        #     target="churned"
-        # )
+        # Option 3: Telco Customer Churn Demo
+        print("Decyphr 🚀: Running Telco Customer Churn Demo...")
+        decyphr.analyze(
+            filepath="telco_customer_churn.csv",
+            target="Churn"
+        )
 
     except Exception as e:
         print(f"An error occurred while running the decyphr analysis: {e}")

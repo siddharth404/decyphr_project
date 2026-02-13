@@ -1,0 +1,23 @@
+{
+    "timestamp": "2026-02-13 13:48:58",
+    "runtime_execution_time": 2.54,
+    "number_of_insights_generated": 1,
+    "number_of_recommendations_generated": 1,
+    "anomaly_count": 4,
+    "top_feature_importance": "N/A",
+    "dataset_statistics": {
+        "Number of Rows": 1000,
+        "Number of Columns": 21,
+        "Total Cells": 21000,
+        "Memory Usage (MB)": 0.27,
+        "Missing Cells": 0,
+        "Missing Cells (%)": "0.00%",
+        "Duplicate Rows": 0,
+        "Duplicate Rows (%)": "0.00%",
+        "Dataset Density": "100.00%",
+        "Health Score": 99.8,
+        "Dataset Fingerprint": "4ec6af2d73b0bbb71ea9047f3d8704c0",
+        "Partitions": 1,
+        "Health Label": "Good"
+    }
+}

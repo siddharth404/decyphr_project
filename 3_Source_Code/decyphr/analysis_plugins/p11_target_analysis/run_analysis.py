@@ -41,11 +41,17 @@ def analyze(ddf: dd.DataFrame, overview_results: Dict[str, Any], target_column: 
         print(f"     ... Using '{target_column}' as the target variable.")
         
         # Lazy import to handle missing libomp/lightgbm
+        model_lib = "lightgbm"
         try:
             import lightgbm as lgb
             from sklearn.model_selection import train_test_split
-        except ImportError as e:
-            return {"error": f"Target analysis skipped: Missing dependency ({e})"}
+        except ImportError:
+            try:
+                from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
+                from sklearn.model_selection import train_test_split
+                model_lib = "sklearn"
+            except ImportError as e:
+                return {"error": f"Target analysis skipped: Missing dependency ({e})"}
         except Exception as e:
             return {"error": f"Target analysis skipped: Initialization failed ({e})"}
 
@@ -72,17 +78,34 @@ def analyze(ddf: dd.DataFrame, overview_results: Dict[str, Any], target_column: 
         
         # --- 2. Determine Problem Type (Classification or Regression) ---
         target_details = column_details[target_column]
-        problem_type = "Regression"
-        if target_details['decyphr_type'] in ['Categorical', 'Categorical (Numeric)', 'Boolean']:
+        # Heuristic: if small unique count (<=20) or boolean/categorical type -> Classification
+        is_classification = target_details['decyphr_type'] in ['Categorical', 'Categorical (Numeric)', 'Boolean'] or \
+                            (target_details.get('nunique', 100) <= 20 and target_details['dtype'] != 'float64')
+
+        if is_classification:
             problem_type = "Classification"
+            # Encode target if it's string/object
+            if y.dtype == 'object' or y.dtype.name == 'category':
+                 from sklearn.preprocessing import LabelEncoder
+                 le = LabelEncoder()
+                 y = le.fit_transform(y.astype(str))
+        else:
+            problem_type = "Regression"
         
-        print(f"     ... Detected problem type: {problem_type}")
+        print(f"     ... Detected problem type: {problem_type} (using {model_lib})")
 
         # --- 3. Train Baseline Model ---
-        if problem_type == "Classification":
-            model = lgb.LGBMClassifier(random_state=42, n_estimators=100)
-        else: # Regression
-            model = lgb.LGBMRegressor(random_state=42, n_estimators=100)
+        if model_lib == "lightgbm":
+            if problem_type == "Classification":
+                model = lgb.LGBMClassifier(random_state=42, n_estimators=100, verbose=-1)
+            else: # Regression
+                model = lgb.LGBMRegressor(random_state=42, n_estimators=100, verbose=-1)
+        else:
+            # Fallback to sklearn
+            if problem_type == "Classification":
+                model = RandomForestClassifier(random_state=42, n_estimators=50, max_depth=10, n_jobs=-1)
+            else:
+                model = RandomForestRegressor(random_state=42, n_estimators=50, max_depth=10, n_jobs=-1)
         
         model.fit(X, y)
 

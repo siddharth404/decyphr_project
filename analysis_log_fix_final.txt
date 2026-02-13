@@ -1,0 +1,119 @@
+DEBUG: Starting analyze.py...
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/lib/_function_base_impl.py:571: RuntimeWarning: Mean of empty slice.
+  avg = a.mean(axis, **keepdims_kw)
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/_core/_methods.py:136: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pandas/core/frame.py:11218: RuntimeWarning: Degrees of freedom <= 0 for slice
+  base_cov = np.cov(mat.T, ddof=ddof)
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/lib/_function_base_impl.py:2914: RuntimeWarning: divide by zero encountered in divide
+  c *= np.true_divide(1, fact)
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/lib/_function_base_impl.py:2914: RuntimeWarning: invalid value encountered in multiply
+  c *= np.true_divide(1, fact)
+Decyphr 🔮 v0.1.0: Ready to analyze.
+Creating a sample dataset to analyze...
+Sample dataset saved to 'sample_data.csv'
+
+================================================================================
+                    RUNNING DECYPHR ANALYSIS
+================================================================================
+
+Decyphr 🚀: Running Telco Customer Churn Demo...
+Decyphr 🔮: Initializing data loading for 'telco_customer_churn.csv'...
+Decyphr 🔮: Detected CSV file. Loading with Dask backend...
+Decyphr 🔮: Successfully created Dask DataFrame.
+
+Decyphr ⚙️: Starting analysis pipeline...
+  -> Running plugin [1/19]: p01_overview
+     -> Running Enhanced Overview Analysis (30+ Features)...
+     ... Overview analysis complete.
+  -> Running plugin [2/19]: p02_univariate
+     -> Performing univariate analysis on numeric and categorical columns...
+DEBUG: Column Details: {'customerID': {'dtype': 'string', 'decyphr_type': 'Unique ID', 'nunique': 1000, 'missing': 0, 'memory_bytes': 21584, 'date_stats': {}, 'distribution_shape': 'N/A', 'string_stats': {}}, 'gender': {'dtype': 'string', 'decyphr_type': 'Boolean', 'nunique': 2, 'missing': 0, 'memory_bytes': 13022, 'date_stats': {}, 'distribution_shape': 'N/A', 'string_stats': {}}, 'SeniorCitizen': {'dtype': 'int64', 'decyphr_type': 'Boolean', 'nunique': 2, 'missing': 0, 'memory_bytes': 8000, 'date_stats': {}, 'distribution_shape': 'N/A', 'string_stats': {}}, 'Partner': {'dtype': 'string', 'decyphr_type': 'Boolean', 'nunique': 2, 'missing': 0, 'memory_bytes': 10524, 'date_stats': {}, 'distribution_shape': 'N/A', 'string_stats': {}}, 'Dependents': {'dtype': 'string', 'decyphr_type': 'Boolean', 'nunique': 2, 'missing': 0, 'memory_bytes': 10499, 'date_stats': {}, 'distribution_shape': 'N/A', 'string_stats': {}}, 'tenure': {'dtype': 'int64', 'decyphr_type': 'Numeric', 'nunique': 70, 'missing': 0, 'memory_bytes': 8000, 'date_stats': {}, 'distribution_shape': 'Non-Normal', 'string_stats': {}}, 'PhoneService': {'dtype': 'string', 'decyphr_type': 'Boolean', 'nunique': 2, 'missing': 0, 'memory_bytes': 10507, 'date_stats': {}, 'distribution_shape': 'N/A', 'string_stats': {}}, 'MultipleLines': {'dtype': 'string', 'decyphr_type': 'Categorical', 'nunique': 3, 'missing': 0, 'memory_bytes': 17167, 'date_stats': {}, 'distribution_shape': 'N/A', 'string_stats': {'min_len': 2, 'max_len': 16, 'avg_len': 9.2}}, 'InternetService': {'dtype': 'string', 'decyphr_type': 'Categorical', 'nunique': 3, 'missing': 0, 'memory_bytes': 14857, 'date_stats': {}, 'distribution_shape': 'N/A', 'string_stats': {'min_len': 2, 'max_len': 11, 'avg_len': 6.9}}, 'OnlineSecurity': {'dtype': 'string', 'decyphr_type': 'Categorical', 'nunique': 3, 'missing': 0, 'memory_bytes': 13517, 'date_stats': {}, 'distribution_shape': 'N/A', 'string_stats': {'min_len': 2, 'max_len': 19, 'avg_len': 5.5}}, 'OnlineBackup': {'dtype': 'string', 'decyphr_type': 'Categorical', 'nunique': 3, 'missing': 0, 'memory_bytes': 13506, 'date_stats': {}, 'distribution_shape': 'N/A', 'string_stats': {'min_len': 2, 'max_len': 19, 'avg_len': 5.5}}, 'DeviceProtection': {'dtype': 'string', 'decyphr_type': 'Categorical', 'nunique': 3, 'missing': 0, 'memory_bytes': 13533, 'date_stats': {}, 'distribution_shape': 'N/A', 'string_stats': {'min_len': 2, 'max_len': 19, 'avg_len': 5.5}}, 'TechSupport': {'dtype': 'string', 'decyphr_type': 'Categorical', 'nunique': 3, 'missing': 0, 'memory_bytes': 13499, 'date_stats': {}, 'distribution_shape': 'N/A', 'string_stats': {'min_len': 2, 'max_len': 19, 'avg_len': 5.5}}, 'StreamingTV': {'dtype': 'string', 'decyphr_type': 'Categorical', 'nunique': 3, 'missing': 0, 'memory_bytes': 13487, 'date_stats': {}, 'distribution_shape': 'N/A', 'string_stats': {'min_len': 2, 'max_len': 19, 'avg_len': 5.5}}, 'StreamingMovies': {'dtype': 'string', 'decyphr_type': 'Categorical', 'nunique': 3, 'missing': 0, 'memory_bytes': 13547, 'date_stats': {}, 'distribution_shape': 'N/A', 'string_stats': {'min_len': 2, 'max_len': 19, 'avg_len': 5.5}}, 'Contract': {'dtype': 'string', 'decyphr_type': 'Categorical', 'nunique': 3, 'missing': 0, 'memory_bytes': 19060, 'date_stats': {}, 'distribution_shape': 'N/A', 'string_stats': {'min_len': 8, 'max_len': 14, 'avg_len': 11.1}}, 'PaperlessBilling': {'dtype': 'string', 'decyphr_type': 'Boolean', 'nunique': 2, 'missing': 0, 'memory_bytes': 10498, 'date_stats': {}, 'distribution_shape': 'N/A', 'string_stats': {}}, 'PaymentMethod': {'dtype': 'string', 'decyphr_type': 'Categorical', 'nunique': 4, 'missing': 0, 'memory_bytes': 27435, 'date_stats': {}, 'distribution_shape': 'N/A', 'string_stats': {'min_len': 12, 'max_len': 25, 'avg_len': 19.4}}, 'MonthlyCharges': {'dtype': 'float64', 'decyphr_type': 'Numeric', 'nunique': 935, 'missing': 0, 'memory_bytes': 8000, 'date_stats': {}, 'distribution_shape': 'Non-Normal', 'string_stats': {}}, 'TotalCharges': {'dtype': 'float64', 'decyphr_type': 'Numeric', 'nunique': 998, 'missing': 0, 'memory_bytes': 8000, 'date_stats': {}, 'distribution_shape': 'Non-Normal', 'string_stats': {}}, 'Churn': {'dtype': 'string', 'decyphr_type': 'Boolean', 'nunique': 2, 'missing': 0, 'memory_bytes': 10425, 'date_stats': {}, 'distribution_shape': 'N/A', 'string_stats': {}}}
+     ... Analyzing 3 numeric columns.
+     ... Analyzing 17 categorical columns.
+     ... Univariate analysis complete.
+  -> Running plugin [3/19]: p03_data_quality
+     -> Performing data quality scan (constants, whitespace)...
+     ... Checking 10 text/categorical columns for whitespace.
+     ... Data quality scan complete.
+  -> Running plugin [4/19]: p04_advanced_outliers
+     -> Performing outlier detection scan (IQR method)...
+     ... Calculating quantiles for 3 numeric columns.
+     ... Outlier detection scan complete.
+  -> Running plugin [5/19]: p05_missing_values
+     -> Performing missing values scan...
+     ... No missing values found in the dataset. Excellent!
+  -> Running plugin [6/19]: p06_correlations
+     -> Performing correlation analysis (Pearson, Phik)...
+     ... Calculating Pearson correlation for 3 numeric columns.
+     ... Excluding 1 high-cardinality columns from Phik analysis for performance.
+     ... Calculating Phik correlation on a sample of the data.
+     ... Correlation analysis complete.
+  -> Running plugin [7/19]: p07_interactions
+     -> Identifying potential feature interactions...
+     ... Analyzing 3 numeric columns for interactions.
+     ... Analyzing 17 categorical columns for interactions.
+     ... Feature interaction analysis complete.
+  -> Running plugin [8/19]: p08_hypothesis_testing
+     -> Performing hypothesis testing (Chi-Squared, T-Test, ANOVA)...
+     ... Using a sample of up to 20000 rows for testing.
+     ... Running Chi-Squared tests on 17 categorical columns.
+     ... Running T-Tests/ANOVA on numeric/categorical pairs.
+     ... Hypothesis testing complete.
+  -> Running plugin [9/19]: p09_pca
+     -> Performing Principal Component Analysis (PCA)...
+     ... Analyzing 3 numeric columns for PCA.
+     ... PCA analysis complete.
+  -> Running plugin [10/19]: p10_clustering
+     -> Performing unsupervised clustering (K-Means)...
+     ... Analyzing 3 numeric columns for clustering.
+     ... Clustering analysis complete. Suggested k=4.
+  -> Running plugin [11/19]: p11_target_analysis
+     -> Performing target analysis (Feature Importance)...
+     ... Using 'Churn' as the target variable.
+     ... Using a sample of up to 75000 rows for model training.
+     ... Detected problem type: Classification (using sklearn)
+     ... Feature importance analysis complete.
+  -> Running plugin [12/19]: p12_explainability_shap
+     -> Performing explainability analysis (SHAP)...
+     ... Preparing data and retraining baseline model for SHAP.
+  -> Running plugin [13/19]: p14_deep_text_analysis
+     -> Performing deep text analysis (Sentiment, NER, Topics)...
+     ... Skipping text analysis. Install with 'pip install "decyphr[text]"' to enable.
+  -> Running plugin [14/19]: p15_timeseries
+     -> Performing time-series analysis...
+     ... Skipping time-series analysis. Expected 1 datetime column, but found 0.
+  -> Running plugin [15/19]: p16_geospatial
+     -> Performing geospatial analysis...
+     ... Skipping geospatial analysis. Install with 'pip install "decyphr[geo]"' to enable.
+  -> Running plugin [16/19]: p17_business_insights
+  -> Running plugin [17/19]: p18_decision_engine
+Decyphr ✅: Analysis pipeline complete.
+DEBUG: dataset_health = {'health_score': 99.8, 'health_label': 'Excellent', 'missing_ratio': 0.0, 'duplicate_ratio': 0.0, 'anomaly_ratio': 0.004, 'completeness_ratio': 1.0}
+Decyphr ⚠️: Failed to collect or save system metrics: name 'datetime' is not defined
+Decyphr 🏗️: Assembling high-performance HTML report...
+     -> Generating details & visualizations for overview...
+     -> Generating details for data quality issues...
+     -> Generating details & visualizations for outlier analysis...
+        - Creating details & box plot for 'tenure'
+        - Creating details & box plot for 'MonthlyCharges'
+        - Creating details & box plot for 'TotalCharges'
+     ... Details and visualizations for outlier analysis complete.
+     -> Generating details & visualizations for correlation analysis...
+        - Creating Pearson correlation heatmap.
+        - Creating Phik (φk) correlation heatmap.
+     ... Details and visualizations for correlation analysis complete.
+     -> Generating details for feature interaction suggestions...
+     ... Details for feature interactions complete.
+     -> Generating details for hypothesis testing results...
+     ... Details for hypothesis testing complete.
+     -> Generating details & visualizations for PCA results...
+     ... Details and visualizations for PCA complete.
+     -> Generating details & visualizations for clustering analysis...
+     ... Details and visualizations for clustering complete.
+     -> Generating details & visualizations for target analysis...
+     ... Details and visualization for feature importance complete.
+DEBUG: Builder received system_metrics: {'dataset_statistics': {'Number of Rows': 1000, 'Number of Columns': 21, 'Total Cells': 21000, 'Memory Usage (MB)': np.float64(0.27), 'Missing Cells': 0, 'Missing Cells (%)': '0.00%', 'Duplicate Rows': 0, 'Duplicate Rows (%)': '0.00%', 'Dataset Fingerprint': '4ec6af2d73b0bbb71ea9047f3d8704c0', 'Partitions': 1, 'Health Label': 'Excellent'}, 'dataset_health': {'health_score': None, 'health_label': None, 'missing_ratio': None, 'duplicate_ratio': None, 'anomaly_ratio': None, 'completeness_ratio': None}}
+Decyphr ✅: Report successfully generated at 'Reports/Report_107.html'
+
+Decyphr 📄: Report successfully saved to '/Users/siddharthkaushik/Decypher/decyphr_project/Reports/Report_107.html'

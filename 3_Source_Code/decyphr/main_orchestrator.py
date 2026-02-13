@@ -10,6 +10,7 @@ import os
 import json
 import time
 import numpy as np
+from datetime import datetime
 from typing import Dict, Any, Optional
 
 # --- Import Core Modules (Using Absolute Imports) ---
@@ -155,7 +156,7 @@ def run_analysis_pipeline(filepath: str, target: Optional[str] = None, compare_f
                 # heuristic: grab first significant correlation pair
                 pass # implementation detail omitted for brevity, stick to "N/A" if p11/p17 fail
 
-        # --- Health Score Calculation ---
+        # --- Health Score and Data Quality Metrics ---
         try:
             # Parse metrics from string "X%" to float
             def parse_pct(val):
@@ -170,43 +171,105 @@ def run_analysis_pipeline(filepath: str, target: Optional[str] = None, compare_f
             num_rows = p01_stats.get("Number of Rows", 0)
             if num_rows > 0:
                 anomaly_pct = (anomaly_count / num_rows) * 100
+                anomaly_ratio = anomaly_count / num_rows
             else:
                 anomaly_pct = 0
+                anomaly_ratio = 0.0
 
             # Formula: 100 - (missing) - (duplicate) - (0.5 * anomaly)
             raw_score = 100 - missing_pct - duplicate_pct - (0.5 * anomaly_pct)
             health_score = max(0, min(100, round(raw_score, 1)))
 
             # Determine Label (Updated Thresholds)
-            if health_score >= 80:
+            if health_score >= 90:
+                health_label = "Excellent"
+            elif health_score >= 80:
                 health_label = "Good"
-            elif health_score >= 50:
-                health_label = "Moderate"
+            elif health_score >= 60:
+                health_label = "Fair"
             else:
                 health_label = "Poor"
 
-            # Update p01_stats so valid value appears in report
+            # Create standardized dataset_health object with EXPLICIT conversions
+            # Use float() to ensure no numpy types escape
+            dataset_health = {
+                "health_score": float(health_score),
+                "health_label": str(health_label),
+                "missing_ratio": float(round(missing_pct / 100, 4)),
+                "duplicate_ratio": float(round(duplicate_pct / 100, 4)),
+                "anomaly_ratio": float(round(anomaly_ratio, 4)),
+                "completeness_ratio": float(round(1.0 - (missing_pct / 100), 4))
+            }
+            
+            # Update p01_stats so valid value appears in report (legacy support)
             p01_stats["Health Score"] = health_score
             p01_stats["Health Label"] = health_label
             
         except Exception as e:
             print(f"Decyphr ⚠️: Health score calculation failed: {e}")
+            dataset_health = {
+                "health_score": None,
+                "health_label": None,
+                "missing_ratio": None,
+                "duplicate_ratio": None,
+                "anomaly_ratio": None,
+                "completeness_ratio": None
+            }
             # If calculation fails, ensure consistent "N/A" state
             p01_stats["Health Score"] = None  # None triggers "Not Available" in template
             p01_stats["Health Label"] = None  # Explicitly None to trigger hiding in template
 
 
+        # --- 4. Custom KPIs for Telco Demo ---
+        churn_rate = "N/A"
+        mtm_pct = "N/A"
+        
+        # Get column names from overview_results
+        columns = list(overview_results.get("column_details", {}).keys())
+
+        # Check if Churn column exists (case-insensitive)
+        churn_col = next((c for c in columns if c.lower() == 'churn'), None)
+        if churn_col:
+             # Assuming 'Yes'/'No' or 1/0
+             try:
+                 churn_series = ddf[churn_col].compute()
+                 churn_count = churn_series.apply(lambda x: 1 if str(x).lower() in ['yes', '1', 'true'] else 0).sum()
+                 total_count = len(churn_series)
+                 if total_count > 0:
+                     churn_rate = (churn_count / total_count) * 100
+                 else:
+                     churn_rate = 0.0
+             except Exception as e:
+                 print(f"Warning: Could not calc churn rate: {e}")
+
+        # Check for Contract column
+        contract_col = next((c for c in columns if c.lower() == 'contract'), None)
+        if contract_col:
+            try:
+                contract_series = ddf[contract_col].compute()
+                mtm_count = contract_series.apply(lambda x: 1 if 'month' in str(x).lower() else 0).sum()
+                total_count = len(contract_series)
+                if total_count > 0:
+                    mtm_pct = (mtm_count / total_count) * 100
+                else:
+                    mtm_pct = 0.0
+            except Exception as e:
+                print(f"Warning: Could not calc MTM pct: {e}")
+
         system_metrics = {
-             "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
-             "runtime_execution_time": execution_time,
-             "number_of_insights_generated": insights_count,
-             "number_of_recommendations_generated": recommendations_count,
-             "anomaly_count": anomaly_count,
-             "top_feature_importance": top_feature,
-             "dataset_statistics": p01_stats
+            "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            "runtime_execution_time": round(time.time() - start_time, 2),
+            "number_of_insights_generated": len(p17_results.get("insights", [])),
+            "number_of_recommendations_generated": len(p18_results.get("recommendations", [])),
+            "anomaly_count": anomaly_count,
+            "top_feature_importance": top_feature, # Pass the extracted feature object/string
+            "churn_rate": round(churn_rate, 1) if isinstance(churn_rate, float) else "N/A",
+            "mtm_pct": round(mtm_pct, 1) if isinstance(mtm_pct, float) else "N/A",
+            "dataset_statistics": p01_stats,
+            "dataset_health": dataset_health
         }
 
-        # Store in analysis_results for builder to use
+        # Store in analysis_results for builder to use (CRITICAL: Do this before potential JSON errors)
         analysis_results["system_metrics"] = system_metrics
 
         # Export to JSON
@@ -232,6 +295,16 @@ def run_analysis_pipeline(filepath: str, target: Optional[str] = None, compare_f
 
     except Exception as e:
         print(f"Decyphr ⚠️: Failed to collect or save system metrics: {e}")
+        # Even if metrics collection failed, try to pass whatever we have or an empty dict
+        if "system_metrics" not in analysis_results:
+             analysis_results["system_metrics"] = {
+                 "dataset_statistics": p01_stats,
+                 "dataset_health": {
+                    "health_score": None, "health_label": None, 
+                    "missing_ratio": None, "duplicate_ratio": None, 
+                    "anomaly_ratio": None, "completeness_ratio": None
+                 }
+             }
 
 
     from decyphr import __version__ as decyphr_version

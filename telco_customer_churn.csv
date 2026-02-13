@@ -1,0 +1,1001 @@
+customerID,gender,SeniorCitizen,Partner,Dependents,tenure,PhoneService,MultipleLines,InternetService,OnlineSecurity,OnlineBackup,DeviceProtection,TechSupport,StreamingTV,StreamingMovies,Contract,PaperlessBilling,PaymentMethod,MonthlyCharges,TotalCharges,Churn
+2824-Alpha-0,Female,0,Yes,Yes,45,Yes,Yes,DSL,No,Yes,Yes,Yes,Yes,Yes,Month-to-month,Yes,Mailed check,105.41,4743.45,Yes
+9928-Beta-1,Male,1,No,Yes,52,Yes,No,DSL,No,No,Yes,Yes,No,Yes,Month-to-month,Yes,Credit card (automatic),79.34,4125.68,No
+2584-Beta-2,Female,1,Yes,No,16,Yes,No,DSL,Yes,No,No,Yes,Yes,Yes,Month-to-month,Yes,Bank transfer (automatic),91.18,1458.88,Yes
+2307-Alpha-3,Male,1,No,No,41,No,No phone service,DSL,Yes,No,No,Yes,No,Yes,Month-to-month,Yes,Mailed check,58.47,2397.27,No
+3677-Beta-4,Female,1,Yes,No,32,Yes,Yes,DSL,Yes,No,No,No,Yes,Yes,Month-to-month,No,Mailed check,93.9,3004.8,Yes
+9179-Beta-5,Female,0,No,Yes,39,Yes,No,Fiber optic,No,No,No,Yes,Yes,No,Two year,Yes,Electronic check,93.64,3651.96,No
+2796-Alpha-6,Male,1,Yes,No,43,No,No phone service,DSL,No,No,Yes,Yes,No,No,Month-to-month,Yes,Bank transfer (automatic),45.29,1947.47,No
+8123-Alpha-7,Female,0,No,Yes,22,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Mailed check,34.72,763.84,No
+7126-Alpha-8,Male,1,No,Yes,20,Yes,No,Fiber optic,No,Yes,Yes,Yes,Yes,Yes,One year,No,Electronic check,111.57,2231.4,No
+9727-Alpha-9,Male,1,Yes,No,39,No,No phone service,Fiber optic,Yes,Yes,No,No,No,No,One year,No,Electronic check,67.88,2647.32,No
+5061-Alpha-10,Male,1,Yes,Yes,24,Yes,Yes,Fiber optic,Yes,Yes,Yes,Yes,Yes,No,One year,Yes,Mailed check,117.18,2812.32,No
+5562-Gamma-11,Female,0,Yes,No,52,Yes,No,Fiber optic,No,Yes,Yes,Yes,No,No,Two year,No,Credit card (automatic),92.65,4817.8,Yes
+8651-Gamma-12,Male,0,Yes,No,58,No,No phone service,DSL,Yes,Yes,Yes,Yes,No,Yes,Month-to-month,No,Mailed check,70.08,4064.64,No
+5563-Beta-13,Male,0,No,Yes,40,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Mailed check,49.19,1967.6,Yes
+3724-Beta-14,Female,1,Yes,No,55,Yes,Yes,DSL,No,Yes,No,No,No,No,One year,No,Credit card (automatic),69.42,3818.1,Yes
+3536-Alpha-15,Female,0,Yes,Yes,33,No,No phone service,Fiber optic,Yes,Yes,No,Yes,Yes,Yes,Month-to-month,Yes,Electronic check,94.06,3103.98,No
+2113-Gamma-16,Male,1,Yes,Yes,9,Yes,Yes,Fiber optic,No,No,No,Yes,No,Yes,One year,No,Credit card (automatic),101.87,916.83,Yes
+3144-Gamma-17,Female,1,No,Yes,27,Yes,No,Fiber optic,Yes,Yes,Yes,No,Yes,No,Month-to-month,Yes,Mailed check,104.75,2828.25,Yes
+7054-Beta-18,Male,1,No,Yes,21,No,No phone service,Fiber optic,Yes,Yes,No,Yes,Yes,Yes,Month-to-month,No,Bank transfer (automatic),93.45,1962.45,No
+4450-Gamma-19,Female,0,No,No,55,No,No phone service,DSL,Yes,Yes,No,No,Yes,Yes,One year,No,Mailed check,68.39,3761.45,No
+5291-Alpha-20,Female,1,Yes,Yes,29,Yes,Yes,DSL,Yes,No,Yes,No,Yes,Yes,One year,No,Bank transfer (automatic),97.7,2833.3,No
+1653-Beta-21,Male,0,Yes,No,48,No,No phone service,Fiber optic,Yes,Yes,Yes,Yes,No,Yes,One year,Yes,Bank transfer (automatic),89.81,4310.88,No
+7745-Gamma-22,Male,1,Yes,Yes,35,No,No phone service,DSL,Yes,No,Yes,Yes,No,No,Two year,No,Mailed check,53.84,1884.4,Yes
+4652-Alpha-23,Male,1,No,No,11,Yes,No,DSL,No,No,No,Yes,Yes,No,One year,Yes,Bank transfer (automatic),74.2,816.2,No
+1626-Alpha-24,Female,1,No,No,59,Yes,No,Fiber optic,Yes,No,Yes,No,Yes,Yes,One year,No,Credit card (automatic),107.76,6357.84,Yes
+2146-Gamma-25,Female,1,Yes,No,26,No,No phone service,Fiber optic,No,No,No,No,Yes,Yes,One year,No,Credit card (automatic),78.93,2052.18,No
+3851-Gamma-26,Female,1,Yes,No,11,No,No phone service,DSL,Yes,No,No,No,No,No,Month-to-month,Yes,Credit card (automatic),41.11,452.21,No
+3780-Gamma-27,Male,1,No,Yes,46,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Mailed check,39.68,1825.28,No
+3414-Alpha-28,Male,0,No,Yes,49,No,No phone service,DSL,No,Yes,No,No,No,Yes,One year,Yes,Electronic check,53.6,2626.4,No
+2746-Beta-29,Male,0,No,Yes,41,Yes,Yes,Fiber optic,No,Yes,No,No,No,No,One year,No,Mailed check,89.96,3688.36,No
+8777-Beta-30,Female,0,No,No,28,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,No,Electronic check,39.28,1099.84,No
+5681-Alpha-31,Female,1,No,Yes,40,Yes,Yes,Fiber optic,Yes,No,Yes,Yes,Yes,No,Month-to-month,No,Bank transfer (automatic),111.28,4451.2,Yes
+9890-Beta-32,Female,0,Yes,No,29,No,No phone service,DSL,Yes,No,No,Yes,No,No,Two year,No,Credit card (automatic),45.02,1305.58,No
+9818-Gamma-33,Male,1,Yes,No,54,No,No phone service,Fiber optic,No,Yes,No,No,No,Yes,Month-to-month,No,Mailed check,73.34,3960.36,Yes
+9751-Alpha-34,Female,0,Yes,No,61,Yes,No,DSL,Yes,Yes,No,No,No,Yes,Month-to-month,No,Bank transfer (automatic),78.62,4795.82,Yes
+6529-Beta-35,Female,1,No,Yes,32,No,No phone service,DSL,Yes,Yes,No,Yes,Yes,Yes,Month-to-month,Yes,Mailed check,76.78,2456.96,No
+4266-Alpha-36,Male,0,Yes,No,20,Yes,Yes,DSL,No,No,No,Yes,Yes,Yes,Month-to-month,No,Electronic check,94.31,1886.2,No
+1420-Beta-37,Female,1,Yes,Yes,33,Yes,Yes,Fiber optic,No,Yes,Yes,No,No,No,Month-to-month,Yes,Bank transfer (automatic),96.74,3192.42,Yes
+1207-Beta-38,Female,0,No,No,23,No,No phone service,Fiber optic,Yes,No,Yes,No,No,No,One year,No,Bank transfer (automatic),68.51,1575.73,No
+6280-Alpha-39,Male,1,No,Yes,17,No,No phone service,DSL,No,No,Yes,No,No,Yes,One year,No,Mailed check,53.48,909.16,No
+6813-Beta-40,Female,1,No,Yes,67,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,Yes,Credit card (automatic),47.81,3203.27,No
+9004-Gamma-41,Male,1,No,No,36,Yes,Yes,Fiber optic,No,Yes,No,Yes,No,No,One year,No,Bank transfer (automatic),98.95,3562.2,No
+7971-Gamma-42,Female,1,No,No,39,No,No phone service,Fiber optic,No,Yes,Yes,Yes,No,Yes,Two year,Yes,Mailed check,83.21,3245.19,No
+4545-Gamma-43,Female,1,No,Yes,31,Yes,No,Fiber optic,Yes,No,Yes,No,Yes,Yes,One year,No,Electronic check,107.85,3343.35,No
+1893-Gamma-44,Female,0,No,Yes,51,Yes,No,Fiber optic,No,No,No,No,Yes,Yes,Month-to-month,No,Credit card (automatic),98.9,5043.9,No
+2869-Alpha-45,Female,1,Yes,Yes,47,Yes,Yes,Fiber optic,No,Yes,Yes,Yes,No,Yes,One year,No,Credit card (automatic),116.43,5472.21,No
+8253-Beta-46,Female,1,Yes,Yes,36,Yes,Yes,DSL,No,Yes,Yes,Yes,Yes,Yes,One year,Yes,Electronic check,104.2,3751.2,No
+7693-Beta-47,Female,1,Yes,Yes,29,No,No phone service,DSL,No,No,Yes,Yes,No,Yes,Month-to-month,No,Electronic check,57.12,1656.48,No
+9922-Alpha-48,Male,1,Yes,Yes,27,Yes,Yes,Fiber optic,No,No,No,Yes,No,No,Month-to-month,No,Bank transfer (automatic),90.81,2451.87,No
+9199-Gamma-49,Female,1,Yes,Yes,23,No,No phone service,Fiber optic,No,No,Yes,Yes,Yes,Yes,Month-to-month,No,Electronic check,87.93,2022.39,Yes
+3870-Beta-50,Female,1,Yes,No,53,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Credit card (automatic),19.63,1040.39,Yes
+6700-Beta-51,Female,1,Yes,Yes,28,No,No phone service,Fiber optic,No,No,No,No,Yes,No,Two year,Yes,Bank transfer (automatic),68.28,1911.84,No
+5135-Beta-52,Male,1,Yes,No,42,No,No phone service,Fiber optic,Yes,Yes,No,No,No,Yes,Two year,Yes,Bank transfer (automatic),82.63,3470.46,Yes
+9998-Alpha-53,Female,1,No,Yes,61,Yes,Yes,DSL,Yes,No,Yes,No,Yes,Yes,Two year,Yes,Credit card (automatic),96.2,5868.2,No
+2924-Gamma-54,Male,1,No,No,21,No,No phone service,Fiber optic,No,No,Yes,No,Yes,No,Month-to-month,Yes,Mailed check,70.61,1482.81,No
+2143-Beta-55,Female,1,No,Yes,43,No,No phone service,DSL,No,No,Yes,No,No,No,One year,No,Credit card (automatic),42.31,1819.33,No
+8460-Beta-56,Male,0,No,Yes,21,No,No phone service,DSL,Yes,No,No,No,No,Yes,Two year,No,Electronic check,53.26,1118.46,No
+3068-Gamma-57,Female,0,No,Yes,44,No,No phone service,DSL,Yes,Yes,No,Yes,Yes,No,Two year,No,Bank transfer (automatic),64.5,2838.0,No
+7512-Gamma-58,Male,1,No,No,60,No,No phone service,DSL,Yes,Yes,Yes,No,Yes,Yes,One year,No,Electronic check,76.35,4581.0,No
+2646-Beta-59,Male,1,Yes,Yes,17,No,No phone service,Fiber optic,Yes,No,No,No,No,Yes,Month-to-month,Yes,Credit card (automatic),76.76,1304.92,Yes
+3950-Alpha-60,Male,0,No,Yes,29,No,No phone service,DSL,Yes,Yes,No,No,No,No,Month-to-month,Yes,Credit card (automatic),50.37,1460.73,Yes
+5712-Gamma-61,Male,0,No,No,13,No,No phone service,Fiber optic,No,No,No,No,Yes,No,Month-to-month,No,Electronic check,69.69,905.97,Yes
+4886-Beta-62,Female,1,No,Yes,12,No,No phone service,Fiber optic,No,Yes,Yes,No,No,Yes,Month-to-month,No,Mailed check,75.64,907.68,Yes
+4115-Gamma-63,Female,0,Yes,Yes,40,No,No phone service,Fiber optic,No,Yes,No,Yes,Yes,No,Two year,No,Credit card (automatic),76.37,3054.8,No
+3877-Alpha-64,Male,1,No,Yes,17,No,No phone service,DSL,No,No,No,Yes,No,Yes,Month-to-month,Yes,Mailed check,53.04,901.68,Yes
+7511-Gamma-65,Female,0,No,Yes,8,No,No phone service,Fiber optic,Yes,No,No,No,No,No,One year,Yes,Mailed check,63.32,506.56,Yes
+8724-Alpha-66,Female,0,Yes,No,38,No,No phone service,DSL,No,Yes,Yes,Yes,Yes,No,Month-to-month,No,Electronic check,62.7,2382.6,No
+2592-Alpha-67,Male,1,No,No,2,No,No phone service,DSL,Yes,No,Yes,No,No,No,One year,Yes,Bank transfer (automatic),47.75,95.5,No
+4559-Beta-68,Female,0,No,Yes,53,No,No phone service,Fiber optic,No,Yes,No,No,Yes,Yes,Month-to-month,No,Electronic check,81.74,4332.22,Yes
+4475-Gamma-69,Male,0,No,Yes,22,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,Yes,Mailed check,45.09,991.98,No
+4538-Alpha-70,Female,0,Yes,No,20,Yes,Yes,Fiber optic,No,Yes,Yes,Yes,Yes,Yes,One year,No,Mailed check,120.18,2403.6,No
+6304-Alpha-71,Male,1,Yes,Yes,23,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,Yes,Electronic check,22.07,507.61,No
+8802-Beta-72,Female,0,No,Yes,34,Yes,No,DSL,No,Yes,Yes,No,No,No,Two year,Yes,Credit card (automatic),68.35,2323.9,No
+8267-Alpha-73,Male,1,Yes,Yes,27,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,No,Credit card (automatic),36.43,983.61,No
+9692-Beta-74,Female,1,Yes,Yes,56,Yes,No,Fiber optic,No,Yes,No,No,No,No,Month-to-month,No,Electronic check,81.92,4587.52,Yes
+6120-Beta-75,Female,1,No,Yes,64,No,No phone service,Fiber optic,Yes,Yes,Yes,Yes,No,Yes,Month-to-month,No,Mailed check,88.35,5654.4,No
+1982-Gamma-76,Female,0,No,No,54,No,No phone service,Fiber optic,Yes,No,No,No,Yes,Yes,Month-to-month,Yes,Credit card (automatic),85.26,4604.04,Yes
+4674-Alpha-77,Female,1,Yes,No,22,Yes,No,Fiber optic,Yes,No,Yes,Yes,No,No,Month-to-month,No,Bank transfer (automatic),96.13,2114.86,No
+1100-Alpha-78,Male,1,Yes,Yes,50,Yes,Yes,DSL,Yes,No,No,No,No,Yes,One year,No,Bank transfer (automatic),84.59,4229.5,Yes
+6314-Gamma-79,Male,0,Yes,Yes,47,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,No,Credit card (automatic),46.38,2179.86,No
+7947-Beta-80,Female,1,No,Yes,51,Yes,No,Fiber optic,No,Yes,No,No,No,Yes,Month-to-month,Yes,Credit card (automatic),89.51,4565.01,Yes
+1897-Alpha-81,Male,1,Yes,Yes,27,No,No phone service,Fiber optic,No,No,Yes,Yes,No,No,Two year,Yes,Mailed check,67.81,1830.87,No
+7229-Gamma-82,Male,1,Yes,No,8,Yes,No,Fiber optic,Yes,No,Yes,No,No,No,One year,No,Bank transfer (automatic),88.61,708.88,Yes
+2887-Beta-83,Male,1,Yes,No,29,No,No phone service,Fiber optic,Yes,No,Yes,Yes,No,No,One year,Yes,Credit card (automatic),71.54,2074.66,No
+6083-Gamma-84,Female,0,No,Yes,55,Yes,Yes,DSL,Yes,No,No,Yes,Yes,Yes,Month-to-month,Yes,Bank transfer (automatic),96.36,5299.8,Yes
+4232-Alpha-85,Male,0,Yes,No,31,No,No phone service,Fiber optic,No,No,No,Yes,No,Yes,Month-to-month,No,Credit card (automatic),75.96,2354.76,Yes
+5961-Beta-86,Male,1,Yes,No,5,No,No phone service,DSL,No,Yes,Yes,No,No,Yes,One year,Yes,Credit card (automatic),63.14,315.7,Yes
+8581-Gamma-87,Male,1,Yes,No,37,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,Yes,Electronic check,19.7,728.9,Yes
+8381-Alpha-88,Female,0,Yes,Yes,42,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,No,Mailed check,36.27,1523.34,No
+6962-Beta-89,Female,1,No,No,34,Yes,No,Fiber optic,Yes,No,Yes,No,No,No,Month-to-month,Yes,Bank transfer (automatic),90.44,3074.96,Yes
+2335-Gamma-90,Male,1,No,No,50,Yes,Yes,Fiber optic,No,No,No,Yes,Yes,No,Month-to-month,No,Electronic check,101.58,5079.0,Yes
+6940-Beta-91,Male,0,No,No,57,Yes,Yes,Fiber optic,Yes,Yes,Yes,No,Yes,Yes,Two year,No,Mailed check,121.7,6936.9,No
+7172-Alpha-92,Male,0,Yes,No,44,Yes,No,DSL,No,Yes,No,No,No,Yes,Two year,Yes,Bank transfer (automatic),72.71,3199.24,Yes
+8684-Alpha-93,Female,1,No,No,59,No,No phone service,DSL,No,Yes,Yes,Yes,No,Yes,Two year,No,Bank transfer (automatic),62.1,3663.9,Yes
+2680-Gamma-94,Male,1,Yes,Yes,39,No,No phone service,Fiber optic,No,Yes,No,Yes,Yes,No,One year,No,Electronic check,78.46,3059.94,No
+7797-Alpha-95,Female,1,Yes,No,70,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,Yes,Electronic check,35.43,2480.1,No
+6221-Alpha-96,Female,0,Yes,Yes,16,No,No phone service,DSL,No,Yes,No,No,Yes,Yes,Month-to-month,Yes,Bank transfer (automatic),65.79,1052.64,No
+4533-Alpha-97,Female,0,No,Yes,23,No,No phone service,DSL,Yes,Yes,Yes,No,No,Yes,Month-to-month,Yes,Credit card (automatic),64.67,1487.41,No
+9782-Alpha-98,Male,0,No,No,57,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Credit card (automatic),39.48,2250.36,Yes
+4068-Gamma-99,Male,1,Yes,Yes,58,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Electronic check,16.84,976.72,Yes
+7338-Beta-100,Female,0,No,Yes,34,No,No phone service,Fiber optic,Yes,Yes,No,Yes,Yes,No,Month-to-month,No,Mailed check,86.76,2949.84,No
+8612-Gamma-101,Female,0,Yes,Yes,24,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,Yes,Bank transfer (automatic),17.52,420.48,No
+4302-Alpha-102,Male,0,No,No,56,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,No,Bank transfer (automatic),19.74,1105.44,No
+1599-Gamma-103,Male,1,No,Yes,40,No,No phone service,DSL,No,Yes,No,No,No,No,One year,No,Bank transfer (automatic),44.07,1762.8,No
+4060-Beta-104,Female,1,No,Yes,10,No,No phone service,Fiber optic,Yes,No,Yes,No,No,Yes,Month-to-month,Yes,Bank transfer (automatic),80.22,802.2,No
+5843-Beta-105,Female,1,Yes,No,24,No,No phone service,DSL,No,Yes,No,No,No,Yes,One year,Yes,Credit card (automatic),53.62,1286.88,No
+6952-Gamma-106,Male,0,Yes,No,39,Yes,Yes,DSL,Yes,Yes,No,No,No,Yes,One year,Yes,Credit card (automatic),84.55,3297.45,No
+7077-Beta-107,Female,0,Yes,No,40,No,No phone service,DSL,No,No,Yes,Yes,Yes,Yes,Month-to-month,No,Credit card (automatic),67.1,2684.0,Yes
+2929-Beta-108,Female,1,Yes,No,25,No,No phone service,DSL,Yes,Yes,Yes,Yes,No,Yes,One year,No,Electronic check,66.84,1671.0,No
+6236-Gamma-109,Female,0,No,No,12,Yes,Yes,Fiber optic,No,Yes,Yes,Yes,Yes,Yes,One year,No,Electronic check,123.49,1481.88,No
+6912-Gamma-110,Female,1,Yes,Yes,14,Yes,No,Fiber optic,No,No,No,No,Yes,Yes,Two year,No,Electronic check,99.49,1392.86,No
+8372-Beta-111,Female,0,Yes,Yes,31,No,No phone service,DSL,Yes,Yes,Yes,No,Yes,Yes,Month-to-month,No,Mailed check,74.11,2297.41,Yes
+6669-Gamma-112,Female,0,No,Yes,55,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,Yes,Bank transfer (automatic),20.36,1119.8,No
+9740-Alpha-113,Male,0,Yes,No,36,Yes,Yes,DSL,Yes,Yes,No,Yes,No,Yes,One year,No,Bank transfer (automatic),91.38,3289.68,Yes
+5949-Beta-114,Male,1,No,No,19,Yes,Yes,Fiber optic,Yes,No,No,No,No,Yes,One year,No,Mailed check,100.46,1908.74,No
+6121-Gamma-115,Female,1,No,Yes,65,No,No phone service,DSL,Yes,No,Yes,No,Yes,No,Month-to-month,No,Mailed check,58.41,3796.65,No
+3308-Alpha-116,Male,1,No,No,55,Yes,Yes,Fiber optic,No,No,Yes,Yes,No,No,Two year,No,Bank transfer (automatic),100.07,5503.85,No
+9148-Alpha-117,Male,1,No,Yes,16,Yes,No,DSL,Yes,Yes,No,No,No,No,Month-to-month,Yes,Electronic check,65.56,1048.96,Yes
+8060-Alpha-118,Female,1,No,No,23,Yes,No,Fiber optic,Yes,Yes,No,No,Yes,No,Month-to-month,No,Bank transfer (automatic),98.72,2270.56,No
+2946-Alpha-119,Male,1,No,No,51,No,No phone service,Fiber optic,Yes,Yes,No,Yes,Yes,Yes,Month-to-month,Yes,Bank transfer (automatic),93.58,4772.58,Yes
+8761-Gamma-120,Female,0,Yes,No,52,No,No phone service,DSL,Yes,No,No,No,No,No,One year,No,Electronic check,42.19,2193.88,No
+7035-Beta-121,Male,1,No,Yes,58,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Mailed check,18.66,1082.28,No
+1841-Gamma-122,Female,0,No,Yes,20,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,Yes,Mailed check,46.47,929.4,No
+1310-Beta-123,Female,1,Yes,No,23,Yes,No,Fiber optic,No,Yes,Yes,Yes,No,No,Month-to-month,No,Bank transfer (automatic),93.18,2143.14,Yes
+3837-Beta-124,Female,1,No,No,60,Yes,Yes,Fiber optic,No,No,Yes,No,No,Yes,Month-to-month,No,Bank transfer (automatic),102.7,6162.0,Yes
+8861-Beta-125,Female,1,Yes,No,18,No,No phone service,DSL,No,Yes,No,Yes,No,Yes,Two year,No,Credit card (automatic),59.43,1069.74,No
+5201-Gamma-126,Female,0,Yes,No,40,No,No phone service,Fiber optic,Yes,Yes,Yes,Yes,Yes,Yes,One year,Yes,Electronic check,99.26,3970.4,No
+2641-Beta-127,Female,1,Yes,Yes,32,Yes,Yes,DSL,No,No,No,Yes,No,No,Two year,No,Electronic check,72.31,2313.92,Yes
+2465-Gamma-128,Male,0,Yes,No,49,Yes,Yes,DSL,No,No,Yes,No,Yes,Yes,One year,No,Electronic check,92.34,4524.66,No
+6489-Beta-129,Female,1,Yes,No,29,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Electronic check,19.47,564.63,Yes
+6417-Alpha-130,Female,1,Yes,Yes,45,No,No phone service,Fiber optic,No,Yes,Yes,No,No,No,Month-to-month,Yes,Credit card (automatic),68.64,3088.8,Yes
+2562-Alpha-131,Male,1,No,Yes,66,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,No,Mailed check,37.13,2450.58,No
+8319-Beta-132,Female,1,Yes,No,24,No,No phone service,Fiber optic,Yes,Yes,Yes,No,No,Yes,Month-to-month,No,Bank transfer (automatic),83.12,1994.88,No
+2923-Gamma-133,Female,1,Yes,Yes,28,Yes,No,Fiber optic,Yes,No,No,No,No,Yes,One year,Yes,Electronic check,94.67,2650.76,Yes
+9609-Beta-134,Female,0,Yes,Yes,46,Yes,Yes,Fiber optic,Yes,No,No,Yes,Yes,No,Month-to-month,Yes,Credit card (automatic),107.16,4929.36,No
+1911-Beta-135,Male,1,No,Yes,58,No,No phone service,Fiber optic,No,Yes,No,No,Yes,Yes,Two year,Yes,Electronic check,86.14,4996.12,Yes
+7941-Beta-136,Male,0,Yes,No,35,Yes,No,Fiber optic,No,Yes,Yes,No,No,No,One year,No,Credit card (automatic),88.64,3102.4,No
+7154-Alpha-137,Male,1,Yes,Yes,54,No,No phone service,Fiber optic,Yes,Yes,Yes,Yes,No,No,Month-to-month,No,Credit card (automatic),81.85,4419.9,Yes
+4762-Alpha-138,Female,1,Yes,No,55,Yes,Yes,DSL,Yes,No,Yes,Yes,Yes,Yes,Month-to-month,Yes,Electronic check,101.35,5574.25,No
+8314-Gamma-139,Male,0,Yes,No,3,No,No phone service,DSL,Yes,Yes,Yes,Yes,No,Yes,Month-to-month,No,Bank transfer (automatic),69.1,207.3,Yes
+4881-Beta-140,Male,0,No,No,54,No,No phone service,Fiber optic,Yes,Yes,No,No,Yes,No,Month-to-month,No,Bank transfer (automatic),78.67,4248.18,Yes
+7821-Beta-141,Male,1,No,Yes,15,No,No phone service,Fiber optic,Yes,Yes,No,Yes,No,Yes,Two year,No,Credit card (automatic),82.69,1240.35,Yes
+9683-Alpha-142,Female,0,No,Yes,42,No,No phone service,DSL,Yes,No,No,Yes,Yes,Yes,One year,No,Credit card (automatic),69.65,2925.3,No
+1647-Alpha-143,Male,0,No,Yes,29,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,No,Electronic check,17.18,498.22,No
+4470-Alpha-144,Male,1,Yes,Yes,63,No,No phone service,DSL,Yes,No,No,No,No,No,Month-to-month,No,Bank transfer (automatic),41.95,2642.85,No
+6892-Gamma-145,Female,1,Yes,No,23,No,No phone service,Fiber optic,Yes,No,No,No,Yes,Yes,One year,Yes,Electronic check,82.1,1888.3,No
+5272-Gamma-146,Female,1,Yes,Yes,35,No,No phone service,DSL,Yes,No,Yes,No,No,No,Month-to-month,No,Credit card (automatic),47.74,1670.9,No
+8550-Alpha-147,Female,0,Yes,No,16,Yes,Yes,Fiber optic,Yes,Yes,Yes,Yes,No,Yes,Two year,Yes,Electronic check,120.4,1926.4,Yes
+3474-Alpha-148,Male,1,No,Yes,27,No,No phone service,Fiber optic,No,Yes,Yes,No,Yes,Yes,Two year,No,Bank transfer (automatic),87.9,2373.3,Yes
+1280-Gamma-149,Female,0,Yes,Yes,30,Yes,Yes,DSL,Yes,No,No,No,No,Yes,One year,No,Credit card (automatic),85.01,2550.3,No
+8520-Gamma-150,Male,0,No,Yes,39,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Credit card (automatic),48.34,1885.26,Yes
+7179-Gamma-151,Female,0,Yes,Yes,19,Yes,No,Fiber optic,No,No,Yes,Yes,Yes,Yes,Two year,No,Bank transfer (automatic),104.77,1990.63,No
+1762-Alpha-152,Female,0,Yes,No,9,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Credit card (automatic),47.4,426.6,Yes
+2260-Beta-153,Male,0,No,No,42,No,No phone service,Fiber optic,Yes,Yes,No,Yes,Yes,No,Month-to-month,Yes,Electronic check,82.39,3460.38,Yes
+6580-Gamma-154,Female,1,Yes,No,13,No,No phone service,Fiber optic,No,Yes,No,No,No,Yes,Two year,No,Electronic check,72.73,945.49,Yes
+5839-Alpha-155,Male,0,No,Yes,25,No,No phone service,DSL,Yes,No,No,No,Yes,Yes,Month-to-month,Yes,Bank transfer (automatic),63.35,1583.75,No
+8286-Beta-156,Female,0,Yes,Yes,66,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,No,Credit card (automatic),40.08,2645.28,No
+2692-Alpha-157,Male,1,Yes,No,19,No,No phone service,DSL,Yes,No,No,No,Yes,Yes,Month-to-month,Yes,Credit card (automatic),62.97,1196.43,No
+3777-Alpha-158,Female,1,No,No,58,Yes,Yes,Fiber optic,Yes,No,No,No,No,No,Month-to-month,Yes,Bank transfer (automatic),91.87,5328.46,Yes
+5123-Alpha-159,Female,0,No,Yes,37,Yes,No,Fiber optic,Yes,No,No,No,No,No,Two year,No,Credit card (automatic),83.98,3107.26,No
+3230-Beta-160,Female,0,No,No,36,Yes,No,Fiber optic,No,No,No,Yes,No,No,One year,No,Credit card (automatic),83.86,3018.96,No
+6980-Alpha-161,Male,0,Yes,No,26,Yes,No,Fiber optic,No,Yes,No,No,Yes,No,One year,Yes,Bank transfer (automatic),93.91,2441.66,No
+3525-Gamma-162,Female,1,Yes,No,22,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,No,Credit card (automatic),17.65,388.3,No
+9907-Alpha-163,Female,0,Yes,Yes,54,No,No phone service,Fiber optic,Yes,Yes,No,No,No,Yes,Month-to-month,Yes,Electronic check,78.28,4227.12,Yes
+5239-Alpha-164,Male,1,No,No,60,No,No phone service,DSL,Yes,No,Yes,No,Yes,No,Month-to-month,No,Electronic check,61.53,3691.8,Yes
+2901-Gamma-165,Male,1,No,No,37,No,No phone service,Fiber optic,Yes,No,No,No,Yes,No,Month-to-month,No,Bank transfer (automatic),72.6,2686.2,Yes
+2100-Beta-166,Male,0,Yes,No,42,Yes,Yes,Fiber optic,Yes,Yes,Yes,No,No,No,One year,Yes,Credit card (automatic),103.44,4344.48,No
+4022-Alpha-167,Female,1,Yes,Yes,38,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Credit card (automatic),18.81,714.78,No
+1072-Gamma-168,Male,0,No,Yes,29,Yes,Yes,DSL,No,No,Yes,No,Yes,No,Month-to-month,No,Bank transfer (automatic),82.61,2395.69,Yes
+7367-Gamma-169,Female,0,No,No,62,No,No phone service,DSL,Yes,No,Yes,Yes,No,Yes,Month-to-month,Yes,Bank transfer (automatic),65.13,4038.06,No
+2916-Alpha-170,Female,0,No,No,58,Yes,No,Fiber optic,No,Yes,No,Yes,Yes,No,Month-to-month,No,Mailed check,98.21,5696.18,No
+4065-Beta-171,Female,0,No,Yes,42,No,No phone service,Fiber optic,Yes,Yes,No,No,No,No,Two year,No,Credit card (automatic),67.39,2830.38,No
+9006-Alpha-172,Male,0,Yes,No,36,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,Yes,Bank transfer (automatic),35.76,1287.36,No
+3755-Beta-173,Female,0,Yes,No,30,No,No phone service,DSL,Yes,No,Yes,No,Yes,Yes,One year,No,Electronic check,70.75,2122.5,No
+8368-Beta-174,Female,0,No,Yes,16,Yes,Yes,DSL,No,No,Yes,Yes,Yes,Yes,Month-to-month,Yes,Bank transfer (automatic),97.34,1557.44,No
+9720-Beta-175,Male,1,No,No,43,No,No phone service,Fiber optic,Yes,Yes,No,Yes,No,Yes,Two year,Yes,Mailed check,80.51,3461.93,Yes
+3396-Gamma-176,Female,0,No,No,11,Yes,No,Fiber optic,No,No,No,Yes,Yes,No,Two year,No,Bank transfer (automatic),94.39,1038.29,Yes
+8449-Beta-177,Female,0,Yes,No,60,No,No phone service,Fiber optic,Yes,No,Yes,No,Yes,No,Month-to-month,No,Bank transfer (automatic),76.22,4573.2,Yes
+5646-Beta-178,Male,1,No,Yes,62,Yes,Yes,Fiber optic,No,Yes,Yes,Yes,No,No,Month-to-month,Yes,Credit card (automatic),104.71,6492.02,No
+4314-Gamma-179,Male,1,Yes,No,8,Yes,No,DSL,No,Yes,No,Yes,Yes,No,One year,No,Mailed check,79.09,632.72,No
+8032-Gamma-180,Male,0,Yes,Yes,56,No,No phone service,DSL,Yes,Yes,Yes,No,Yes,Yes,Month-to-month,No,Electronic check,71.78,4019.68,Yes
+7919-Gamma-181,Male,1,Yes,Yes,54,No,No phone service,Fiber optic,Yes,Yes,Yes,No,No,No,Two year,Yes,Credit card (automatic),77.89,4206.06,Yes
+3181-Gamma-182,Male,0,Yes,Yes,40,No,No phone service,Fiber optic,No,Yes,Yes,No,No,Yes,Month-to-month,Yes,Electronic check,77.95,3118.0,Yes
+3293-Alpha-183,Female,1,No,No,47,Yes,Yes,Fiber optic,No,Yes,Yes,No,Yes,No,Month-to-month,Yes,Mailed check,105.04,4936.88,Yes
+7418-Beta-184,Male,0,No,No,6,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Electronic check,48.93,293.58,No
+9655-Alpha-185,Female,1,Yes,No,39,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,No,Mailed check,16.91,659.49,Yes
+8717-Alpha-186,Male,0,Yes,No,42,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,Yes,Credit card (automatic),45.45,1908.9,No
+9300-Beta-187,Female,1,No,Yes,26,Yes,No,DSL,Yes,No,Yes,Yes,Yes,No,One year,No,Electronic check,81.12,2109.12,No
+6081-Gamma-188,Female,0,Yes,Yes,31,Yes,No,Fiber optic,Yes,No,Yes,No,Yes,Yes,Month-to-month,Yes,Mailed check,109.31,3388.61,Yes
+1185-Alpha-189,Female,1,No,Yes,24,No,No phone service,Fiber optic,Yes,No,Yes,Yes,No,No,One year,No,Electronic check,72.82,1747.68,Yes
+5308-Gamma-190,Male,1,No,No,43,Yes,No,DSL,Yes,No,Yes,No,Yes,Yes,Month-to-month,Yes,Electronic check,87.02,3741.86,Yes
+1721-Alpha-191,Male,0,No,No,30,No,No phone service,Fiber optic,Yes,Yes,Yes,No,Yes,No,Month-to-month,Yes,Credit card (automatic),83.26,2497.8,Yes
+6241-Beta-192,Male,1,Yes,Yes,2,Yes,Yes,Fiber optic,Yes,No,Yes,No,No,No,Month-to-month,No,Electronic check,94.91,189.82,Yes
+8483-Alpha-193,Female,0,No,No,15,Yes,No,DSL,No,No,Yes,Yes,Yes,Yes,One year,No,Electronic check,83.07,1246.05,Yes
+4817-Gamma-194,Female,0,No,Yes,13,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,No,Electronic check,18.22,236.86,Yes
+4361-Gamma-195,Male,1,No,Yes,30,Yes,No,Fiber optic,Yes,Yes,Yes,No,No,No,Month-to-month,Yes,Electronic check,92.93,2787.9,Yes
+9280-Alpha-196,Female,0,Yes,No,17,Yes,Yes,Fiber optic,No,No,No,No,No,No,One year,No,Bank transfer (automatic),85.91,1460.47,No
+4827-Alpha-197,Male,0,Yes,Yes,41,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Credit card (automatic),46.27,1897.07,No
+6145-Beta-198,Male,1,Yes,No,42,No,No phone service,DSL,No,No,Yes,Yes,Yes,No,One year,Yes,Mailed check,59.17,2485.14,No
+6370-Alpha-199,Male,0,No,No,31,Yes,No,DSL,No,Yes,Yes,No,No,Yes,Two year,Yes,Credit card (automatic),78.62,2437.22,No
+2669-Alpha-200,Male,0,Yes,Yes,29,Yes,Yes,Fiber optic,No,No,Yes,No,Yes,Yes,Month-to-month,Yes,Mailed check,114.62,3323.98,Yes
+8265-Alpha-201,Male,1,Yes,Yes,33,No,No phone service,Fiber optic,Yes,Yes,No,No,No,Yes,Month-to-month,No,Credit card (automatic),76.74,2532.42,Yes
+3831-Beta-202,Male,0,No,No,45,No,No phone service,DSL,Yes,Yes,Yes,No,No,No,Two year,No,Electronic check,51.96,2338.2,No
+2437-Beta-203,Female,0,No,Yes,30,Yes,Yes,Fiber optic,No,No,No,No,No,No,Month-to-month,No,Bank transfer (automatic),88.27,2648.1,Yes
+3946-Alpha-204,Female,0,Yes,No,56,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Mailed check,37.81,2117.36,No
+3615-Alpha-205,Male,0,No,Yes,22,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,No,Mailed check,37.08,815.76,No
+3885-Alpha-206,Female,1,Yes,No,17,Yes,Yes,Fiber optic,No,No,Yes,No,Yes,Yes,One year,Yes,Mailed check,112.61,1914.37,No
+4584-Alpha-207,Female,0,No,Yes,13,Yes,No,DSL,Yes,No,Yes,Yes,Yes,Yes,One year,Yes,Bank transfer (automatic),91.95,1195.35,No
+2188-Beta-208,Female,0,No,No,22,No,No phone service,DSL,Yes,Yes,No,No,No,Yes,One year,No,Mailed check,59.76,1314.72,No
+3872-Beta-209,Female,1,Yes,Yes,43,Yes,No,DSL,Yes,Yes,No,Yes,Yes,No,One year,Yes,Bank transfer (automatic),80.8,3474.4,No
+2274-Alpha-210,Female,1,Yes,Yes,47,No,No phone service,Fiber optic,No,Yes,No,Yes,Yes,Yes,One year,No,Bank transfer (automatic),85.86,4035.42,No
+2770-Gamma-211,Male,0,No,No,44,No,No phone service,DSL,Yes,No,No,No,No,No,One year,Yes,Credit card (automatic),43.28,1904.32,No
+4695-Alpha-212,Female,0,Yes,No,29,Yes,No,Fiber optic,No,Yes,Yes,No,Yes,No,Two year,Yes,Electronic check,101.7,2949.3,No
+9962-Alpha-213,Female,1,Yes,No,54,Yes,No,DSL,Yes,Yes,Yes,No,Yes,Yes,One year,No,Bank transfer (automatic),89.73,4845.42,No
+5612-Beta-214,Male,0,Yes,No,9,No,No phone service,Fiber optic,Yes,Yes,No,Yes,No,Yes,One year,No,Credit card (automatic),87.37,786.33,No
+4271-Alpha-215,Male,0,Yes,No,41,Yes,No,DSL,Yes,No,No,No,No,No,Month-to-month,Yes,Credit card (automatic),62.15,2548.15,Yes
+4029-Beta-216,Female,1,Yes,No,34,Yes,No,Fiber optic,No,No,No,Yes,No,Yes,Month-to-month,Yes,Electronic check,91.82,3121.88,Yes
+2404-Gamma-217,Female,1,Yes,Yes,6,No,No phone service,Fiber optic,No,No,Yes,No,No,Yes,Month-to-month,No,Electronic check,75.69,454.14,Yes
+9226-Gamma-218,Male,0,No,Yes,49,Yes,Yes,Fiber optic,Yes,Yes,Yes,No,Yes,No,Month-to-month,Yes,Mailed check,114.43,5607.07,Yes
+5225-Beta-219,Male,0,No,No,45,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Credit card (automatic),15.06,677.7,No
+1202-Gamma-220,Female,0,No,Yes,69,Yes,Yes,Fiber optic,Yes,Yes,No,No,No,No,Month-to-month,No,Credit card (automatic),100.57,6939.33,No
+8750-Alpha-221,Male,1,No,Yes,46,No,No phone service,Fiber optic,Yes,No,No,Yes,Yes,No,Two year,No,Bank transfer (automatic),78.85,3627.1,Yes
+1331-Beta-222,Female,1,No,No,38,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Bank transfer (automatic),49.08,1865.04,Yes
+8259-Beta-223,Female,1,Yes,Yes,25,No,No phone service,DSL,Yes,No,No,No,Yes,Yes,Two year,Yes,Bank transfer (automatic),61.76,1544.0,Yes
+9303-Beta-224,Male,0,Yes,Yes,2,Yes,Yes,DSL,Yes,Yes,No,Yes,No,Yes,One year,No,Bank transfer (automatic),92.38,184.76,No
+8605-Gamma-225,Female,0,Yes,Yes,63,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Credit card (automatic),17.19,1082.97,No
+3909-Beta-226,Female,1,Yes,No,60,Yes,No,Fiber optic,Yes,No,Yes,Yes,Yes,Yes,Month-to-month,Yes,Mailed check,111.78,6706.8,No
+5408-Gamma-227,Female,0,Yes,No,40,Yes,Yes,Fiber optic,Yes,Yes,No,No,No,No,Month-to-month,No,Bank transfer (automatic),97.37,3894.8,Yes
+8520-Beta-228,Male,1,No,No,23,Yes,Yes,DSL,No,No,No,Yes,No,Yes,Two year,No,Bank transfer (automatic),83.12,1911.76,No
+6327-Beta-229,Female,1,Yes,Yes,40,Yes,Yes,Fiber optic,No,No,Yes,Yes,No,No,Two year,No,Credit card (automatic),101.36,4054.4,No
+7628-Beta-230,Male,0,No,Yes,39,No,No phone service,Fiber optic,No,No,Yes,Yes,No,Yes,One year,No,Mailed check,78.9,3077.1,No
+5237-Gamma-231,Male,1,Yes,Yes,37,No,No phone service,Fiber optic,Yes,No,No,No,No,No,Month-to-month,No,Credit card (automatic),60.12,2224.44,Yes
+2929-Beta-232,Male,0,No,Yes,48,Yes,No,DSL,No,No,Yes,Yes,Yes,Yes,One year,No,Credit card (automatic),87.4,4195.2,No
+8496-Alpha-233,Female,0,Yes,No,48,No,No phone service,Fiber optic,Yes,No,Yes,Yes,No,No,One year,Yes,Mailed check,70.37,3377.76,No
+3595-Beta-234,Male,0,No,No,17,No,No phone service,DSL,No,No,No,Yes,Yes,Yes,One year,No,Electronic check,61.96,1053.32,No
+6279-Gamma-235,Male,0,Yes,Yes,53,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,No,Mailed check,37.44,1984.32,No
+2682-Beta-236,Female,0,Yes,Yes,66,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,No,Credit card (automatic),18.09,1193.94,No
+9524-Gamma-237,Female,1,Yes,No,57,No,No phone service,Fiber optic,No,Yes,Yes,No,Yes,Yes,Month-to-month,Yes,Mailed check,89.11,5079.27,Yes
+4460-Gamma-238,Male,0,Yes,No,48,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,No,Electronic check,37.54,1801.92,No
+1785-Gamma-239,Male,0,Yes,Yes,12,No,No phone service,Fiber optic,No,No,Yes,No,No,Yes,Month-to-month,Yes,Electronic check,75.84,910.08,Yes
+5933-Beta-240,Male,1,Yes,No,26,Yes,Yes,DSL,No,Yes,Yes,No,Yes,Yes,Month-to-month,No,Mailed check,98.34,2556.84,Yes
+6864-Gamma-241,Female,1,Yes,Yes,57,No,No phone service,Fiber optic,Yes,No,No,Yes,Yes,Yes,Two year,Yes,Electronic check,89.06,5076.42,No
+9095-Alpha-242,Male,0,Yes,No,54,Yes,No,DSL,No,No,No,Yes,Yes,Yes,Month-to-month,Yes,Bank transfer (automatic),85.63,4624.02,No
+6901-Gamma-243,Female,1,Yes,Yes,50,Yes,Yes,Fiber optic,Yes,Yes,No,No,No,No,One year,Yes,Bank transfer (automatic),95.25,4762.5,Yes
+6615-Alpha-244,Male,1,No,No,21,No,No phone service,Fiber optic,No,No,No,Yes,Yes,Yes,One year,Yes,Mailed check,83.61,1755.81,No
+2699-Beta-245,Female,1,Yes,No,45,No,No phone service,DSL,Yes,Yes,No,No,Yes,No,Month-to-month,No,Electronic check,60.46,2720.7,Yes
+2037-Beta-246,Female,0,Yes,No,43,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Credit card (automatic),38.07,1637.01,No
+6664-Gamma-247,Female,0,Yes,Yes,47,Yes,No,DSL,No,Yes,Yes,No,No,Yes,Two year,No,Bank transfer (automatic),76.38,3589.86,No
+1824-Gamma-248,Male,1,No,Yes,45,Yes,No,DSL,No,No,Yes,No,No,No,Month-to-month,Yes,Credit card (automatic),66.93,3011.85,Yes
+1291-Alpha-249,Female,1,Yes,Yes,65,Yes,No,Fiber optic,Yes,No,No,No,Yes,Yes,Month-to-month,No,Bank transfer (automatic),105.15,6834.75,No
+8751-Gamma-250,Female,1,Yes,Yes,56,Yes,Yes,DSL,No,No,No,No,Yes,Yes,One year,Yes,Credit card (automatic),86.91,4866.96,No
+3301-Gamma-251,Female,0,No,Yes,24,Yes,Yes,Fiber optic,No,Yes,No,Yes,No,Yes,Month-to-month,No,Electronic check,109.2,2620.8,No
+3018-Beta-252,Female,0,No,Yes,71,Yes,No,Fiber optic,No,Yes,Yes,Yes,Yes,No,One year,No,Credit card (automatic),104.61,7427.31,No
+7859-Gamma-253,Male,1,No,No,23,No,No phone service,Fiber optic,No,Yes,Yes,No,No,No,One year,Yes,Mailed check,68.4,1573.2,Yes
+4435-Gamma-254,Female,1,Yes,Yes,14,No,No phone service,Fiber optic,Yes,No,No,No,No,No,One year,Yes,Electronic check,62.0,868.0,Yes
+1414-Beta-255,Male,0,Yes,Yes,48,No,No phone service,DSL,Yes,No,No,Yes,Yes,No,Two year,Yes,Electronic check,58.18,2792.64,No
+6876-Beta-256,Male,0,No,Yes,16,No,No phone service,DSL,Yes,No,No,No,No,Yes,One year,Yes,Bank transfer (automatic),52.63,842.08,No
+4327-Gamma-257,Female,0,No,Yes,24,Yes,No,DSL,No,Yes,Yes,Yes,Yes,Yes,One year,No,Electronic check,92.61,2222.64,No
+8020-Beta-258,Female,0,Yes,No,25,Yes,No,DSL,No,Yes,Yes,Yes,No,Yes,Month-to-month,No,Credit card (automatic),79.64,1991.0,No
+6866-Alpha-259,Female,0,Yes,Yes,36,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,No,Electronic check,40.04,1441.44,Yes
+6724-Alpha-260,Male,1,No,No,27,No,No phone service,Fiber optic,Yes,No,Yes,Yes,No,No,One year,Yes,Mailed check,72.71,1963.17,No
+1653-Gamma-261,Female,1,Yes,No,26,No,No phone service,DSL,No,Yes,No,No,No,Yes,Month-to-month,No,Mailed check,51.28,1333.28,Yes
+6248-Gamma-262,Male,0,Yes,Yes,33,Yes,Yes,Fiber optic,Yes,No,Yes,Yes,No,Yes,Month-to-month,Yes,Electronic check,113.67,3751.11,Yes
+8523-Gamma-263,Female,0,Yes,Yes,48,Yes,Yes,DSL,No,Yes,Yes,No,No,No,One year,No,Credit card (automatic),77.97,3742.56,Yes
+8094-Beta-264,Male,1,Yes,Yes,39,Yes,Yes,Fiber optic,Yes,No,Yes,No,No,Yes,Month-to-month,No,Credit card (automatic),107.57,4195.23,Yes
+7249-Beta-265,Male,1,Yes,Yes,13,Yes,No,Fiber optic,No,Yes,No,No,Yes,Yes,One year,Yes,Electronic check,104.1,1353.3,Yes
+1082-Gamma-266,Female,0,No,Yes,57,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,Yes,Credit card (automatic),17.98,1024.86,No
+9397-Alpha-267,Male,0,Yes,No,31,Yes,Yes,Fiber optic,Yes,Yes,No,Yes,No,Yes,Month-to-month,No,Electronic check,108.93,3376.83,Yes
+4234-Gamma-268,Female,1,No,Yes,22,Yes,Yes,DSL,No,Yes,Yes,No,No,No,Month-to-month,No,Bank transfer (automatic),79.87,1757.14,Yes
+3496-Gamma-269,Female,1,No,Yes,68,Yes,No,Fiber optic,Yes,Yes,No,No,No,Yes,Month-to-month,No,Credit card (automatic),96.64,6571.52,Yes
+8583-Beta-270,Female,1,No,Yes,32,Yes,Yes,Fiber optic,No,Yes,Yes,No,Yes,Yes,Month-to-month,Yes,Electronic check,118.34,3786.88,Yes
+7637-Gamma-271,Male,0,No,No,38,Yes,No,DSL,No,Yes,No,Yes,No,Yes,One year,No,Bank transfer (automatic),77.51,2945.38,No
+9227-Alpha-272,Male,0,Yes,No,48,Yes,Yes,Fiber optic,Yes,No,No,Yes,Yes,No,Two year,Yes,Electronic check,109.6,5260.8,No
+5331-Beta-273,Male,0,Yes,No,43,No,No phone service,Fiber optic,No,No,Yes,Yes,No,Yes,One year,No,Bank transfer (automatic),79.15,3403.45,Yes
+9918-Gamma-274,Male,1,No,No,32,Yes,No,Fiber optic,No,Yes,No,No,No,No,Month-to-month,No,Electronic check,81.67,2613.44,Yes
+9222-Alpha-275,Female,0,Yes,Yes,61,No,No phone service,DSL,Yes,Yes,Yes,Yes,No,Yes,Month-to-month,Yes,Credit card (automatic),69.75,4254.75,No
+6410-Gamma-276,Male,1,No,No,20,Yes,Yes,DSL,No,Yes,Yes,Yes,Yes,Yes,Month-to-month,Yes,Electronic check,106.17,2123.4,Yes
+3406-Alpha-277,Male,1,Yes,No,58,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Mailed check,39.19,2273.02,No
+8359-Gamma-278,Female,1,Yes,Yes,45,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Mailed check,19.0,855.0,Yes
+9369-Beta-279,Male,1,No,Yes,62,Yes,No,DSL,No,Yes,Yes,Yes,Yes,No,One year,Yes,Electronic check,85.77,5317.74,No
+3906-Beta-280,Male,0,Yes,No,7,Yes,Yes,Fiber optic,No,No,No,Yes,No,Yes,One year,No,Credit card (automatic),102.82,719.74,No
+6742-Gamma-281,Male,1,Yes,No,36,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,Yes,Electronic check,19.44,699.84,No
+5641-Gamma-282,Female,1,Yes,Yes,42,Yes,Yes,Fiber optic,Yes,No,Yes,No,No,No,Month-to-month,Yes,Mailed check,95.31,4003.02,No
+7980-Gamma-283,Female,1,No,No,9,No,No phone service,DSL,No,Yes,No,No,Yes,No,One year,No,Bank transfer (automatic),54.28,488.52,No
+6024-Gamma-284,Female,1,Yes,Yes,22,Yes,No,Fiber optic,Yes,Yes,Yes,No,No,Yes,One year,Yes,Credit card (automatic),103.95,2286.9,Yes
+1086-Alpha-285,Male,1,No,Yes,51,Yes,No,DSL,Yes,No,Yes,Yes,No,No,Month-to-month,No,Electronic check,71.76,3659.76,Yes
+3871-Gamma-286,Female,1,Yes,Yes,8,No,No phone service,Fiber optic,Yes,Yes,Yes,Yes,Yes,No,One year,Yes,Electronic check,85.03,680.24,Yes
+3579-Alpha-287,Female,1,No,No,17,No,No phone service,Fiber optic,Yes,Yes,Yes,Yes,No,No,Month-to-month,No,Bank transfer (automatic),77.86,1323.62,Yes
+4707-Gamma-288,Male,1,No,Yes,34,No,No phone service,DSL,Yes,No,Yes,Yes,No,No,Two year,Yes,Bank transfer (automatic),47.21,1605.14,No
+9813-Gamma-289,Female,1,No,No,36,Yes,No,Fiber optic,No,No,Yes,No,Yes,No,Two year,Yes,Credit card (automatic),92.27,3321.72,No
+4610-Gamma-290,Male,1,No,No,21,Yes,No,DSL,Yes,No,Yes,No,No,Yes,Month-to-month,Yes,Credit card (automatic),76.86,1614.06,No
+6142-Beta-291,Male,1,Yes,Yes,43,No,No phone service,Fiber optic,Yes,Yes,Yes,No,Yes,Yes,Month-to-month,Yes,Mailed check,95.49,4106.07,Yes
+6833-Alpha-292,Male,0,Yes,No,30,Yes,Yes,DSL,No,No,No,No,No,No,One year,Yes,Bank transfer (automatic),65.93,1977.9,No
+7518-Alpha-293,Male,0,No,No,39,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Mailed check,40.0,1560.0,No
+8490-Alpha-294,Female,1,Yes,Yes,43,Yes,No,Fiber optic,Yes,No,No,No,Yes,No,Month-to-month,Yes,Bank transfer (automatic),96.1,4132.3,Yes
+8722-Gamma-295,Female,1,Yes,No,36,No,No phone service,Fiber optic,Yes,No,No,No,No,No,Two year,No,Mailed check,65.72,2365.92,No
+3148-Gamma-296,Male,0,No,Yes,32,No,No phone service,DSL,No,Yes,Yes,Yes,No,Yes,Month-to-month,Yes,Credit card (automatic),63.25,2024.0,Yes
+9185-Alpha-297,Female,1,No,No,52,Yes,No,DSL,Yes,Yes,Yes,Yes,No,No,One year,Yes,Credit card (automatic),75.81,3942.12,No
+6483-Beta-298,Female,1,No,No,37,Yes,No,Fiber optic,Yes,No,Yes,Yes,No,No,Two year,No,Credit card (automatic),94.59,3499.83,No
+8322-Alpha-299,Female,1,No,Yes,17,Yes,No,Fiber optic,No,No,Yes,Yes,Yes,No,One year,Yes,Bank transfer (automatic),96.45,1639.65,No
+6191-Gamma-300,Female,1,No,No,17,No,No phone service,Fiber optic,No,No,No,Yes,Yes,Yes,Month-to-month,Yes,Mailed check,83.33,1416.61,Yes
+5122-Gamma-301,Male,0,Yes,No,24,Yes,Yes,Fiber optic,Yes,No,Yes,Yes,No,Yes,One year,Yes,Bank transfer (automatic),110.26,2646.24,No
+3544-Alpha-302,Female,1,Yes,Yes,40,No,No phone service,Fiber optic,No,Yes,Yes,Yes,Yes,Yes,Month-to-month,No,Bank transfer (automatic),94.68,3787.2,Yes
+8801-Beta-303,Female,1,Yes,Yes,37,No,No phone service,DSL,No,No,No,No,Yes,Yes,Month-to-month,No,Bank transfer (automatic),59.43,2198.91,Yes
+6992-Beta-304,Female,0,No,Yes,21,Yes,Yes,DSL,No,No,No,Yes,No,No,Month-to-month,No,Electronic check,72.58,1524.18,No
+8052-Beta-305,Male,0,No,Yes,35,No,No phone service,Fiber optic,No,No,Yes,Yes,No,No,Month-to-month,Yes,Bank transfer (automatic),68.74,2405.9,Yes
+2297-Beta-306,Male,1,No,No,60,No,No phone service,DSL,Yes,Yes,Yes,Yes,No,Yes,Two year,No,Credit card (automatic),68.29,4097.4,No
+5458-Gamma-307,Female,0,No,Yes,58,Yes,Yes,DSL,Yes,Yes,Yes,No,No,Yes,One year,No,Electronic check,91.02,5279.16,No
+4814-Alpha-308,Male,0,No,Yes,17,No,No phone service,Fiber optic,No,No,No,No,No,Yes,One year,No,Electronic check,66.63,1132.71,No
+3393-Alpha-309,Female,1,Yes,No,10,Yes,Yes,DSL,No,No,Yes,Yes,Yes,No,Month-to-month,No,Mailed check,87.1,871.0,Yes
+1549-Alpha-310,Female,0,Yes,No,51,No,No phone service,Fiber optic,No,No,Yes,Yes,Yes,No,Month-to-month,No,Bank transfer (automatic),78.62,4009.62,Yes
+4255-Beta-311,Male,0,Yes,Yes,19,No,No phone service,DSL,No,Yes,Yes,No,Yes,No,Month-to-month,Yes,Electronic check,55.4,1052.6,Yes
+1688-Gamma-312,Female,0,No,Yes,39,Yes,Yes,DSL,No,Yes,No,Yes,Yes,No,Two year,Yes,Electronic check,88.43,3448.77,No
+3061-Beta-313,Male,1,No,No,10,Yes,Yes,DSL,No,No,Yes,No,Yes,No,One year,No,Bank transfer (automatic),83.1,831.0,No
+9892-Gamma-314,Female,0,Yes,No,18,No,No phone service,Fiber optic,No,No,Yes,Yes,Yes,No,One year,No,Bank transfer (automatic),77.87,1401.66,Yes
+9873-Beta-315,Female,0,No,Yes,49,Yes,No,DSL,Yes,No,Yes,No,Yes,No,Month-to-month,Yes,Bank transfer (automatic),75.75,3711.75,Yes
+6285-Beta-316,Female,0,Yes,Yes,51,Yes,Yes,DSL,Yes,Yes,Yes,Yes,No,Yes,Month-to-month,Yes,Electronic check,97.78,4986.78,No
+7366-Gamma-317,Female,1,Yes,No,41,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Mailed check,45.95,1883.95,Yes
+9051-Alpha-318,Female,0,No,No,69,No,No phone service,DSL,Yes,No,Yes,Yes,No,Yes,One year,Yes,Electronic check,65.27,4503.63,No
+2658-Gamma-319,Male,1,Yes,Yes,12,Yes,Yes,DSL,No,Yes,No,No,No,Yes,One year,Yes,Mailed check,81.44,977.28,No
+7579-Gamma-320,Female,0,No,No,24,No,No phone service,Fiber optic,No,No,No,No,No,Yes,Month-to-month,Yes,Credit card (automatic),65.12,1562.88,Yes
+5162-Beta-321,Female,1,No,Yes,23,Yes,No,Fiber optic,Yes,Yes,No,Yes,No,Yes,Month-to-month,Yes,Bank transfer (automatic),100.75,2317.25,Yes
+1355-Gamma-322,Female,0,Yes,Yes,39,No,No phone service,Fiber optic,No,Yes,Yes,No,No,Yes,One year,Yes,Bank transfer (automatic),79.61,3104.79,Yes
+5920-Alpha-323,Female,0,Yes,No,68,No,No phone service,DSL,Yes,No,Yes,No,Yes,No,Month-to-month,Yes,Electronic check,58.89,4004.52,No
+6478-Beta-324,Female,1,Yes,Yes,26,Yes,No,Fiber optic,Yes,No,Yes,No,Yes,No,Month-to-month,Yes,Mailed check,99.61,2589.86,Yes
+1827-Gamma-325,Female,1,Yes,Yes,49,No,No phone service,Fiber optic,No,No,Yes,Yes,No,Yes,Two year,No,Electronic check,76.89,3767.61,Yes
+9980-Beta-326,Female,0,No,No,49,Yes,Yes,Fiber optic,No,Yes,No,No,Yes,Yes,Month-to-month,Yes,Electronic check,115.73,5670.77,Yes
+5362-Beta-327,Female,0,Yes,No,58,No,No phone service,Fiber optic,No,No,Yes,No,No,Yes,Two year,No,Mailed check,74.3,4309.4,Yes
+6729-Gamma-328,Female,0,No,Yes,63,Yes,Yes,Fiber optic,No,Yes,Yes,Yes,Yes,Yes,Month-to-month,Yes,Bank transfer (automatic),126.24,7953.12,No
+1225-Beta-329,Male,1,No,No,32,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,Yes,Mailed check,39.58,1266.56,No
+4339-Gamma-330,Female,1,Yes,Yes,50,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,Yes,Bank transfer (automatic),16.05,802.5,No
+3790-Alpha-331,Female,0,No,Yes,24,No,No phone service,Fiber optic,Yes,Yes,No,No,No,Yes,Month-to-month,Yes,Bank transfer (automatic),79.64,1911.36,Yes
+7332-Alpha-332,Female,0,No,No,65,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,Yes,Credit card (automatic),46.54,3025.1,No
+1352-Alpha-333,Male,1,No,No,46,No,No phone service,DSL,Yes,Yes,No,No,No,No,Two year,Yes,Bank transfer (automatic),43.94,2021.24,Yes
+2015-Gamma-334,Female,1,Yes,No,55,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,No,Credit card (automatic),45.52,2503.6,No
+3248-Alpha-335,Female,0,No,Yes,62,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Bank transfer (automatic),37.51,2325.62,No
+8359-Gamma-336,Male,0,Yes,Yes,54,Yes,No,Fiber optic,Yes,No,Yes,Yes,No,Yes,One year,Yes,Mailed check,100.54,5429.16,No
+6203-Alpha-337,Male,1,No,No,57,No,No phone service,DSL,No,No,Yes,Yes,Yes,Yes,Month-to-month,Yes,Electronic check,68.57,3908.49,No
+5372-Gamma-338,Male,0,Yes,Yes,48,No,No phone service,DSL,Yes,No,Yes,No,No,Yes,Month-to-month,No,Credit card (automatic),55.6,2668.8,Yes
+8763-Alpha-339,Male,0,Yes,Yes,42,No,No phone service,DSL,Yes,No,No,Yes,Yes,Yes,Two year,Yes,Mailed check,67.79,2847.18,No
+8197-Gamma-340,Female,1,No,Yes,55,No,No phone service,DSL,No,Yes,No,No,No,Yes,Month-to-month,Yes,Credit card (automatic),51.39,2826.45,Yes
+8485-Alpha-341,Male,1,Yes,No,38,Yes,Yes,Fiber optic,No,No,No,No,No,No,Month-to-month,Yes,Credit card (automatic),86.16,3274.08,Yes
+5823-Gamma-342,Male,0,No,No,53,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Mailed check,48.91,2592.23,No
+7440-Beta-343,Female,1,Yes,Yes,29,No,No phone service,Fiber optic,Yes,No,Yes,No,No,Yes,Two year,Yes,Electronic check,79.35,2301.15,Yes
+2870-Gamma-344,Female,1,Yes,No,28,Yes,No,DSL,No,Yes,Yes,No,Yes,Yes,One year,Yes,Mailed check,90.59,2536.52,No
+1840-Beta-345,Female,1,No,No,45,Yes,Yes,DSL,Yes,Yes,Yes,No,Yes,No,One year,No,Credit card (automatic),92.2,4149.0,Yes
+9904-Alpha-346,Female,0,Yes,No,36,No,No phone service,Fiber optic,No,No,Yes,Yes,Yes,No,One year,Yes,Electronic check,79.9,2876.4,Yes
+4028-Alpha-347,Male,1,Yes,Yes,40,Yes,No,Fiber optic,No,Yes,Yes,Yes,No,Yes,Month-to-month,Yes,Bank transfer (automatic),103.84,4153.6,No
+3906-Beta-348,Female,0,Yes,No,45,No,No phone service,DSL,No,No,Yes,No,Yes,No,Month-to-month,No,Mailed check,51.87,2334.15,Yes
+2999-Gamma-349,Female,1,No,Yes,28,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,Yes,Electronic check,48.25,1351.0,No
+8924-Gamma-350,Female,1,No,No,36,No,No phone service,Fiber optic,Yes,No,No,No,Yes,Yes,One year,No,Mailed check,80.77,2907.72,Yes
+1025-Alpha-351,Male,1,Yes,Yes,48,No,No phone service,DSL,No,Yes,No,No,Yes,Yes,Month-to-month,Yes,Bank transfer (automatic),63.86,3065.28,No
+5168-Alpha-352,Female,1,No,Yes,62,Yes,No,Fiber optic,No,No,Yes,Yes,Yes,No,Month-to-month,No,Credit card (automatic),99.64,6177.68,No
+8774-Alpha-353,Male,1,Yes,No,19,No,No phone service,Fiber optic,No,No,Yes,No,No,Yes,One year,Yes,Bank transfer (automatic),73.22,1391.18,No
+6793-Alpha-354,Male,1,Yes,No,33,No,No phone service,DSL,Yes,No,Yes,Yes,No,No,Month-to-month,Yes,Bank transfer (automatic),56.14,1852.62,Yes
+7780-Alpha-355,Female,0,No,No,42,No,No phone service,DSL,Yes,No,Yes,Yes,No,Yes,Month-to-month,Yes,Electronic check,61.08,2565.36,Yes
+8270-Gamma-356,Male,1,Yes,Yes,46,No,No phone service,Fiber optic,No,No,No,Yes,Yes,Yes,Month-to-month,Yes,Electronic check,80.61,3708.06,No
+8526-Beta-357,Male,0,No,Yes,30,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,No,Electronic check,37.79,1133.7,No
+2689-Gamma-358,Female,0,No,Yes,20,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,Yes,Mailed check,17.62,352.4,No
+5695-Beta-359,Female,1,Yes,No,66,Yes,Yes,DSL,No,Yes,Yes,Yes,Yes,No,One year,No,Bank transfer (automatic),91.42,6033.72,No
+3319-Gamma-360,Female,0,Yes,Yes,21,No,No phone service,DSL,No,No,Yes,Yes,Yes,No,Month-to-month,Yes,Electronic check,60.09,1261.89,Yes
+7284-Alpha-361,Male,1,No,Yes,47,No,No phone service,Fiber optic,No,No,No,Yes,Yes,No,One year,Yes,Electronic check,70.49,3313.03,Yes
+8672-Alpha-362,Female,1,No,No,17,Yes,Yes,Fiber optic,Yes,No,No,No,Yes,No,One year,No,Credit card (automatic),106.43,1809.31,No
+8987-Alpha-363,Male,1,Yes,No,18,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,No,Mailed check,16.22,291.96,No
+5624-Beta-364,Male,0,No,Yes,51,No,No phone service,DSL,Yes,No,No,No,No,Yes,Month-to-month,Yes,Mailed check,52.43,2673.93,No
+8903-Beta-365,Male,1,Yes,No,59,No,No phone service,Fiber optic,No,Yes,Yes,Yes,No,Yes,Month-to-month,No,Bank transfer (automatic),88.49,5220.91,Yes
+2599-Beta-366,Male,1,No,Yes,17,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,No,Credit card (automatic),41.77,710.09,No
+2007-Alpha-367,Male,0,Yes,Yes,57,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,No,Credit card (automatic),36.65,2089.05,No
+8326-Alpha-368,Male,1,No,No,36,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Electronic check,18.37,661.32,Yes
+1133-Gamma-369,Female,0,No,Yes,25,No,No phone service,Fiber optic,Yes,Yes,No,Yes,No,Yes,Two year,Yes,Credit card (automatic),79.5,1987.5,Yes
+7459-Gamma-370,Female,1,No,No,53,No,No phone service,Fiber optic,Yes,Yes,No,Yes,Yes,No,One year,No,Credit card (automatic),82.88,4392.64,No
+3527-Beta-371,Male,0,Yes,Yes,59,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,No,Credit card (automatic),45.78,2701.02,No
+3224-Alpha-372,Male,1,No,No,29,Yes,No,Fiber optic,No,No,No,No,Yes,Yes,Month-to-month,No,Electronic check,99.83,2895.07,Yes
+9161-Gamma-373,Male,1,No,No,44,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,No,Bank transfer (automatic),47.64,2096.16,No
+2854-Gamma-374,Female,0,Yes,No,38,No,No phone service,DSL,Yes,Yes,Yes,No,Yes,No,Month-to-month,Yes,Bank transfer (automatic),65.13,2474.94,No
+9765-Alpha-375,Female,1,No,No,33,No,No phone service,DSL,No,No,No,Yes,Yes,No,Month-to-month,No,Electronic check,53.28,1758.24,Yes
+8752-Gamma-376,Male,0,No,Yes,59,No,No phone service,Fiber optic,No,Yes,Yes,Yes,No,No,One year,Yes,Bank transfer (automatic),76.29,4501.11,No
+5509-Beta-377,Male,0,Yes,Yes,12,No,No phone service,Fiber optic,No,Yes,No,Yes,No,Yes,Month-to-month,Yes,Bank transfer (automatic),79.44,953.28,Yes
+2382-Alpha-378,Male,1,No,No,14,Yes,No,Fiber optic,Yes,Yes,No,Yes,No,Yes,One year,Yes,Mailed check,100.78,1410.92,Yes
+8602-Beta-379,Female,1,No,Yes,48,No,No phone service,DSL,No,No,No,Yes,No,Yes,Month-to-month,No,Credit card (automatic),53.95,2589.6,Yes
+7258-Gamma-380,Female,0,Yes,No,9,No,No phone service,Fiber optic,No,No,No,No,Yes,No,Two year,No,Credit card (automatic),67.65,608.85,No
+4961-Gamma-381,Male,1,Yes,No,37,Yes,Yes,DSL,Yes,Yes,No,Yes,Yes,No,Month-to-month,No,Mailed check,93.76,3469.12,No
+5641-Beta-382,Male,0,Yes,Yes,58,Yes,Yes,Fiber optic,Yes,Yes,Yes,Yes,No,Yes,One year,Yes,Mailed check,116.76,6772.08,No
+5150-Beta-383,Female,0,No,No,64,No,No phone service,Fiber optic,No,No,Yes,Yes,No,Yes,One year,No,Credit card (automatic),79.02,5057.28,No
+6450-Alpha-384,Female,1,Yes,No,46,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,Yes,Credit card (automatic),40.34,1855.64,No
+3923-Gamma-385,Female,0,Yes,No,12,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,No,Bank transfer (automatic),47.99,575.88,No
+2692-Alpha-386,Male,0,No,No,33,Yes,No,Fiber optic,Yes,Yes,Yes,No,No,Yes,One year,No,Credit card (automatic),101.13,3337.29,No
+1060-Gamma-387,Female,1,No,No,32,Yes,Yes,Fiber optic,Yes,No,No,Yes,No,No,Month-to-month,No,Credit card (automatic),97.26,3112.32,Yes
+1904-Gamma-388,Male,1,No,Yes,32,No,No phone service,Fiber optic,No,Yes,Yes,Yes,No,Yes,One year,No,Credit card (automatic),82.58,2642.56,Yes
+2749-Gamma-389,Female,1,Yes,No,23,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,Yes,Mailed check,48.96,1126.08,No
+1415-Gamma-390,Male,1,No,Yes,4,No,No phone service,DSL,No,No,Yes,Yes,No,Yes,Two year,No,Electronic check,61.76,247.04,No
+7643-Alpha-391,Male,1,Yes,Yes,54,Yes,Yes,Fiber optic,Yes,No,Yes,No,Yes,Yes,Two year,Yes,Electronic check,116.35,6282.9,No
+3822-Gamma-392,Male,1,Yes,No,14,Yes,Yes,DSL,Yes,Yes,No,Yes,Yes,Yes,One year,No,Bank transfer (automatic),104.04,1456.56,No
+7586-Beta-393,Male,0,No,Yes,24,Yes,Yes,Fiber optic,No,Yes,Yes,No,Yes,No,Two year,Yes,Bank transfer (automatic),108.89,2613.36,Yes
+3703-Beta-394,Male,0,Yes,Yes,32,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,Yes,Electronic check,17.84,570.88,Yes
+8978-Alpha-395,Male,0,Yes,Yes,28,No,No phone service,DSL,No,No,Yes,Yes,Yes,No,Month-to-month,No,Credit card (automatic),55.15,1544.2,Yes
+4919-Alpha-396,Male,0,No,Yes,29,No,No phone service,Fiber optic,No,No,Yes,Yes,Yes,Yes,Month-to-month,Yes,Bank transfer (automatic),87.28,2531.12,Yes
+9842-Gamma-397,Male,1,Yes,No,38,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Mailed check,47.61,1809.18,Yes
+8772-Beta-398,Male,0,Yes,Yes,49,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Mailed check,18.62,912.38,Yes
+8121-Beta-399,Female,1,Yes,Yes,61,Yes,Yes,Fiber optic,Yes,Yes,No,Yes,Yes,Yes,Month-to-month,No,Bank transfer (automatic),118.7,7240.7,No
+7865-Alpha-400,Female,0,Yes,No,44,Yes,Yes,Fiber optic,Yes,No,Yes,No,Yes,Yes,One year,No,Credit card (automatic),118.21,5201.24,Yes
+1890-Beta-401,Male,0,No,Yes,45,No,No phone service,Fiber optic,No,Yes,No,Yes,No,No,One year,Yes,Bank transfer (automatic),69.94,3147.3,No
+3084-Alpha-402,Male,1,Yes,Yes,51,No,No phone service,Fiber optic,No,No,Yes,No,Yes,No,Month-to-month,Yes,Mailed check,76.38,3895.38,Yes
+4763-Alpha-403,Female,1,Yes,No,15,No,No phone service,Fiber optic,No,Yes,No,Yes,Yes,No,Month-to-month,No,Mailed check,81.5,1222.5,Yes
+3440-Gamma-404,Male,1,Yes,Yes,64,No,No phone service,DSL,Yes,No,No,No,Yes,No,Month-to-month,No,Mailed check,52.03,3329.92,No
+2361-Gamma-405,Male,1,Yes,Yes,46,No,No phone service,Fiber optic,No,Yes,Yes,Yes,No,No,Month-to-month,Yes,Credit card (automatic),73.69,3389.74,Yes
+1399-Beta-406,Female,0,No,Yes,48,No,No phone service,Fiber optic,No,Yes,Yes,No,No,Yes,Month-to-month,No,Credit card (automatic),79.07,3795.36,Yes
+5420-Gamma-407,Male,0,No,Yes,25,No,No phone service,DSL,Yes,Yes,No,No,No,Yes,Month-to-month,No,Bank transfer (automatic),60.71,1517.75,Yes
+3871-Gamma-408,Male,0,Yes,No,50,Yes,Yes,DSL,No,Yes,Yes,No,No,No,Month-to-month,No,Bank transfer (automatic),77.83,3891.5,Yes
+1892-Alpha-409,Female,1,No,No,43,Yes,No,Fiber optic,No,No,No,Yes,Yes,No,One year,Yes,Electronic check,94.17,4049.31,No
+7400-Alpha-410,Female,0,Yes,Yes,15,No,No phone service,DSL,Yes,Yes,No,Yes,Yes,Yes,Month-to-month,No,Credit card (automatic),73.53,1102.95,No
+9870-Alpha-411,Female,1,No,No,11,Yes,No,Fiber optic,Yes,Yes,Yes,Yes,No,No,Month-to-month,No,Bank transfer (automatic),97.68,1074.48,Yes
+8965-Gamma-412,Female,1,No,Yes,48,No,No phone service,DSL,Yes,No,Yes,No,No,No,Month-to-month,Yes,Mailed check,48.91,2347.68,Yes
+6785-Beta-413,Female,0,Yes,No,17,Yes,Yes,Fiber optic,Yes,Yes,Yes,Yes,Yes,No,Month-to-month,Yes,Credit card (automatic),118.62,2016.54,No
+5266-Beta-414,Male,0,Yes,No,54,No,No phone service,DSL,Yes,No,No,Yes,No,Yes,Month-to-month,Yes,Credit card (automatic),60.84,3285.36,Yes
+9182-Alpha-415,Female,1,Yes,Yes,34,No,No phone service,Fiber optic,No,No,No,Yes,No,No,One year,Yes,Credit card (automatic),64.99,2209.66,No
+1656-Alpha-416,Male,1,Yes,No,44,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Electronic check,40.16,1767.04,No
+6347-Alpha-417,Male,0,No,Yes,30,Yes,Yes,Fiber optic,No,Yes,No,Yes,No,No,Month-to-month,Yes,Bank transfer (automatic),93.97,2819.1,Yes
+7513-Alpha-418,Female,1,No,No,23,Yes,No,DSL,No,No,No,No,Yes,Yes,Month-to-month,No,Credit card (automatic),77.87,1791.01,Yes
+8249-Beta-419,Male,1,No,Yes,24,Yes,Yes,Fiber optic,Yes,No,No,No,Yes,No,Two year,Yes,Electronic check,103.8,2491.2,No
+7708-Gamma-420,Female,1,Yes,No,9,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,Yes,Credit card (automatic),49.52,445.68,No
+5742-Gamma-421,Female,0,No,No,27,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Mailed check,16.14,435.78,No
+1439-Alpha-422,Male,1,No,No,8,Yes,No,Fiber optic,No,Yes,No,Yes,Yes,Yes,Month-to-month,No,Credit card (automatic),110.07,880.56,Yes
+2093-Gamma-423,Female,1,No,No,31,No,No phone service,Fiber optic,Yes,No,Yes,No,Yes,Yes,One year,Yes,Bank transfer (automatic),88.65,2748.15,No
+8553-Gamma-424,Male,1,Yes,Yes,23,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Credit card (automatic),15.99,367.77,Yes
+6832-Alpha-425,Female,1,Yes,Yes,46,Yes,Yes,Fiber optic,Yes,No,No,No,No,No,Month-to-month,Yes,Bank transfer (automatic),92.77,4267.42,Yes
+3354-Alpha-426,Male,1,No,No,51,No,No phone service,DSL,No,Yes,Yes,Yes,Yes,Yes,One year,Yes,Electronic check,71.53,3648.03,No
+7837-Beta-427,Male,0,Yes,Yes,61,No,No phone service,Fiber optic,No,No,No,Yes,No,No,Two year,Yes,Bank transfer (automatic),63.06,3846.66,No
+1471-Gamma-428,Male,0,Yes,Yes,58,Yes,No,DSL,Yes,Yes,Yes,Yes,No,Yes,Month-to-month,Yes,Electronic check,90.33,5239.14,Yes
+8934-Beta-429,Male,0,Yes,Yes,23,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Bank transfer (automatic),34.51,793.73,No
+1709-Alpha-430,Female,0,Yes,Yes,28,Yes,Yes,DSL,Yes,No,Yes,Yes,Yes,No,Month-to-month,No,Bank transfer (automatic),93.15,2608.2,Yes
+3630-Gamma-431,Male,0,Yes,Yes,56,Yes,Yes,Fiber optic,No,Yes,Yes,Yes,Yes,No,Month-to-month,No,Mailed check,110.32,6177.92,Yes
+8203-Gamma-432,Male,0,No,No,42,No,No phone service,Fiber optic,Yes,Yes,No,Yes,No,Yes,Month-to-month,No,Electronic check,83.7,3515.4,No
+9515-Alpha-433,Female,1,No,Yes,28,Yes,No,DSL,No,Yes,No,No,No,No,Month-to-month,No,Mailed check,66.72,1868.16,No
+7672-Beta-434,Female,0,Yes,No,43,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Electronic check,17.46,750.78,Yes
+9055-Gamma-435,Male,1,No,Yes,11,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Credit card (automatic),47.7,524.7,No
+2666-Gamma-436,Male,0,No,Yes,43,No,No phone service,Fiber optic,Yes,No,Yes,Yes,No,No,One year,No,Bank transfer (automatic),76.51,3289.93,No
+7557-Beta-437,Female,1,No,No,43,Yes,No,Fiber optic,Yes,Yes,No,No,No,Yes,Month-to-month,Yes,Electronic check,97.88,4208.84,Yes
+2631-Gamma-438,Male,0,No,Yes,66,Yes,No,Fiber optic,No,Yes,No,Yes,Yes,No,Month-to-month,No,Mailed check,98.54,6503.64,Yes
+5809-Gamma-439,Female,1,No,No,30,Yes,Yes,Fiber optic,No,Yes,No,No,No,No,Two year,No,Credit card (automatic),91.99,2759.7,No
+1589-Alpha-440,Male,1,Yes,No,25,No,No phone service,DSL,Yes,No,No,No,Yes,No,Two year,No,Credit card (automatic),55.39,1384.75,Yes
+3560-Gamma-441,Male,1,No,No,12,No,No phone service,Fiber optic,No,No,No,Yes,Yes,Yes,Month-to-month,Yes,Bank transfer (automatic),82.65,991.8,No
+6715-Gamma-442,Male,1,No,Yes,20,No,No phone service,DSL,No,No,No,No,Yes,Yes,One year,Yes,Mailed check,56.74,1134.8,No
+6113-Gamma-443,Male,0,No,Yes,39,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Electronic check,19.23,749.97,No
+9821-Beta-444,Male,1,No,No,62,No,No phone service,Fiber optic,Yes,No,Yes,No,No,No,Month-to-month,No,Electronic check,70.89,4395.18,No
+9001-Alpha-445,Male,1,No,No,36,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,No,Credit card (automatic),40.15,1445.4,No
+4305-Beta-446,Male,0,No,No,14,Yes,No,Fiber optic,No,Yes,Yes,Yes,No,No,Two year,Yes,Credit card (automatic),89.0,1246.0,No
+7997-Alpha-447,Female,0,No,No,37,No,No phone service,DSL,No,Yes,No,No,No,No,Month-to-month,Yes,Electronic check,44.93,1662.41,Yes
+9457-Alpha-448,Female,0,No,No,71,No,No phone service,Fiber optic,Yes,Yes,No,No,Yes,Yes,One year,Yes,Bank transfer (automatic),87.5,6212.5,No
+8133-Beta-449,Female,0,Yes,No,48,No,No phone service,DSL,No,Yes,No,Yes,No,Yes,Month-to-month,Yes,Mailed check,55.94,2685.12,No
+4144-Alpha-450,Male,1,No,No,11,No,No phone service,DSL,No,Yes,Yes,Yes,No,Yes,One year,Yes,Bank transfer (automatic),62.42,686.62,No
+5551-Gamma-451,Male,0,No,Yes,32,Yes,Yes,Fiber optic,No,No,Yes,No,No,Yes,Two year,No,Mailed check,104.21,3334.72,No
+4867-Alpha-452,Male,1,No,Yes,54,Yes,Yes,DSL,No,No,No,Yes,No,Yes,Month-to-month,Yes,Electronic check,84.91,4585.14,No
+3869-Alpha-453,Female,1,No,No,27,Yes,No,Fiber optic,No,Yes,No,No,No,Yes,One year,No,Mailed check,90.18,2434.86,Yes
+6947-Beta-454,Female,1,Yes,Yes,12,Yes,Yes,Fiber optic,No,No,No,No,Yes,Yes,Two year,No,Credit card (automatic),108.12,1297.44,No
+1128-Beta-455,Female,1,Yes,Yes,32,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Mailed check,20.05,641.6,Yes
+8190-Gamma-456,Female,1,Yes,No,24,Yes,No,Fiber optic,No,No,No,No,Yes,Yes,Month-to-month,No,Electronic check,101.3,2431.2,Yes
+6764-Beta-457,Female,1,Yes,Yes,18,Yes,No,Fiber optic,Yes,Yes,No,Yes,No,No,One year,Yes,Electronic check,93.82,1688.76,No
+3585-Alpha-458,Male,1,No,No,34,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Bank transfer (automatic),20.75,705.5,Yes
+3842-Gamma-459,Female,1,Yes,Yes,8,No,No phone service,DSL,No,Yes,No,No,Yes,Yes,One year,Yes,Mailed check,63.62,508.96,No
+2457-Beta-460,Male,1,Yes,Yes,66,No,No phone service,Fiber optic,No,No,Yes,Yes,No,Yes,Month-to-month,Yes,Electronic check,80.37,5304.42,No
+9615-Beta-461,Female,1,Yes,Yes,31,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Bank transfer (automatic),49.37,1530.47,Yes
+9096-Beta-462,Male,1,Yes,Yes,34,No,No phone service,Fiber optic,Yes,No,Yes,No,Yes,Yes,Month-to-month,No,Bank transfer (automatic),86.44,2938.96,Yes
+4858-Gamma-463,Female,0,No,No,60,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,No,Mailed check,46.49,2789.4,No
+6296-Gamma-464,Female,0,No,No,47,No,No phone service,DSL,Yes,Yes,Yes,Yes,No,Yes,Month-to-month,No,Bank transfer (automatic),66.42,3121.74,Yes
+1745-Alpha-465,Female,1,No,No,38,No,No phone service,Fiber optic,Yes,Yes,Yes,No,Yes,No,One year,No,Credit card (automatic),83.52,3173.76,Yes
+3161-Alpha-466,Female,1,Yes,No,4,Yes,No,DSL,Yes,Yes,No,No,No,No,Month-to-month,No,Bank transfer (automatic),66.99,267.96,Yes
+5321-Gamma-467,Female,1,Yes,No,18,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,Yes,Credit card (automatic),13.27,238.86,No
+1871-Alpha-468,Male,0,Yes,Yes,34,Yes,No,Fiber optic,No,Yes,No,No,Yes,No,Month-to-month,Yes,Credit card (automatic),93.93,3193.62,Yes
+6841-Gamma-469,Female,1,No,Yes,13,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Electronic check,49.37,641.81,No
+4337-Beta-470,Male,0,No,Yes,14,Yes,Yes,Fiber optic,No,Yes,Yes,No,Yes,No,One year,Yes,Bank transfer (automatic),106.53,1491.42,Yes
+2998-Beta-471,Female,0,No,Yes,43,Yes,Yes,Fiber optic,No,No,No,No,Yes,No,Month-to-month,Yes,Credit card (automatic),95.29,4097.47,Yes
+6323-Gamma-472,Male,0,Yes,No,52,No,No phone service,Fiber optic,Yes,Yes,No,Yes,No,No,Two year,Yes,Mailed check,73.25,3809.0,No
+7535-Alpha-473,Male,0,Yes,No,18,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,No,Mailed check,15.16,272.88,No
+2975-Beta-474,Female,1,No,Yes,65,No,No phone service,Fiber optic,Yes,No,Yes,No,No,No,One year,No,Bank transfer (automatic),69.66,4527.9,Yes
+7931-Alpha-475,Female,1,Yes,No,49,No,No phone service,Fiber optic,Yes,Yes,No,No,Yes,Yes,One year,No,Electronic check,90.71,4444.79,No
+5762-Beta-476,Female,0,No,No,47,Yes,Yes,Fiber optic,No,Yes,No,No,Yes,Yes,Two year,Yes,Electronic check,111.06,5219.82,Yes
+9366-Beta-477,Female,0,No,No,28,No,No phone service,Fiber optic,No,Yes,Yes,Yes,No,Yes,Month-to-month,Yes,Credit card (automatic),81.29,2276.12,Yes
+1741-Alpha-478,Female,1,No,No,26,No,No phone service,Fiber optic,No,No,Yes,Yes,Yes,Yes,Month-to-month,No,Electronic check,89.05,2315.3,Yes
+8107-Gamma-479,Male,0,No,Yes,22,Yes,Yes,Fiber optic,No,No,No,No,No,No,Month-to-month,No,Bank transfer (automatic),90.86,1998.92,Yes
+2435-Alpha-480,Male,0,Yes,Yes,53,Yes,Yes,Fiber optic,Yes,Yes,No,Yes,Yes,No,One year,Yes,Electronic check,112.68,5972.04,Yes
+5930-Beta-481,Male,1,No,Yes,58,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Credit card (automatic),47.41,2749.78,Yes
+8947-Beta-482,Male,1,Yes,Yes,37,No,No phone service,DSL,No,Yes,No,Yes,Yes,No,Two year,No,Credit card (automatic),59.26,2192.62,No
+5764-Alpha-483,Female,1,No,No,29,Yes,Yes,Fiber optic,Yes,No,No,Yes,No,No,Month-to-month,No,Electronic check,96.44,2796.76,No
+9106-Gamma-484,Female,1,No,Yes,45,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Credit card (automatic),42.34,1905.3,No
+6633-Beta-485,Male,0,No,No,32,Yes,No,Fiber optic,No,No,No,No,Yes,Yes,Month-to-month,No,Electronic check,99.93,3197.76,Yes
+8911-Alpha-486,Male,0,Yes,No,48,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,No,Bank transfer (automatic),38.1,1828.8,No
+4845-Alpha-487,Male,0,No,No,24,No,No phone service,Fiber optic,Yes,Yes,Yes,Yes,No,No,One year,Yes,Mailed check,79.29,1902.96,No
+2977-Gamma-488,Male,1,No,No,28,No,No phone service,DSL,Yes,No,Yes,Yes,Yes,No,Month-to-month,No,Electronic check,60.7,1699.6,No
+2734-Gamma-489,Male,0,Yes,Yes,21,Yes,Yes,DSL,No,Yes,No,No,No,Yes,Month-to-month,Yes,Bank transfer (automatic),81.47,1710.87,Yes
+6482-Alpha-490,Male,0,No,No,32,Yes,Yes,Fiber optic,No,No,No,Yes,Yes,No,Month-to-month,No,Credit card (automatic),101.13,3236.16,No
+6908-Gamma-491,Male,0,No,Yes,54,Yes,No,Fiber optic,No,No,No,No,Yes,No,One year,Yes,Electronic check,88.56,4782.24,No
+9476-Alpha-492,Male,1,No,No,47,Yes,No,DSL,Yes,No,Yes,Yes,Yes,No,Two year,No,Credit card (automatic),80.58,3787.26,No
+5986-Gamma-493,Female,1,Yes,No,33,Yes,No,DSL,No,Yes,No,No,No,Yes,One year,No,Electronic check,71.82,2370.06,No
+1605-Gamma-494,Female,1,Yes,No,10,Yes,Yes,DSL,No,No,Yes,Yes,Yes,No,One year,Yes,Bank transfer (automatic),83.04,830.4,No
+7926-Gamma-495,Male,0,No,No,69,No,No phone service,Fiber optic,Yes,Yes,Yes,No,No,Yes,Month-to-month,No,Bank transfer (automatic),86.31,5955.39,Yes
+4868-Gamma-496,Male,1,No,No,49,Yes,No,Fiber optic,Yes,Yes,No,Yes,No,No,One year,Yes,Mailed check,92.82,4548.18,No
+7974-Beta-497,Male,0,Yes,No,47,Yes,No,Fiber optic,Yes,No,Yes,No,No,No,One year,No,Credit card (automatic),88.34,4151.98,Yes
+7937-Beta-498,Female,1,Yes,Yes,33,Yes,No,Fiber optic,No,Yes,Yes,Yes,No,No,Month-to-month,Yes,Mailed check,93.13,3073.29,No
+7051-Alpha-499,Female,0,Yes,No,69,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Mailed check,16.66,1149.54,No
+2929-Beta-500,Female,1,No,No,36,No,No phone service,DSL,Yes,Yes,Yes,No,Yes,No,One year,No,Mailed check,58.26,2097.36,No
+3999-Gamma-501,Female,0,Yes,No,47,Yes,Yes,Fiber optic,No,No,No,No,No,No,Month-to-month,No,Mailed check,90.24,4241.28,Yes
+3269-Gamma-502,Female,1,No,Yes,34,No,No phone service,Fiber optic,Yes,No,No,Yes,No,No,Month-to-month,Yes,Credit card (automatic),71.44,2428.96,Yes
+5544-Gamma-503,Male,0,Yes,No,24,Yes,Yes,Fiber optic,Yes,Yes,Yes,No,Yes,Yes,One year,Yes,Electronic check,123.62,2966.88,No
+5504-Alpha-504,Male,1,Yes,No,58,No,No phone service,Fiber optic,Yes,No,Yes,No,No,Yes,Month-to-month,No,Electronic check,75.11,4356.38,Yes
+9649-Beta-505,Female,1,Yes,Yes,10,Yes,Yes,Fiber optic,No,Yes,Yes,No,Yes,Yes,Two year,No,Credit card (automatic),117.02,1170.2,Yes
+3772-Alpha-506,Female,0,Yes,Yes,57,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Electronic check,20.64,1176.48,Yes
+6243-Alpha-507,Female,1,No,No,27,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Mailed check,47.89,1293.03,No
+4874-Beta-508,Female,0,No,Yes,51,No,No phone service,Fiber optic,No,No,Yes,No,Yes,No,One year,Yes,Electronic check,71.97,3670.47,No
+5409-Gamma-509,Male,0,Yes,No,66,No,No phone service,DSL,No,Yes,Yes,Yes,No,Yes,One year,Yes,Credit card (automatic),61.86,4082.76,No
+8401-Alpha-510,Male,1,No,Yes,13,Yes,Yes,DSL,No,No,No,No,No,Yes,Month-to-month,No,Electronic check,78.46,1019.98,No
+3644-Gamma-511,Male,1,Yes,No,69,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,No,Credit card (automatic),45.3,3125.7,No
+4454-Gamma-512,Female,1,No,No,44,No,No phone service,DSL,Yes,No,No,Yes,No,No,Month-to-month,Yes,Mailed check,47.8,2103.2,No
+1033-Gamma-513,Female,0,Yes,Yes,57,No,No phone service,Fiber optic,No,No,Yes,Yes,Yes,No,Month-to-month,Yes,Bank transfer (automatic),75.55,4306.35,No
+7166-Gamma-514,Female,1,Yes,Yes,33,Yes,No,Fiber optic,No,Yes,No,Yes,Yes,Yes,One year,No,Bank transfer (automatic),109.04,3598.32,No
+4137-Alpha-515,Female,0,Yes,No,25,No,No phone service,Fiber optic,Yes,No,No,Yes,Yes,Yes,Month-to-month,No,Electronic check,84.29,2107.25,Yes
+5544-Gamma-516,Female,0,Yes,Yes,50,Yes,Yes,DSL,Yes,Yes,No,Yes,No,Yes,Month-to-month,Yes,Bank transfer (automatic),93.78,4689.0,No
+8437-Alpha-517,Female,0,No,No,24,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Electronic check,18.0,432.0,Yes
+9491-Beta-518,Female,1,Yes,Yes,56,Yes,No,Fiber optic,No,No,No,Yes,No,Yes,Two year,No,Electronic check,93.18,5218.08,No
+1415-Gamma-519,Male,1,Yes,Yes,52,Yes,Yes,DSL,No,No,Yes,Yes,Yes,No,One year,No,Electronic check,87.55,4552.6,No
+6477-Beta-520,Male,0,No,Yes,39,No,No phone service,Fiber optic,Yes,No,Yes,Yes,No,Yes,Two year,No,Electronic check,87.68,3419.52,No
+2401-Alpha-521,Male,1,No,Yes,64,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Electronic check,49.31,3155.84,No
+5939-Gamma-522,Female,0,Yes,Yes,48,Yes,No,Fiber optic,No,No,Yes,No,Yes,Yes,Month-to-month,No,Credit card (automatic),103.4,4963.2,No
+8605-Beta-523,Male,1,Yes,No,24,No,No phone service,DSL,Yes,Yes,Yes,Yes,Yes,Yes,One year,Yes,Bank transfer (automatic),83.22,1997.28,No
+6822-Beta-524,Female,1,Yes,Yes,33,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,Yes,Mailed check,48.93,1614.69,No
+6106-Gamma-525,Female,1,No,Yes,51,Yes,No,Fiber optic,No,No,No,No,Yes,Yes,Two year,Yes,Mailed check,100.38,5119.38,Yes
+9308-Gamma-526,Male,1,No,Yes,54,Yes,Yes,Fiber optic,Yes,No,Yes,No,No,No,Month-to-month,No,Bank transfer (automatic),97.87,5284.98,Yes
+7859-Beta-527,Male,0,No,Yes,42,No,No phone service,Fiber optic,Yes,Yes,Yes,Yes,No,Yes,One year,Yes,Credit card (automatic),90.28,3791.76,No
+6431-Gamma-528,Female,0,No,Yes,37,Yes,No,Fiber optic,Yes,Yes,No,Yes,Yes,Yes,Month-to-month,No,Credit card (automatic),113.04,4182.48,Yes
+4185-Gamma-529,Female,0,Yes,Yes,21,Yes,No,Fiber optic,Yes,Yes,No,Yes,No,Yes,Month-to-month,Yes,Mailed check,104.97,2204.37,Yes
+1352-Alpha-530,Female,0,Yes,Yes,16,No,No phone service,DSL,Yes,No,Yes,No,No,Yes,Month-to-month,No,Bank transfer (automatic),58.01,928.16,Yes
+3807-Gamma-531,Female,0,Yes,Yes,20,Yes,Yes,Fiber optic,Yes,No,No,No,No,Yes,Two year,Yes,Mailed check,100.26,2005.2,No
+9773-Beta-532,Male,1,Yes,Yes,19,No,No phone service,DSL,Yes,No,Yes,Yes,No,Yes,Month-to-month,Yes,Credit card (automatic),60.3,1145.7,No
+9342-Beta-533,Female,1,Yes,No,56,No,No phone service,Fiber optic,No,No,No,No,No,Yes,One year,Yes,Mailed check,68.8,3852.8,No
+4325-Beta-534,Male,1,Yes,No,48,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,No,Mailed check,19.9,955.2,Yes
+7129-Beta-535,Male,0,Yes,No,11,No,No phone service,DSL,No,Yes,Yes,No,No,No,Two year,No,Credit card (automatic),50.25,552.75,Yes
+8086-Beta-536,Female,1,No,No,41,No,No phone service,DSL,Yes,Yes,No,Yes,No,Yes,One year,No,Electronic check,61.73,2530.93,No
+5825-Gamma-537,Male,1,Yes,Yes,23,Yes,Yes,Fiber optic,No,Yes,Yes,No,Yes,No,Month-to-month,No,Bank transfer (automatic),106.95,2459.85,Yes
+5496-Alpha-538,Male,1,Yes,No,26,No,No phone service,Fiber optic,No,No,No,Yes,No,Yes,Month-to-month,No,Mailed check,72.15,1875.9,Yes
+4717-Gamma-539,Male,1,Yes,No,24,No,No phone service,DSL,No,Yes,No,Yes,No,No,Two year,Yes,Credit card (automatic),48.76,1170.24,Yes
+8372-Gamma-540,Male,1,Yes,Yes,35,No,No phone service,DSL,Yes,No,No,No,Yes,No,Month-to-month,No,Credit card (automatic),53.67,1878.45,Yes
+9808-Beta-541,Female,0,Yes,Yes,16,Yes,No,Fiber optic,No,No,Yes,No,Yes,No,One year,Yes,Credit card (automatic),94.56,1512.96,No
+2779-Beta-542,Female,1,Yes,Yes,57,Yes,Yes,Fiber optic,Yes,No,Yes,Yes,Yes,Yes,Month-to-month,No,Bank transfer (automatic),122.45,6979.65,Yes
+4373-Alpha-543,Female,0,No,Yes,33,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Mailed check,17.45,575.85,No
+6353-Beta-544,Female,0,Yes,Yes,50,No,No phone service,DSL,No,Yes,No,Yes,Yes,Yes,Month-to-month,No,Credit card (automatic),70.59,3529.5,No
+8778-Alpha-545,Female,0,No,No,44,Yes,Yes,Fiber optic,Yes,No,Yes,No,Yes,No,One year,No,Credit card (automatic),105.31,4633.64,No
+8580-Gamma-546,Male,0,No,No,46,No,No phone service,DSL,No,No,Yes,No,Yes,Yes,Month-to-month,No,Credit card (automatic),62.63,2880.98,No
+7302-Gamma-547,Male,0,No,Yes,45,Yes,Yes,DSL,No,No,Yes,Yes,No,No,Month-to-month,Yes,Bank transfer (automatic),76.2,3429.0,Yes
+2253-Alpha-548,Female,1,No,Yes,28,No,No phone service,Fiber optic,Yes,Yes,No,Yes,Yes,No,Month-to-month,No,Bank transfer (automatic),81.04,2269.12,Yes
+7542-Alpha-549,Female,0,Yes,No,11,Yes,Yes,DSL,No,No,No,No,Yes,Yes,Month-to-month,Yes,Credit card (automatic),87.24,959.64,Yes
+3297-Beta-550,Female,0,Yes,Yes,29,Yes,Yes,Fiber optic,No,Yes,No,Yes,Yes,Yes,One year,No,Mailed check,120.56,3496.24,Yes
+8219-Beta-551,Male,0,Yes,Yes,44,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,Yes,Electronic check,20.15,886.6,Yes
+7399-Gamma-552,Female,1,Yes,Yes,61,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Mailed check,37.86,2309.46,No
+7138-Alpha-553,Male,0,Yes,No,29,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,No,Mailed check,48.64,1410.56,No
+2035-Alpha-554,Male,0,Yes,Yes,49,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,Yes,Bank transfer (automatic),20.25,992.25,No
+6286-Gamma-555,Male,0,No,No,37,Yes,Yes,Fiber optic,Yes,Yes,No,No,Yes,Yes,One year,No,Bank transfer (automatic),120.48,4457.76,No
+1196-Beta-556,Male,1,Yes,Yes,25,No,No phone service,DSL,No,Yes,Yes,Yes,No,No,Month-to-month,No,Electronic check,51.78,1294.5,No
+9784-Gamma-557,Male,1,Yes,No,36,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,Yes,Bank transfer (automatic),19.35,696.6,No
+3872-Gamma-558,Female,1,Yes,No,57,Yes,No,DSL,No,Yes,Yes,Yes,Yes,Yes,Month-to-month,No,Mailed check,95.17,5424.69,No
+8020-Alpha-559,Male,0,Yes,No,34,No,No phone service,Fiber optic,No,Yes,Yes,No,Yes,Yes,Two year,Yes,Credit card (automatic),91.31,3104.54,No
+6385-Alpha-560,Female,1,Yes,No,65,No,No phone service,DSL,Yes,Yes,No,No,Yes,Yes,Month-to-month,Yes,Mailed check,69.01,4485.65,No
+4644-Gamma-561,Female,1,Yes,No,55,Yes,Yes,DSL,No,Yes,Yes,Yes,Yes,Yes,One year,Yes,Electronic check,104.08,5724.4,No
+3845-Gamma-562,Male,0,Yes,No,53,No,No phone service,Fiber optic,No,Yes,Yes,Yes,No,Yes,One year,Yes,Bank transfer (automatic),82.09,4350.77,Yes
+5675-Gamma-563,Female,0,No,No,16,Yes,No,Fiber optic,No,No,Yes,No,No,No,Two year,No,Mailed check,83.62,1337.92,No
+8897-Alpha-564,Female,1,Yes,No,28,Yes,Yes,Fiber optic,No,No,No,No,No,No,Month-to-month,No,Credit card (automatic),87.87,2460.36,Yes
+2178-Beta-565,Male,1,Yes,Yes,12,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,Yes,Bank transfer (automatic),45.05,540.6,No
+9051-Beta-566,Female,1,No,No,26,No,No phone service,Fiber optic,No,Yes,No,Yes,Yes,No,One year,Yes,Mailed check,84.55,2198.3,No
+8148-Beta-567,Female,1,No,Yes,14,No,No phone service,DSL,No,Yes,Yes,No,Yes,No,Month-to-month,Yes,Mailed check,57.15,800.1,No
+5281-Gamma-568,Female,0,No,Yes,16,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,Yes,Electronic check,43.12,689.92,No
+7297-Beta-569,Male,0,No,Yes,42,No,No phone service,Fiber optic,No,No,No,No,No,Yes,One year,Yes,Bank transfer (automatic),66.52,2793.84,No
+3338-Beta-570,Male,1,No,Yes,57,Yes,No,Fiber optic,Yes,Yes,Yes,No,No,No,Month-to-month,No,Mailed check,94.44,5383.08,Yes
+3890-Beta-571,Male,0,Yes,No,22,Yes,Yes,Fiber optic,No,Yes,Yes,Yes,Yes,Yes,Month-to-month,Yes,Bank transfer (automatic),120.28,2646.16,Yes
+7697-Beta-572,Male,0,Yes,No,40,Yes,No,DSL,Yes,No,Yes,No,Yes,Yes,Month-to-month,No,Credit card (automatic),87.09,3483.6,Yes
+2651-Alpha-573,Male,1,Yes,Yes,68,Yes,Yes,Fiber optic,Yes,No,No,No,No,No,Month-to-month,No,Bank transfer (automatic),90.69,6166.92,No
+7074-Gamma-574,Female,1,Yes,No,17,No,No phone service,Fiber optic,No,Yes,No,No,Yes,Yes,Month-to-month,No,Credit card (automatic),84.85,1442.45,Yes
+3275-Alpha-575,Male,1,Yes,No,15,No,No phone service,DSL,No,No,Yes,Yes,No,Yes,Month-to-month,No,Electronic check,58.66,879.9,Yes
+6333-Gamma-576,Female,0,No,No,35,Yes,No,Fiber optic,No,No,Yes,No,No,Yes,Month-to-month,Yes,Electronic check,92.42,3234.7,Yes
+3094-Beta-577,Male,1,No,Yes,30,No,No phone service,Fiber optic,Yes,No,Yes,Yes,Yes,Yes,Two year,Yes,Electronic check,91.21,2736.3,No
+8125-Gamma-578,Male,0,No,No,28,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,Yes,Bank transfer (automatic),17.78,497.84,No
+8803-Gamma-579,Male,0,No,Yes,30,No,No phone service,Fiber optic,Yes,Yes,No,No,No,No,Month-to-month,Yes,Mailed check,69.39,2081.7,Yes
+5244-Alpha-580,Female,0,Yes,Yes,32,No,No phone service,Fiber optic,Yes,Yes,No,Yes,No,No,Month-to-month,Yes,Bank transfer (automatic),73.48,2351.36,No
+2013-Gamma-581,Male,1,No,No,35,No,No phone service,Fiber optic,Yes,Yes,Yes,No,Yes,No,One year,No,Mailed check,85.87,3005.45,No
+5863-Alpha-582,Female,1,Yes,No,23,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Bank transfer (automatic),47.41,1090.43,No
+9230-Gamma-583,Male,1,No,Yes,10,No,No phone service,Fiber optic,No,No,Yes,No,Yes,Yes,One year,Yes,Electronic check,84.44,844.4,No
+3933-Beta-584,Female,1,Yes,Yes,53,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,No,Credit card (automatic),16.69,884.57,No
+8756-Beta-585,Female,1,Yes,No,32,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Credit card (automatic),20.54,657.28,Yes
+2594-Alpha-586,Female,0,No,No,11,Yes,Yes,DSL,No,No,No,Yes,Yes,Yes,Month-to-month,Yes,Electronic check,91.5,1006.5,Yes
+6934-Gamma-587,Male,0,No,No,46,Yes,Yes,Fiber optic,Yes,No,No,Yes,Yes,Yes,Two year,No,Credit card (automatic),117.87,5422.02,No
+3434-Gamma-588,Female,0,Yes,Yes,30,Yes,No,DSL,No,No,Yes,No,Yes,No,One year,No,Bank transfer (automatic),76.56,2296.8,No
+8292-Beta-589,Male,0,Yes,Yes,41,Yes,No,Fiber optic,Yes,Yes,No,No,Yes,Yes,Two year,No,Credit card (automatic),109.49,4489.09,No
+8105-Beta-590,Male,0,No,Yes,67,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,Yes,Credit card (automatic),32.99,2210.33,No
+9788-Gamma-591,Female,0,Yes,Yes,23,Yes,Yes,Fiber optic,Yes,Yes,No,No,Yes,Yes,Two year,Yes,Mailed check,118.3,2720.9,No
+3641-Alpha-592,Female,0,Yes,Yes,29,No,No phone service,Fiber optic,No,Yes,No,Yes,Yes,No,Two year,Yes,Bank transfer (automatic),79.21,2297.09,No
+9750-Beta-593,Male,1,No,No,36,Yes,Yes,Fiber optic,Yes,Yes,Yes,Yes,Yes,No,Month-to-month,Yes,Mailed check,116.28,4186.08,No
+4539-Gamma-594,Female,1,Yes,No,22,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Credit card (automatic),38.86,854.92,No
+3675-Beta-595,Female,0,No,No,47,Yes,Yes,DSL,Yes,No,Yes,No,Yes,No,Month-to-month,Yes,Bank transfer (automatic),86.29,4055.63,Yes
+8104-Beta-596,Male,0,Yes,No,47,Yes,Yes,DSL,No,Yes,No,Yes,No,No,One year,No,Mailed check,77.12,3624.64,No
+4698-Beta-597,Male,0,No,Yes,71,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,Yes,Electronic check,20.44,1451.24,No
+3879-Gamma-598,Female,1,Yes,No,41,No,No phone service,DSL,No,Yes,Yes,Yes,No,No,Month-to-month,Yes,Bank transfer (automatic),51.07,2093.87,No
+9711-Gamma-599,Female,1,Yes,No,47,Yes,Yes,Fiber optic,Yes,Yes,No,No,Yes,No,One year,Yes,Credit card (automatic),105.54,4960.38,Yes
+8500-Alpha-600,Female,1,No,No,13,No,No phone service,DSL,No,Yes,No,Yes,No,No,Two year,No,Electronic check,44.53,578.89,No
+2302-Alpha-601,Male,0,Yes,Yes,30,Yes,No,Fiber optic,No,Yes,No,Yes,No,No,One year,Yes,Credit card (automatic),88.9,2667.0,No
+1227-Gamma-602,Male,0,No,No,10,Yes,Yes,DSL,No,Yes,Yes,Yes,Yes,No,One year,Yes,Bank transfer (automatic),94.61,946.1,No
+1834-Beta-603,Female,1,Yes,No,40,Yes,No,Fiber optic,Yes,Yes,No,No,No,No,Month-to-month,No,Mailed check,85.12,3404.8,Yes
+1036-Gamma-604,Female,0,No,Yes,9,No,No phone service,Fiber optic,No,Yes,No,Yes,No,No,Two year,No,Bank transfer (automatic),68.09,612.81,Yes
+2755-Alpha-605,Female,0,No,No,60,Yes,Yes,Fiber optic,No,No,Yes,Yes,Yes,No,One year,Yes,Credit card (automatic),108.24,6494.4,No
+1113-Alpha-606,Female,0,No,No,33,No,No phone service,Fiber optic,No,No,No,Yes,No,Yes,One year,No,Credit card (automatic),71.07,2345.31,No
+3651-Alpha-607,Female,1,Yes,No,49,Yes,Yes,DSL,Yes,No,Yes,Yes,No,No,Two year,No,Electronic check,83.77,4104.73,No
+3626-Gamma-608,Male,1,No,Yes,28,No,No phone service,DSL,No,No,Yes,No,No,No,One year,Yes,Electronic check,39.26,1099.28,Yes
+2767-Alpha-609,Male,0,No,Yes,42,Yes,Yes,Fiber optic,No,No,Yes,No,No,No,Month-to-month,No,Credit card (automatic),91.05,3824.1,No
+2353-Beta-610,Male,0,Yes,Yes,47,No,No phone service,Fiber optic,Yes,No,Yes,No,Yes,No,One year,Yes,Mailed check,76.69,3604.43,No
+4091-Gamma-611,Male,0,Yes,Yes,22,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Bank transfer (automatic),19.46,428.12,No
+4148-Alpha-612,Female,0,Yes,Yes,16,Yes,No,DSL,No,No,Yes,Yes,No,No,Month-to-month,No,Electronic check,70.66,1130.56,Yes
+9353-Beta-613,Male,1,Yes,No,26,No,No phone service,Fiber optic,No,No,No,Yes,No,Yes,One year,Yes,Electronic check,71.66,1863.16,Yes
+1008-Alpha-614,Female,0,No,No,24,No,No phone service,Fiber optic,Yes,No,Yes,No,No,No,Month-to-month,No,Bank transfer (automatic),69.71,1673.04,Yes
+2827-Alpha-615,Male,0,No,No,38,No,No phone service,Fiber optic,No,Yes,No,Yes,No,Yes,Month-to-month,Yes,Mailed check,78.56,2985.28,Yes
+2971-Alpha-616,Male,0,No,Yes,19,Yes,No,Fiber optic,No,No,Yes,Yes,Yes,Yes,Two year,Yes,Credit card (automatic),106.1,2015.9,No
+5137-Gamma-617,Female,1,No,Yes,58,No,No phone service,DSL,Yes,No,No,Yes,Yes,No,One year,Yes,Bank transfer (automatic),59.76,3466.08,No
+1744-Gamma-618,Male,0,No,No,63,Yes,Yes,Fiber optic,No,No,No,No,No,Yes,One year,Yes,Electronic check,98.26,6190.38,No
+3621-Gamma-619,Male,0,No,No,46,No,No phone service,DSL,Yes,No,No,Yes,Yes,Yes,Month-to-month,Yes,Mailed check,66.37,3053.02,No
+5781-Alpha-620,Male,1,Yes,No,32,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,Yes,Electronic check,43.9,1404.8,No
+1022-Gamma-621,Female,1,No,Yes,44,No,No phone service,DSL,Yes,No,No,No,Yes,Yes,One year,No,Mailed check,63.8,2807.2,No
+5582-Alpha-622,Female,0,Yes,No,56,No,No phone service,DSL,Yes,No,Yes,No,No,Yes,Month-to-month,No,Mailed check,58.31,3265.36,Yes
+8308-Alpha-623,Female,1,Yes,No,19,Yes,No,DSL,Yes,No,Yes,Yes,Yes,No,Month-to-month,Yes,Bank transfer (automatic),78.51,1491.69,Yes
+1344-Beta-624,Male,0,No,Yes,55,Yes,Yes,DSL,Yes,No,Yes,No,No,Yes,Month-to-month,Yes,Electronic check,87.6,4818.0,Yes
+2633-Beta-625,Female,0,Yes,Yes,33,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,Yes,Electronic check,48.28,1593.24,Yes
+5385-Alpha-626,Male,0,Yes,No,36,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Credit card (automatic),44.53,1603.08,Yes
+8279-Alpha-627,Female,1,No,Yes,38,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Electronic check,48.22,1832.36,No
+1347-Alpha-628,Male,1,Yes,No,51,Yes,Yes,Fiber optic,Yes,Yes,Yes,No,No,Yes,Two year,No,Bank transfer (automatic),113.94,5810.94,No
+4700-Gamma-629,Female,0,No,Yes,27,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,Yes,Bank transfer (automatic),47.77,1289.79,Yes
+6854-Alpha-630,Female,0,No,Yes,66,Yes,Yes,Fiber optic,Yes,No,No,Yes,No,Yes,One year,No,Bank transfer (automatic),105.45,6959.7,No
+6707-Alpha-631,Female,1,No,No,18,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Mailed check,46.28,833.04,Yes
+6247-Alpha-632,Female,1,No,Yes,48,Yes,No,Fiber optic,No,Yes,Yes,No,Yes,Yes,Two year,No,Bank transfer (automatic),107.57,5163.36,No
+6231-Beta-633,Female,1,No,No,36,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Credit card (automatic),48.61,1749.96,Yes
+9144-Gamma-634,Female,0,No,Yes,22,No,No phone service,DSL,Yes,Yes,Yes,No,Yes,Yes,Month-to-month,Yes,Bank transfer (automatic),75.55,1662.1,Yes
+8764-Alpha-635,Male,0,No,No,26,Yes,No,Fiber optic,No,Yes,No,Yes,Yes,Yes,One year,Yes,Mailed check,108.83,2829.58,No
+2920-Gamma-636,Male,1,Yes,No,30,No,No phone service,DSL,Yes,Yes,Yes,No,Yes,Yes,Month-to-month,Yes,Bank transfer (automatic),74.95,2248.5,No
+3314-Alpha-637,Male,0,Yes,No,38,Yes,Yes,Fiber optic,No,Yes,No,No,No,No,One year,No,Electronic check,94.82,3603.16,No
+5698-Alpha-638,Male,0,Yes,Yes,21,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Credit card (automatic),44.86,942.06,No
+8443-Gamma-639,Female,1,Yes,No,41,Yes,No,DSL,Yes,No,Yes,Yes,No,Yes,Month-to-month,Yes,Credit card (automatic),80.06,3282.46,No
+4009-Gamma-640,Male,1,No,No,47,No,No phone service,DSL,No,Yes,Yes,No,No,Yes,Month-to-month,No,Electronic check,59.96,2818.12,No
+2710-Alpha-641,Female,1,Yes,Yes,65,No,No phone service,DSL,Yes,Yes,Yes,Yes,Yes,No,Month-to-month,Yes,Mailed check,65.08,4230.2,No
+1530-Alpha-642,Female,0,Yes,No,33,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Electronic check,47.78,1576.74,No
+6056-Alpha-643,Female,1,No,Yes,11,No,No phone service,DSL,No,No,Yes,Yes,No,No,Month-to-month,Yes,Mailed check,47.89,526.79,No
+1388-Gamma-644,Female,1,Yes,No,19,Yes,Yes,DSL,No,Yes,Yes,Yes,Yes,Yes,Month-to-month,Yes,Bank transfer (automatic),100.45,1908.55,No
+8331-Alpha-645,Female,1,No,No,18,Yes,No,Fiber optic,Yes,Yes,Yes,Yes,No,Yes,One year,Yes,Mailed check,105.47,1898.46,Yes
+6071-Gamma-646,Male,1,Yes,No,44,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Bank transfer (automatic),20.14,886.16,No
+3645-Alpha-647,Female,1,No,Yes,54,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Bank transfer (automatic),45.17,2439.18,Yes
+8753-Beta-648,Female,0,Yes,No,52,Yes,No,DSL,No,No,No,Yes,No,No,Month-to-month,No,Bank transfer (automatic),64.42,3349.84,No
+2367-Gamma-649,Female,1,No,Yes,42,Yes,Yes,DSL,Yes,Yes,Yes,No,No,Yes,Month-to-month,No,Electronic check,90.24,3790.08,No
+4654-Beta-650,Female,0,No,No,56,No,No phone service,DSL,No,Yes,Yes,Yes,Yes,No,Month-to-month,No,Mailed check,66.69,3734.64,No
+7578-Beta-651,Male,1,No,No,19,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,Yes,Bank transfer (automatic),35.79,680.01,No
+8447-Alpha-652,Male,1,Yes,Yes,32,No,No phone service,Fiber optic,Yes,No,Yes,No,No,No,Month-to-month,Yes,Electronic check,65.9,2108.8,Yes
+4465-Alpha-653,Female,1,No,Yes,19,Yes,Yes,DSL,Yes,No,No,Yes,No,No,One year,No,Mailed check,77.24,1467.56,No
+5250-Alpha-654,Male,0,No,No,34,No,No phone service,Fiber optic,Yes,Yes,No,No,No,No,One year,Yes,Credit card (automatic),70.09,2383.06,Yes
+6811-Gamma-655,Female,0,Yes,Yes,69,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Electronic check,39.09,2697.21,No
+3465-Beta-656,Male,1,No,Yes,33,No,No phone service,DSL,No,Yes,No,Yes,No,Yes,Month-to-month,Yes,Mailed check,60.87,2008.71,Yes
+4074-Beta-657,Male,1,Yes,No,25,Yes,Yes,Fiber optic,Yes,No,No,Yes,No,No,One year,Yes,Credit card (automatic),100.13,2503.25,Yes
+8471-Beta-658,Female,1,No,No,28,No,No phone service,Fiber optic,Yes,Yes,No,No,No,Yes,Month-to-month,Yes,Credit card (automatic),77.63,2173.64,Yes
+7251-Beta-659,Female,1,Yes,Yes,14,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,Yes,Credit card (automatic),45.92,642.88,No
+2698-Beta-660,Male,1,Yes,No,52,No,No phone service,Fiber optic,Yes,Yes,No,No,Yes,Yes,Month-to-month,No,Electronic check,87.17,4532.84,Yes
+6744-Beta-661,Female,1,Yes,No,67,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,No,Bank transfer (automatic),32.59,2183.53,No
+6036-Beta-662,Male,0,No,Yes,26,Yes,Yes,Fiber optic,Yes,No,No,No,Yes,No,Month-to-month,Yes,Credit card (automatic),101.75,2645.5,No
+4156-Gamma-663,Female,0,No,Yes,36,No,No phone service,Fiber optic,Yes,No,No,Yes,No,Yes,Month-to-month,Yes,Mailed check,82.56,2972.16,Yes
+9261-Alpha-664,Female,1,Yes,No,56,Yes,Yes,Fiber optic,Yes,Yes,No,Yes,Yes,Yes,Two year,Yes,Credit card (automatic),120.97,6774.32,No
+1414-Gamma-665,Male,1,No,Yes,47,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Mailed check,43.99,2067.53,No
+9772-Alpha-666,Female,1,Yes,No,59,Yes,Yes,Fiber optic,Yes,Yes,Yes,No,Yes,Yes,Two year,Yes,Bank transfer (automatic),121.79,7185.61,Yes
+5292-Alpha-667,Male,0,No,No,14,Yes,No,DSL,Yes,No,Yes,No,Yes,No,Month-to-month,Yes,Mailed check,76.85,1075.9,Yes
+7879-Beta-668,Female,1,Yes,Yes,20,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Mailed check,20.15,403.0,Yes
+1515-Alpha-669,Female,1,No,Yes,37,Yes,No,Fiber optic,Yes,Yes,Yes,Yes,Yes,Yes,Month-to-month,No,Electronic check,120.8,4469.6,Yes
+4554-Alpha-670,Female,0,Yes,Yes,38,Yes,No,Fiber optic,No,No,Yes,Yes,No,No,One year,No,Credit card (automatic),90.16,3426.08,No
+8144-Gamma-671,Female,0,No,Yes,45,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Electronic check,39.44,1774.8,No
+6105-Alpha-672,Male,1,No,No,48,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Bank transfer (automatic),19.7,945.6,No
+2762-Gamma-673,Female,1,Yes,No,38,No,No phone service,Fiber optic,Yes,No,Yes,Yes,No,No,Month-to-month,No,Bank transfer (automatic),72.64,2760.32,No
+7525-Alpha-674,Male,0,No,No,53,Yes,No,Fiber optic,Yes,Yes,Yes,No,No,Yes,Month-to-month,No,Electronic check,103.83,5502.99,Yes
+1157-Beta-675,Male,1,Yes,No,58,No,No phone service,DSL,Yes,Yes,No,No,Yes,Yes,Two year,Yes,Bank transfer (automatic),68.32,3962.56,No
+2225-Gamma-676,Female,1,No,No,31,Yes,Yes,DSL,Yes,No,No,Yes,No,No,One year,Yes,Electronic check,75.51,2340.81,No
+8418-Alpha-677,Female,1,Yes,Yes,41,No,No phone service,DSL,Yes,Yes,No,No,Yes,No,One year,Yes,Electronic check,57.44,2355.04,Yes
+6527-Gamma-678,Male,0,No,Yes,7,No,No phone service,Fiber optic,No,No,No,No,No,Yes,Month-to-month,No,Credit card (automatic),69.59,487.13,Yes
+1771-Beta-679,Female,1,No,Yes,55,No,No phone service,DSL,Yes,Yes,Yes,Yes,Yes,Yes,One year,Yes,Bank transfer (automatic),78.75,4331.25,No
+8138-Alpha-680,Male,0,Yes,No,51,Yes,Yes,Fiber optic,No,Yes,Yes,Yes,No,Yes,Two year,No,Bank transfer (automatic),107.61,5488.11,No
+7218-Beta-681,Male,0,No,Yes,60,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Credit card (automatic),31.9,1914.0,Yes
+8320-Gamma-682,Male,0,No,No,63,No,No phone service,Fiber optic,No,No,Yes,Yes,No,No,Month-to-month,Yes,Bank transfer (automatic),67.72,4266.36,No
+4971-Gamma-683,Male,0,Yes,No,33,Yes,Yes,DSL,Yes,Yes,No,No,Yes,No,Month-to-month,Yes,Bank transfer (automatic),84.72,2795.76,Yes
+4418-Gamma-684,Female,1,No,Yes,5,Yes,Yes,Fiber optic,Yes,No,No,No,Yes,No,Month-to-month,Yes,Electronic check,101.72,508.6,Yes
+5552-Beta-685,Male,1,Yes,Yes,6,No,No phone service,Fiber optic,Yes,Yes,Yes,Yes,No,Yes,Month-to-month,No,Electronic check,87.41,524.46,Yes
+8802-Gamma-686,Female,1,No,Yes,44,Yes,No,Fiber optic,No,Yes,Yes,No,No,No,Two year,Yes,Credit card (automatic),87.93,3868.92,No
+5466-Beta-687,Male,0,No,No,35,Yes,No,Fiber optic,Yes,No,Yes,No,No,No,Month-to-month,Yes,Electronic check,88.73,3105.55,Yes
+5078-Alpha-688,Male,0,Yes,Yes,61,No,No phone service,DSL,Yes,Yes,Yes,No,Yes,No,Two year,No,Credit card (automatic),64.43,3930.23,No
+2659-Alpha-689,Female,1,Yes,Yes,51,Yes,No,Fiber optic,No,No,Yes,Yes,Yes,No,One year,No,Mailed check,96.73,4933.23,Yes
+3789-Beta-690,Male,0,Yes,No,47,No,No phone service,Fiber optic,Yes,Yes,No,No,No,Yes,Month-to-month,Yes,Bank transfer (automatic),77.13,3625.11,Yes
+2261-Alpha-691,Male,1,No,Yes,36,No,No phone service,Fiber optic,Yes,No,Yes,Yes,Yes,No,Month-to-month,Yes,Mailed check,83.55,3007.8,Yes
+3401-Alpha-692,Male,1,No,No,36,No,No phone service,DSL,No,No,No,No,No,No,Month-to-month,Yes,Bank transfer (automatic),36.88,1327.68,Yes
+5933-Gamma-693,Female,1,Yes,No,14,Yes,Yes,DSL,No,Yes,Yes,No,No,Yes,Month-to-month,Yes,Credit card (automatic),87.18,1220.52,No
+6888-Alpha-694,Male,0,No,Yes,51,No,No phone service,DSL,No,Yes,No,No,No,No,Month-to-month,No,Bank transfer (automatic),40.57,2069.07,Yes
+6067-Alpha-695,Male,1,Yes,No,52,No,No phone service,DSL,No,No,Yes,Yes,No,Yes,One year,No,Mailed check,60.19,3129.88,No
+9571-Beta-696,Male,1,No,No,19,Yes,No,DSL,Yes,No,Yes,Yes,No,Yes,Month-to-month,Yes,Credit card (automatic),81.71,1552.49,No
+6010-Alpha-697,Female,1,Yes,Yes,62,No,No phone service,DSL,Yes,No,No,Yes,Yes,No,Month-to-month,Yes,Mailed check,55.81,3460.22,Yes
+8078-Gamma-698,Male,1,Yes,Yes,24,No,No phone service,DSL,No,Yes,No,No,No,Yes,Month-to-month,No,Bank transfer (automatic),51.2,1228.8,No
+6091-Alpha-699,Female,1,Yes,Yes,38,No,No phone service,Fiber optic,Yes,No,Yes,No,No,Yes,Month-to-month,No,Credit card (automatic),75.94,2885.72,No
+9942-Alpha-700,Female,1,Yes,Yes,16,No,No phone service,Fiber optic,No,No,No,No,No,No,Month-to-month,No,Credit card (automatic),60.38,966.08,Yes
+8557-Alpha-701,Male,1,Yes,Yes,15,No,No phone service,Fiber optic,Yes,No,Yes,No,Yes,No,Month-to-month,Yes,Credit card (automatic),78.86,1182.9,No
+1097-Beta-702,Female,0,Yes,Yes,27,No,No phone service,Fiber optic,Yes,No,Yes,No,No,No,Month-to-month,Yes,Electronic check,70.44,1901.88,Yes
+9369-Gamma-703,Male,0,Yes,No,8,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Bank transfer (automatic),48.34,386.72,No
+6093-Gamma-704,Male,1,Yes,Yes,22,Yes,Yes,Fiber optic,Yes,Yes,Yes,Yes,Yes,Yes,One year,No,Electronic check,128.42,2825.24,Yes
+9287-Beta-705,Female,0,Yes,No,16,No,No phone service,Fiber optic,No,Yes,Yes,No,No,Yes,Two year,No,Mailed check,80.33,1285.28,Yes
+1354-Alpha-706,Male,0,Yes,Yes,25,No,No phone service,DSL,No,No,No,Yes,No,No,One year,No,Credit card (automatic),42.86,1071.5,No
+7321-Gamma-707,Male,1,No,No,53,Yes,Yes,Fiber optic,No,No,Yes,No,Yes,No,Two year,Yes,Credit card (automatic),100.19,5310.07,No
+1698-Beta-708,Male,1,No,No,30,Yes,Yes,Fiber optic,No,Yes,No,No,Yes,Yes,Month-to-month,Yes,Bank transfer (automatic),115.31,3459.3,Yes
+6558-Beta-709,Male,1,No,No,58,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Credit card (automatic),35.5,2059.0,No
+3955-Gamma-710,Female,0,No,No,11,No,No phone service,Fiber optic,Yes,Yes,Yes,Yes,Yes,Yes,One year,Yes,Credit card (automatic),97.81,1075.91,No
+8805-Beta-711,Male,0,Yes,Yes,66,No,No phone service,DSL,No,Yes,Yes,No,Yes,Yes,Two year,Yes,Credit card (automatic),69.62,4594.92,No
+7132-Gamma-712,Male,0,No,Yes,27,No,No phone service,Fiber optic,No,Yes,Yes,Yes,No,No,One year,No,Bank transfer (automatic),74.87,2021.49,Yes
+4694-Alpha-713,Male,1,Yes,Yes,55,Yes,Yes,Fiber optic,Yes,Yes,Yes,Yes,No,No,One year,Yes,Bank transfer (automatic),106.59,5862.45,No
+4036-Gamma-714,Female,0,Yes,No,27,No,No phone service,Fiber optic,No,Yes,Yes,No,No,No,One year,Yes,Electronic check,68.27,1843.29,Yes
+3083-Gamma-715,Female,0,Yes,No,14,Yes,Yes,DSL,No,Yes,Yes,No,No,No,Month-to-month,No,Electronic check,76.88,1076.32,Yes
+3586-Beta-716,Male,0,No,No,25,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,No,Bank transfer (automatic),46.37,1159.25,No
+1491-Alpha-717,Female,1,No,Yes,39,No,No phone service,Fiber optic,Yes,Yes,Yes,No,Yes,Yes,One year,No,Electronic check,97.62,3807.18,No
+1579-Beta-718,Male,1,Yes,No,21,Yes,No,Fiber optic,Yes,Yes,Yes,No,Yes,No,One year,No,Credit card (automatic),99.87,2097.27,No
+5971-Alpha-719,Male,0,Yes,Yes,7,No,No phone service,Fiber optic,Yes,No,Yes,No,No,Yes,Two year,No,Credit card (automatic),78.93,552.51,Yes
+3257-Alpha-720,Female,0,No,No,52,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Electronic check,36.01,1872.52,Yes
+4902-Alpha-721,Male,0,Yes,No,20,Yes,Yes,Fiber optic,Yes,Yes,Yes,Yes,Yes,No,Two year,Yes,Bank transfer (automatic),117.31,2346.2,No
+1716-Beta-722,Female,0,No,Yes,65,No,No phone service,Fiber optic,No,Yes,Yes,Yes,No,Yes,Month-to-month,No,Bank transfer (automatic),82.81,5382.65,No
+4609-Beta-723,Female,1,No,Yes,38,No,No phone service,Fiber optic,No,Yes,Yes,No,No,No,One year,No,Electronic check,66.26,2517.88,Yes
+4335-Alpha-724,Male,1,Yes,Yes,27,No,No phone service,Fiber optic,Yes,Yes,Yes,No,No,Yes,Month-to-month,Yes,Credit card (automatic),87.9,2373.3,Yes
+1553-Beta-725,Female,1,No,Yes,49,Yes,No,Fiber optic,No,No,Yes,No,No,No,Month-to-month,Yes,Mailed check,86.66,4246.34,Yes
+4370-Beta-726,Male,1,Yes,No,24,Yes,No,Fiber optic,Yes,No,No,Yes,Yes,No,Two year,No,Credit card (automatic),98.75,2370.0,No
+1935-Alpha-727,Female,1,No,No,53,No,No phone service,DSL,Yes,No,No,Yes,Yes,Yes,One year,No,Bank transfer (automatic),68.34,3622.02,No
+2401-Alpha-728,Female,1,No,Yes,57,No,No phone service,Fiber optic,No,No,No,Yes,Yes,No,One year,No,Bank transfer (automatic),70.09,3995.13,No
+3929-Beta-729,Female,0,No,Yes,50,No,No phone service,Fiber optic,Yes,No,No,Yes,No,Yes,Month-to-month,Yes,Bank transfer (automatic),78.11,3905.5,Yes
+6145-Alpha-730,Female,0,No,No,33,No,No phone service,Fiber optic,No,Yes,Yes,Yes,Yes,Yes,Two year,Yes,Electronic check,94.12,3105.96,Yes
+1630-Alpha-731,Female,1,Yes,Yes,42,Yes,No,DSL,No,Yes,No,Yes,Yes,No,Two year,Yes,Electronic check,79.16,3324.72,No
+9305-Beta-732,Male,0,Yes,Yes,36,No,No phone service,DSL,No,No,Yes,No,No,Yes,Two year,Yes,Bank transfer (automatic),55.32,1991.52,No
+6902-Beta-733,Female,1,No,No,32,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Electronic check,46.83,1498.56,No
+5765-Alpha-734,Male,0,Yes,No,50,No,No phone service,Fiber optic,Yes,No,Yes,Yes,No,Yes,Month-to-month,Yes,Mailed check,83.52,4176.0,Yes
+9249-Gamma-735,Female,0,Yes,No,59,No,No phone service,DSL,No,No,Yes,No,Yes,No,One year,Yes,Bank transfer (automatic),49.1,2896.9,No
+4782-Beta-736,Female,0,Yes,No,31,No,No phone service,DSL,No,Yes,No,Yes,No,No,Month-to-month,Yes,Credit card (automatic),48.87,1514.97,Yes
+7862-Alpha-737,Male,0,No,Yes,13,No,No phone service,Fiber optic,No,No,No,Yes,Yes,No,One year,No,Mailed check,76.85,999.05,Yes
+9096-Gamma-738,Male,0,No,Yes,46,Yes,Yes,Fiber optic,No,No,No,Yes,Yes,Yes,One year,No,Electronic check,111.51,5129.46,No
+3735-Alpha-739,Male,1,No,No,49,Yes,No,Fiber optic,Yes,No,Yes,No,No,Yes,Month-to-month,Yes,Electronic check,98.17,4810.33,Yes
+6815-Beta-740,Female,1,No,No,53,No,No phone service,DSL,Yes,Yes,Yes,Yes,Yes,No,Month-to-month,No,Credit card (automatic),68.55,3633.15,No
+6250-Beta-741,Male,1,Yes,Yes,32,No,No phone service,DSL,No,No,Yes,No,No,No,Month-to-month,No,Bank transfer (automatic),42.24,1351.68,Yes
+3923-Alpha-742,Male,0,No,No,29,No,No phone service,DSL,Yes,No,No,Yes,Yes,No,Month-to-month,No,Credit card (automatic),58.83,1706.07,Yes
+8191-Alpha-743,Male,1,No,Yes,13,Yes,No,Fiber optic,Yes,Yes,Yes,Yes,Yes,Yes,Month-to-month,Yes,Electronic check,118.28,1537.64,Yes
+9001-Alpha-744,Female,0,No,No,25,No,No phone service,Fiber optic,Yes,No,No,Yes,Yes,No,One year,No,Credit card (automatic),76.14,1903.5,No
+5309-Alpha-745,Male,1,Yes,No,55,Yes,Yes,Fiber optic,Yes,No,Yes,No,No,No,Month-to-month,Yes,Bank transfer (automatic),99.66,5481.3,Yes
+1628-Beta-746,Male,1,Yes,Yes,38,Yes,Yes,DSL,Yes,No,Yes,Yes,No,No,Month-to-month,Yes,Credit card (automatic),83.89,3187.82,Yes
+4065-Gamma-747,Female,1,Yes,Yes,55,Yes,Yes,Fiber optic,Yes,No,Yes,No,Yes,Yes,Month-to-month,Yes,Credit card (automatic),116.17,6389.35,Yes
+5310-Gamma-748,Female,0,No,No,42,Yes,No,Fiber optic,Yes,No,No,No,No,No,One year,No,Bank transfer (automatic),83.79,3519.18,Yes
+2581-Alpha-749,Male,1,No,No,29,No,No phone service,DSL,Yes,No,Yes,Yes,No,No,Month-to-month,Yes,Bank transfer (automatic),52.15,1512.35,No
+7522-Gamma-750,Male,1,No,No,11,Yes,Yes,Fiber optic,No,No,Yes,No,Yes,No,Month-to-month,No,Bank transfer (automatic),101.43,1115.73,Yes
+7737-Beta-751,Female,1,No,No,64,Yes,No,DSL,No,Yes,No,Yes,No,No,One year,No,Mailed check,65.72,4206.08,No
+3728-Gamma-752,Male,0,No,Yes,41,Yes,Yes,Fiber optic,No,Yes,No,No,Yes,Yes,Month-to-month,Yes,Bank transfer (automatic),111.04,4552.64,Yes
+9773-Alpha-753,Male,1,Yes,No,65,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,No,Credit card (automatic),36.41,2366.65,No
+4532-Gamma-754,Male,0,Yes,Yes,42,Yes,No,Fiber optic,No,Yes,Yes,No,No,Yes,Two year,Yes,Mailed check,97.74,4105.08,Yes
+1553-Beta-755,Male,1,No,Yes,58,No,No phone service,DSL,Yes,Yes,Yes,No,Yes,Yes,Two year,Yes,Electronic check,71.29,4134.82,No
+7408-Alpha-756,Female,1,No,Yes,22,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,No,Credit card (automatic),15.23,335.06,No
+4320-Alpha-757,Female,1,No,No,30,No,No phone service,DSL,Yes,Yes,No,No,No,No,Month-to-month,Yes,Credit card (automatic),45.85,1375.5,No
+1282-Beta-758,Female,1,Yes,No,47,Yes,Yes,Fiber optic,No,Yes,No,No,No,Yes,Month-to-month,No,Bank transfer (automatic),103.2,4850.4,Yes
+3355-Gamma-759,Male,0,Yes,Yes,9,No,No phone service,DSL,Yes,Yes,Yes,No,No,Yes,Month-to-month,Yes,Credit card (automatic),65.64,590.76,Yes
+5129-Beta-760,Female,1,Yes,Yes,41,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Electronic check,17.56,719.96,Yes
+5393-Gamma-761,Male,1,No,No,59,Yes,No,DSL,No,No,Yes,Yes,No,Yes,One year,No,Mailed check,79.11,4667.49,No
+1223-Alpha-762,Male,0,Yes,No,66,Yes,Yes,Fiber optic,No,No,Yes,No,Yes,No,Two year,No,Electronic check,102.59,6770.94,No
+5861-Alpha-763,Female,1,No,No,67,No,No phone service,DSL,Yes,Yes,No,Yes,No,No,Two year,No,Credit card (automatic),51.44,3446.48,No
+4450-Beta-764,Male,0,No,Yes,51,No,No phone service,DSL,No,Yes,Yes,No,Yes,Yes,Month-to-month,No,Mailed check,70.98,3619.98,No
+4264-Gamma-765,Male,1,No,Yes,52,Yes,No,DSL,Yes,Yes,No,Yes,No,Yes,Month-to-month,Yes,Bank transfer (automatic),81.0,4212.0,No
+5656-Beta-766,Female,1,No,No,21,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,Yes,Electronic check,52.39,1100.19,No
+4546-Beta-767,Male,1,Yes,Yes,52,No,No phone service,Fiber optic,No,No,No,Yes,Yes,Yes,Month-to-month,Yes,Mailed check,84.93,4416.36,No
+2496-Gamma-768,Male,0,Yes,No,22,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,Yes,Electronic check,35.22,774.84,Yes
+3244-Gamma-769,Female,1,No,No,56,No,No phone service,DSL,Yes,Yes,No,No,No,No,Two year,No,Bank transfer (automatic),48.46,2713.76,Yes
+9552-Beta-770,Male,0,Yes,No,59,Yes,No,Fiber optic,No,No,No,Yes,No,No,Month-to-month,Yes,Electronic check,84.86,5006.74,No
+6991-Beta-771,Female,1,Yes,Yes,7,No,No phone service,Fiber optic,No,Yes,Yes,Yes,No,No,Two year,Yes,Electronic check,71.55,500.85,No
+6085-Beta-772,Male,1,No,Yes,40,No,No phone service,DSL,Yes,No,No,No,Yes,No,One year,No,Electronic check,55.49,2219.6,Yes
+1498-Gamma-773,Female,1,No,Yes,19,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,Yes,Electronic check,17.11,325.09,Yes
+7054-Alpha-774,Male,0,Yes,Yes,11,No,No phone service,Fiber optic,Yes,Yes,No,Yes,No,Yes,Month-to-month,No,Mailed check,83.07,913.77,No
+1273-Beta-775,Female,0,No,Yes,55,No,No phone service,DSL,No,Yes,Yes,Yes,Yes,No,One year,Yes,Mailed check,64.63,3554.65,No
+8264-Alpha-776,Female,0,No,Yes,23,Yes,No,DSL,No,No,Yes,No,No,Yes,Month-to-month,No,Electronic check,73.13,1681.99,Yes
+2904-Alpha-777,Male,0,Yes,No,49,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Mailed check,47.89,2346.61,No
+7136-Beta-778,Male,0,No,Yes,6,Yes,No,Fiber optic,Yes,No,No,Yes,No,Yes,Month-to-month,No,Credit card (automatic),96.03,576.18,Yes
+4702-Alpha-779,Female,0,Yes,No,23,No,No phone service,Fiber optic,No,No,Yes,No,No,No,One year,No,Credit card (automatic),59.32,1364.36,No
+3793-Alpha-780,Female,0,Yes,No,41,No,No phone service,Fiber optic,No,Yes,No,No,Yes,Yes,Month-to-month,No,Mailed check,83.5,3423.5,Yes
+8662-Beta-781,Male,0,Yes,No,17,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Bank transfer (automatic),42.17,716.89,No
+7191-Gamma-782,Male,1,Yes,No,33,Yes,Yes,DSL,No,No,No,No,Yes,Yes,Month-to-month,No,Bank transfer (automatic),86.43,2852.19,No
+3666-Beta-783,Male,0,No,No,43,No,No phone service,Fiber optic,No,No,Yes,No,No,No,One year,No,Credit card (automatic),60.7,2610.1,No
+5918-Alpha-784,Male,0,No,No,39,No,No phone service,DSL,No,Yes,Yes,Yes,No,Yes,One year,Yes,Mailed check,62.28,2428.92,No
+6458-Alpha-785,Male,1,Yes,No,50,No,No phone service,Fiber optic,No,Yes,No,Yes,Yes,Yes,One year,Yes,Bank transfer (automatic),87.97,4398.5,No
+6038-Alpha-786,Male,0,Yes,No,66,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,Yes,Bank transfer (automatic),44.77,2954.82,No
+1081-Beta-787,Male,1,Yes,No,22,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Credit card (automatic),16.93,372.46,Yes
+7165-Beta-788,Male,0,No,Yes,49,No,No phone service,Fiber optic,Yes,No,No,No,No,No,One year,Yes,Bank transfer (automatic),65.88,3228.12,No
+9000-Gamma-789,Male,0,Yes,Yes,42,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Bank transfer (automatic),23.25,976.5,Yes
+9215-Alpha-790,Female,0,Yes,Yes,11,No,No phone service,Fiber optic,Yes,Yes,Yes,No,No,Yes,Two year,No,Credit card (automatic),82.52,907.72,No
+3947-Beta-791,Male,1,No,No,16,No,No phone service,DSL,Yes,No,No,Yes,Yes,No,Two year,Yes,Credit card (automatic),60.91,974.56,No
+2353-Beta-792,Male,1,Yes,Yes,58,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Credit card (automatic),16.16,937.28,No
+8449-Alpha-793,Female,1,No,Yes,36,No,No phone service,Fiber optic,No,No,Yes,No,No,No,Month-to-month,No,Bank transfer (automatic),64.63,2326.68,Yes
+2829-Alpha-794,Female,1,Yes,Yes,44,Yes,No,Fiber optic,No,Yes,No,No,Yes,No,Month-to-month,No,Electronic check,91.91,4044.04,Yes
+2991-Beta-795,Female,1,Yes,No,19,No,No phone service,Fiber optic,No,No,No,Yes,No,Yes,Month-to-month,No,Bank transfer (automatic),75.3,1430.7,No
+7833-Alpha-796,Female,1,No,Yes,70,Yes,No,Fiber optic,Yes,No,Yes,Yes,Yes,Yes,One year,Yes,Mailed check,112.14,7849.8,No
+9084-Beta-797,Female,1,No,Yes,44,No,No phone service,Fiber optic,Yes,Yes,No,No,Yes,Yes,Two year,Yes,Credit card (automatic),89.02,3916.88,Yes
+9398-Gamma-798,Male,1,No,No,46,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,Yes,Mailed check,17.87,822.02,Yes
+5208-Gamma-799,Male,1,Yes,Yes,38,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Mailed check,20.19,767.22,Yes
+1800-Beta-800,Female,0,No,No,47,Yes,No,Fiber optic,Yes,No,Yes,No,No,Yes,One year,No,Mailed check,100.33,4715.51,No
+1306-Beta-801,Male,1,No,No,40,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Mailed check,17.6,704.0,Yes
+4683-Alpha-802,Female,0,Yes,No,17,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,No,Bank transfer (automatic),16.63,282.71,No
+9871-Beta-803,Female,0,No,No,52,No,No phone service,Fiber optic,No,No,Yes,No,No,Yes,One year,Yes,Credit card (automatic),74.98,3898.96,Yes
+5189-Beta-804,Male,0,No,No,65,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,No,Bank transfer (automatic),48.82,3173.3,No
+5781-Beta-805,Female,1,Yes,Yes,20,Yes,No,Fiber optic,No,No,Yes,No,No,Yes,One year,No,Mailed check,89.76,1795.2,No
+7200-Gamma-806,Male,0,No,Yes,33,Yes,Yes,DSL,No,Yes,Yes,No,No,No,Month-to-month,Yes,Credit card (automatic),79.27,2615.91,Yes
+5569-Beta-807,Female,0,No,No,37,Yes,No,Fiber optic,No,No,No,No,Yes,Yes,Month-to-month,No,Bank transfer (automatic),96.41,3567.17,Yes
+1054-Gamma-808,Female,1,Yes,Yes,53,No,No phone service,DSL,No,No,No,Yes,Yes,Yes,Two year,Yes,Electronic check,59.79,3168.87,No
+7697-Alpha-809,Female,0,Yes,No,59,Yes,No,DSL,Yes,No,Yes,Yes,No,No,Two year,Yes,Mailed check,78.9,4655.1,No
+8736-Gamma-810,Male,1,Yes,No,48,Yes,Yes,Fiber optic,Yes,No,No,Yes,No,Yes,Month-to-month,Yes,Credit card (automatic),105.24,5051.52,No
+9195-Gamma-811,Male,1,Yes,Yes,45,No,No phone service,Fiber optic,Yes,Yes,Yes,No,No,No,Month-to-month,Yes,Credit card (automatic),70.26,3161.7,Yes
+5260-Gamma-812,Male,0,No,No,63,Yes,No,Fiber optic,No,Yes,No,No,No,No,One year,Yes,Electronic check,82.45,5194.35,No
+3391-Beta-813,Male,0,No,No,27,No,No phone service,Fiber optic,Yes,Yes,No,Yes,No,Yes,Month-to-month,No,Electronic check,84.48,2280.96,Yes
+8507-Gamma-814,Female,0,No,No,43,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Bank transfer (automatic),22.05,948.15,No
+8378-Gamma-815,Female,1,Yes,Yes,42,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,Yes,Mailed check,39.15,1644.3,No
+7076-Gamma-816,Female,1,No,Yes,39,No,No phone service,DSL,No,No,No,Yes,Yes,Yes,One year,No,Credit card (automatic),66.69,2600.91,Yes
+5215-Gamma-817,Male,0,Yes,No,50,Yes,Yes,Fiber optic,No,No,No,No,Yes,No,Two year,Yes,Bank transfer (automatic),96.96,4848.0,No
+9574-Beta-818,Female,1,Yes,No,46,Yes,No,Fiber optic,No,Yes,Yes,No,Yes,No,One year,Yes,Mailed check,97.69,4493.74,Yes
+3459-Beta-819,Male,0,No,No,55,No,No phone service,Fiber optic,Yes,Yes,Yes,No,Yes,No,Month-to-month,Yes,Bank transfer (automatic),82.48,4536.4,Yes
+9313-Alpha-820,Female,0,Yes,No,40,Yes,Yes,Fiber optic,No,Yes,Yes,Yes,No,Yes,Month-to-month,Yes,Bank transfer (automatic),109.78,4391.2,Yes
+5546-Alpha-821,Male,0,Yes,No,48,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Mailed check,47.31,2270.88,Yes
+8819-Beta-822,Male,0,No,Yes,42,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Credit card (automatic),37.61,1579.62,No
+2366-Beta-823,Male,0,Yes,No,57,No,No phone service,DSL,Yes,No,Yes,No,Yes,No,One year,Yes,Bank transfer (automatic),58.87,3355.59,No
+7671-Gamma-824,Female,1,Yes,No,17,No,No phone service,DSL,No,No,No,Yes,No,No,Month-to-month,No,Credit card (automatic),44.65,759.05,Yes
+2826-Alpha-825,Female,0,No,No,20,No,No phone service,Fiber optic,Yes,Yes,Yes,No,No,Yes,Month-to-month,No,Bank transfer (automatic),79.76,1595.2,Yes
+9824-Alpha-826,Male,0,Yes,Yes,34,No,No phone service,DSL,No,No,No,Yes,No,Yes,Month-to-month,Yes,Bank transfer (automatic),53.53,1820.02,No
+3562-Alpha-827,Female,0,Yes,Yes,52,No,No phone service,DSL,No,No,No,Yes,No,No,Two year,No,Bank transfer (automatic),42.43,2206.36,No
+3375-Beta-828,Female,1,No,No,71,No,No phone service,Fiber optic,No,No,No,Yes,No,Yes,Month-to-month,No,Bank transfer (automatic),72.53,5149.63,No
+3292-Beta-829,Female,0,Yes,Yes,33,No,No phone service,DSL,No,No,Yes,No,No,No,Month-to-month,No,Mailed check,38.38,1266.54,Yes
+4522-Gamma-830,Female,1,Yes,Yes,49,Yes,Yes,Fiber optic,No,No,No,Yes,No,No,Month-to-month,Yes,Bank transfer (automatic),91.06,4461.94,Yes
+7144-Alpha-831,Male,0,No,No,11,No,No phone service,DSL,No,No,Yes,No,Yes,Yes,Month-to-month,No,Credit card (automatic),65.97,725.67,No
+3486-Alpha-832,Female,0,Yes,No,13,Yes,No,Fiber optic,No,No,Yes,Yes,Yes,No,Month-to-month,No,Credit card (automatic),95.79,1245.27,No
+4519-Alpha-833,Female,1,Yes,No,23,No,No phone service,Fiber optic,No,Yes,No,No,Yes,Yes,Month-to-month,Yes,Credit card (automatic),80.86,1859.78,No
+8001-Beta-834,Female,0,Yes,No,67,Yes,No,DSL,Yes,No,No,No,No,Yes,One year,Yes,Electronic check,74.47,4989.49,No
+2840-Gamma-835,Male,0,No,Yes,61,Yes,No,Fiber optic,No,No,No,Yes,No,Yes,One year,Yes,Bank transfer (automatic),92.21,5624.81,No
+8439-Gamma-836,Female,0,No,No,60,Yes,No,DSL,Yes,Yes,Yes,No,No,Yes,Two year,No,Mailed check,81.94,4916.4,No
+6351-Gamma-837,Female,0,No,Yes,35,Yes,Yes,Fiber optic,Yes,No,Yes,Yes,Yes,Yes,Month-to-month,Yes,Bank transfer (automatic),122.67,4293.45,No
+2134-Beta-838,Female,0,Yes,Yes,10,No,No phone service,Fiber optic,Yes,No,No,Yes,Yes,No,Month-to-month,Yes,Mailed check,79.59,795.9,No
+8203-Alpha-839,Female,0,No,Yes,6,No,No phone service,Fiber optic,Yes,No,No,No,Yes,Yes,Month-to-month,No,Electronic check,82.79,496.74,Yes
+2521-Alpha-840,Male,0,Yes,Yes,40,No,No phone service,Fiber optic,No,No,No,Yes,Yes,Yes,Two year,No,Credit card (automatic),85.26,3410.4,Yes
+5182-Gamma-841,Male,1,Yes,Yes,24,No,No phone service,Fiber optic,No,No,Yes,No,No,No,Month-to-month,Yes,Credit card (automatic),62.95,1510.8,Yes
+5926-Alpha-842,Male,1,No,Yes,51,No,No phone service,Fiber optic,No,Yes,Yes,Yes,Yes,Yes,Month-to-month,Yes,Mailed check,87.45,4459.95,No
+3297-Gamma-843,Female,0,Yes,Yes,46,No,No phone service,Fiber optic,No,No,Yes,No,Yes,Yes,One year,Yes,Mailed check,84.54,3888.84,No
+6981-Alpha-844,Male,0,No,Yes,14,No,No phone service,Fiber optic,No,No,No,No,Yes,Yes,One year,No,Electronic check,78.41,1097.74,No
+8708-Alpha-845,Male,1,Yes,No,45,Yes,Yes,Fiber optic,Yes,Yes,No,Yes,Yes,No,Month-to-month,Yes,Electronic check,112.46,5060.7,Yes
+8793-Beta-846,Female,1,Yes,Yes,2,No,No phone service,Fiber optic,No,No,No,Yes,No,No,One year,Yes,Credit card (automatic),60.09,120.18,Yes
+9074-Gamma-847,Male,0,Yes,Yes,60,Yes,Yes,Fiber optic,Yes,Yes,No,No,Yes,Yes,Month-to-month,Yes,Bank transfer (automatic),113.92,6835.2,Yes
+4024-Gamma-848,Female,1,No,No,13,Yes,No,DSL,No,No,Yes,Yes,No,Yes,One year,Yes,Mailed check,78.3,1017.9,No
+1234-Alpha-849,Male,0,Yes,No,33,No,No phone service,Fiber optic,Yes,No,No,No,Yes,No,Month-to-month,No,Mailed check,71.62,2363.46,Yes
+8425-Gamma-850,Female,1,Yes,No,44,No,No phone service,Fiber optic,No,Yes,No,No,No,No,Month-to-month,Yes,Bank transfer (automatic),63.5,2794.0,Yes
+9504-Beta-851,Male,1,No,Yes,48,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Credit card (automatic),48.62,2333.76,Yes
+2820-Alpha-852,Female,0,No,No,3,No,No phone service,Fiber optic,No,Yes,Yes,No,Yes,Yes,One year,Yes,Electronic check,89.5,268.5,Yes
+4255-Gamma-853,Female,0,Yes,No,52,Yes,Yes,Fiber optic,No,Yes,Yes,Yes,Yes,Yes,Month-to-month,No,Mailed check,123.12,6402.24,No
+5561-Alpha-854,Female,1,No,No,47,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Bank transfer (automatic),19.29,906.63,No
+3230-Gamma-855,Female,0,Yes,No,59,No,No phone service,Fiber optic,Yes,Yes,Yes,No,Yes,Yes,Month-to-month,No,Mailed check,92.82,5476.38,Yes
+4972-Beta-856,Male,1,No,Yes,33,Yes,No,Fiber optic,Yes,Yes,No,Yes,No,Yes,Two year,Yes,Mailed check,101.58,3352.14,No
+8264-Alpha-857,Female,1,Yes,Yes,55,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Credit card (automatic),18.75,1031.25,Yes
+4804-Gamma-858,Female,1,Yes,No,46,Yes,Yes,Fiber optic,No,No,Yes,No,No,Yes,Month-to-month,No,Credit card (automatic),102.48,4714.08,Yes
+3759-Gamma-859,Female,1,Yes,Yes,12,Yes,No,DSL,Yes,No,No,No,Yes,Yes,One year,No,Bank transfer (automatic),80.4,964.8,No
+5123-Gamma-860,Female,1,No,No,27,Yes,Yes,Fiber optic,Yes,No,Yes,No,Yes,No,Month-to-month,No,Electronic check,108.88,2939.76,Yes
+8993-Gamma-861,Female,1,Yes,Yes,44,Yes,Yes,Fiber optic,Yes,Yes,No,No,No,Yes,Month-to-month,No,Credit card (automatic),110.0,4840.0,No
+8548-Gamma-862,Male,1,No,Yes,44,Yes,Yes,Fiber optic,Yes,No,Yes,No,No,Yes,One year,No,Bank transfer (automatic),110.25,4851.0,No
+6875-Gamma-863,Female,1,Yes,No,28,No,No phone service,DSL,Yes,No,No,No,Yes,Yes,One year,No,Credit card (automatic),61.58,1724.24,No
+6710-Alpha-864,Female,0,No,No,42,Yes,No,Fiber optic,No,Yes,Yes,No,No,No,Month-to-month,Yes,Credit card (automatic),85.23,3579.66,Yes
+4312-Beta-865,Female,1,No,No,45,No,No phone service,DSL,Yes,Yes,No,Yes,Yes,Yes,One year,No,Bank transfer (automatic),75.92,3416.4,No
+9818-Alpha-866,Female,0,Yes,Yes,49,Yes,No,DSL,No,Yes,No,No,No,Yes,Month-to-month,No,Electronic check,73.78,3615.22,Yes
+5815-Gamma-867,Male,1,Yes,No,38,Yes,Yes,Fiber optic,Yes,No,Yes,No,Yes,Yes,One year,Yes,Mailed check,115.51,4389.38,Yes
+8214-Gamma-868,Male,0,Yes,No,50,Yes,Yes,Fiber optic,No,No,No,Yes,No,Yes,Month-to-month,No,Credit card (automatic),99.98,4999.0,No
+5284-Gamma-869,Female,1,No,No,18,No,No phone service,Fiber optic,Yes,No,No,Yes,Yes,No,Month-to-month,Yes,Mailed check,76.53,1377.54,No
+2583-Gamma-870,Female,1,Yes,Yes,55,No,No phone service,DSL,Yes,No,No,Yes,No,No,One year,No,Credit card (automatic),49.35,2714.25,No
+2059-Alpha-871,Male,1,Yes,No,43,No,No phone service,Fiber optic,Yes,Yes,No,Yes,No,No,One year,Yes,Credit card (automatic),73.67,3167.81,No
+8058-Gamma-872,Male,1,Yes,No,49,No,No phone service,Fiber optic,No,No,Yes,No,Yes,No,One year,Yes,Electronic check,71.65,3510.85,Yes
+6871-Gamma-873,Male,0,Yes,No,11,Yes,Yes,Fiber optic,Yes,Yes,Yes,Yes,No,Yes,Month-to-month,No,Electronic check,116.11,1277.21,Yes
+2542-Beta-874,Female,1,No,No,28,Yes,No,DSL,Yes,Yes,No,No,Yes,No,One year,No,Credit card (automatic),75.29,2108.12,No
+2486-Alpha-875,Female,1,Yes,Yes,51,No,No phone service,DSL,Yes,No,No,Yes,No,Yes,Two year,Yes,Electronic check,56.51,2882.01,No
+7113-Alpha-876,Male,0,Yes,Yes,40,No,No phone service,DSL,No,No,Yes,No,Yes,Yes,Month-to-month,Yes,Credit card (automatic),62.93,2517.2,Yes
+3978-Gamma-877,Male,1,Yes,Yes,21,No,No phone service,Fiber optic,Yes,No,Yes,Yes,No,Yes,Month-to-month,Yes,Electronic check,84.99,1784.79,Yes
+6106-Beta-878,Male,1,Yes,Yes,52,Yes,No,Fiber optic,Yes,Yes,No,No,No,No,Month-to-month,Yes,Electronic check,87.49,4549.48,Yes
+6543-Alpha-879,Female,0,Yes,No,18,Yes,No,Fiber optic,Yes,No,Yes,No,Yes,Yes,Month-to-month,No,Credit card (automatic),105.83,1904.94,No
+9951-Gamma-880,Male,1,No,Yes,4,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,Yes,Bank transfer (automatic),18.2,72.8,Yes
+7984-Beta-881,Female,1,Yes,No,39,Yes,No,DSL,Yes,No,No,No,No,No,Month-to-month,No,Electronic check,61.1,2382.9,Yes
+9643-Alpha-882,Male,0,No,Yes,20,No,No phone service,DSL,Yes,Yes,Yes,No,No,Yes,Month-to-month,No,Electronic check,62.15,1243.0,Yes
+8107-Gamma-883,Male,1,Yes,Yes,7,Yes,No,Fiber optic,Yes,Yes,No,Yes,Yes,No,One year,Yes,Electronic check,106.98,748.86,Yes
+1741-Beta-884,Male,0,No,Yes,45,Yes,No,DSL,Yes,No,Yes,No,No,Yes,Two year,Yes,Mailed check,77.3,3478.5,No
+5033-Gamma-885,Female,1,No,Yes,17,No,No phone service,Fiber optic,No,Yes,No,No,No,No,Month-to-month,Yes,Credit card (automatic),60.86,1034.62,No
+5152-Gamma-886,Male,1,Yes,No,16,Yes,Yes,Fiber optic,Yes,Yes,Yes,Yes,No,Yes,Month-to-month,Yes,Bank transfer (automatic),118.91,1902.56,Yes
+3742-Gamma-887,Female,1,No,No,24,No,No phone service,Fiber optic,No,Yes,Yes,No,Yes,Yes,Two year,No,Mailed check,87.52,2100.48,No
+3082-Gamma-888,Male,1,No,Yes,26,Yes,Yes,Fiber optic,Yes,No,Yes,Yes,Yes,Yes,Month-to-month,No,Bank transfer (automatic),121.82,3167.32,Yes
+8177-Gamma-889,Male,1,Yes,Yes,31,Yes,No,Fiber optic,Yes,Yes,Yes,No,No,Yes,One year,No,Credit card (automatic),104.25,3231.75,Yes
+4287-Gamma-890,Male,1,No,Yes,33,No,No phone service,Fiber optic,Yes,Yes,Yes,Yes,No,No,Month-to-month,Yes,Credit card (automatic),81.03,2673.99,No
+2136-Alpha-891,Female,0,Yes,No,30,Yes,Yes,Fiber optic,Yes,No,Yes,Yes,No,No,Two year,Yes,Mailed check,101.59,3047.7,No
+2700-Gamma-892,Male,0,No,Yes,26,Yes,No,Fiber optic,Yes,Yes,Yes,Yes,Yes,No,Two year,No,Bank transfer (automatic),107.53,2795.78,Yes
+7336-Beta-893,Male,1,No,No,51,No,No phone service,DSL,No,Yes,No,No,Yes,Yes,Month-to-month,No,Mailed check,63.42,3234.42,No
+7364-Beta-894,Male,1,Yes,No,18,No,No phone service,Fiber optic,Yes,Yes,No,No,Yes,No,One year,Yes,Bank transfer (automatic),77.06,1387.08,No
+4409-Beta-895,Female,1,No,No,14,No,No phone service,Fiber optic,No,No,No,No,No,No,One year,Yes,Mailed check,57.62,806.68,No
+5030-Alpha-896,Male,0,No,No,13,No,No phone service,DSL,No,No,Yes,No,Yes,No,Month-to-month,Yes,Credit card (automatic),52.81,686.53,No
+5920-Gamma-897,Female,0,Yes,Yes,9,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,Yes,Credit card (automatic),20.51,184.59,No
+9478-Beta-898,Male,1,Yes,Yes,16,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Bank transfer (automatic),15.77,252.32,No
+3553-Gamma-899,Female,0,Yes,No,20,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Mailed check,17.19,343.8,No
+3139-Beta-900,Female,0,Yes,Yes,17,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Electronic check,50.03,850.51,Yes
+6431-Alpha-901,Female,1,Yes,Yes,44,Yes,No,DSL,Yes,No,No,No,No,No,Month-to-month,Yes,Bank transfer (automatic),62.67,2757.48,No
+5968-Alpha-902,Male,0,Yes,No,39,Yes,No,DSL,Yes,No,No,Yes,Yes,Yes,One year,No,Electronic check,86.4,3369.6,No
+1645-Alpha-903,Female,1,No,No,37,Yes,Yes,Fiber optic,No,No,Yes,No,Yes,No,Two year,No,Bank transfer (automatic),101.92,3771.04,No
+2392-Beta-904,Male,0,Yes,No,28,No,No phone service,Fiber optic,Yes,Yes,Yes,No,No,Yes,Month-to-month,No,Credit card (automatic),79.1,2214.8,Yes
+1261-Gamma-905,Female,0,No,No,64,Yes,No,Fiber optic,Yes,No,No,Yes,Yes,Yes,Two year,No,Bank transfer (automatic),105.25,6736.0,No
+8355-Beta-906,Female,0,No,No,33,Yes,No,Fiber optic,Yes,Yes,Yes,Yes,No,No,Month-to-month,Yes,Credit card (automatic),97.73,3225.09,No
+7226-Beta-907,Male,1,No,No,36,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,No,Credit card (automatic),20.45,736.2,No
+6605-Alpha-908,Female,1,Yes,No,61,No,No phone service,Fiber optic,No,Yes,No,Yes,No,Yes,Month-to-month,Yes,Mailed check,78.0,4758.0,No
+2753-Alpha-909,Male,0,No,Yes,38,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,Yes,Electronic check,44.07,1674.66,No
+1158-Gamma-910,Male,1,Yes,Yes,25,No,No phone service,Fiber optic,No,Yes,Yes,Yes,Yes,Yes,Month-to-month,Yes,Mailed check,90.68,2267.0,No
+2502-Gamma-911,Male,0,No,Yes,25,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Credit card (automatic),46.37,1159.25,Yes
+6249-Gamma-912,Male,1,Yes,No,64,Yes,No,Fiber optic,No,Yes,No,Yes,Yes,Yes,One year,Yes,Mailed check,108.91,6970.24,No
+5313-Alpha-913,Male,0,Yes,Yes,46,Yes,No,Fiber optic,Yes,Yes,No,No,No,No,Two year,Yes,Credit card (automatic),87.15,4008.9,No
+5111-Beta-914,Male,0,No,No,27,Yes,Yes,DSL,Yes,Yes,No,No,Yes,No,Month-to-month,Yes,Credit card (automatic),86.32,2330.64,Yes
+1196-Gamma-915,Male,1,No,Yes,33,No,No phone service,Fiber optic,No,No,No,No,No,No,Month-to-month,No,Credit card (automatic),59.26,1955.58,Yes
+6135-Gamma-916,Male,0,Yes,Yes,61,No,No phone service,Fiber optic,No,No,No,No,No,No,Month-to-month,No,Credit card (automatic),60.05,3663.05,Yes
+3501-Alpha-917,Female,1,Yes,Yes,31,No,No phone service,Fiber optic,No,Yes,No,No,Yes,No,Month-to-month,Yes,Mailed check,72.7,2253.7,Yes
+4013-Alpha-918,Male,0,No,No,65,Yes,No,DSL,No,Yes,Yes,No,No,Yes,One year,No,Bank transfer (automatic),76.24,4955.6,No
+4731-Alpha-919,Female,1,No,No,51,Yes,No,Fiber optic,Yes,No,Yes,Yes,No,No,Month-to-month,No,Mailed check,91.55,4669.05,Yes
+4852-Gamma-920,Female,0,No,No,29,Yes,No,Fiber optic,Yes,No,No,No,Yes,Yes,One year,No,Bank transfer (automatic),102.62,2975.98,Yes
+7117-Gamma-921,Male,1,No,Yes,60,Yes,No,DSL,No,No,Yes,Yes,No,Yes,Two year,No,Credit card (automatic),79.64,4778.4,No
+5596-Gamma-922,Female,1,Yes,Yes,5,No,No phone service,Fiber optic,Yes,Yes,Yes,No,No,Yes,One year,No,Electronic check,88.25,441.25,No
+7293-Alpha-923,Female,0,No,No,51,No,No phone service,Fiber optic,Yes,No,No,Yes,No,Yes,Month-to-month,No,Electronic check,80.24,4092.24,Yes
+8761-Alpha-924,Male,0,No,No,36,No,No phone service,Fiber optic,Yes,No,No,No,No,Yes,Two year,Yes,Electronic check,70.83,2549.88,No
+5843-Gamma-925,Male,0,No,Yes,52,No,No phone service,Fiber optic,No,Yes,No,No,Yes,Yes,One year,No,Electronic check,80.8,4201.6,No
+1472-Gamma-926,Female,0,No,No,60,Yes,No,Fiber optic,No,Yes,No,No,Yes,No,One year,No,Bank transfer (automatic),92.64,5558.4,No
+4240-Gamma-927,Female,1,Yes,Yes,2,No,No phone service,Fiber optic,Yes,Yes,Yes,No,No,No,Two year,Yes,Bank transfer (automatic),72.51,145.02,No
+7144-Gamma-928,Male,1,No,No,51,Yes,No,Fiber optic,Yes,No,No,Yes,Yes,Yes,Two year,No,Electronic check,108.17,5516.67,No
+2112-Alpha-929,Male,0,Yes,Yes,38,Yes,No,DSL,No,No,Yes,No,No,Yes,Two year,No,Credit card (automatic),71.88,2731.44,No
+9931-Alpha-930,Female,1,Yes,Yes,53,Yes,No,Fiber optic,Yes,Yes,No,Yes,Yes,Yes,Month-to-month,Yes,Electronic check,111.2,5893.6,Yes
+4694-Beta-931,Male,0,Yes,Yes,43,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,No,Bank transfer (automatic),47.22,2030.46,No
+7349-Gamma-932,Female,0,No,No,53,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Electronic check,35.44,1878.32,No
+4278-Gamma-933,Male,0,Yes,No,22,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Bank transfer (automatic),37.86,832.92,No
+9341-Alpha-934,Female,0,Yes,Yes,36,No,No phone service,Fiber optic,No,No,No,Yes,Yes,No,Month-to-month,No,Mailed check,72.86,2622.96,Yes
+6358-Beta-935,Female,0,No,No,61,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,No,Mailed check,37.03,2258.83,No
+4028-Alpha-936,Male,1,Yes,Yes,25,Yes,No,Fiber optic,Yes,No,No,No,Yes,Yes,One year,No,Mailed check,103.74,2593.5,No
+9373-Alpha-937,Female,0,Yes,Yes,55,No,No phone service,DSL,Yes,No,No,No,No,No,Month-to-month,Yes,Credit card (automatic),46.19,2540.45,Yes
+8867-Gamma-938,Female,0,Yes,Yes,35,Yes,Yes,Fiber optic,Yes,Yes,No,Yes,No,No,One year,No,Mailed check,101.03,3536.05,Yes
+2593-Alpha-939,Female,0,Yes,No,42,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Bank transfer (automatic),16.63,698.46,No
+7840-Gamma-940,Male,1,Yes,Yes,30,No,No phone service,Fiber optic,Yes,No,No,Yes,Yes,Yes,Two year,No,Mailed check,90.18,2705.4,No
+1235-Alpha-941,Male,0,No,No,46,No,No phone service,Fiber optic,Yes,No,Yes,Yes,Yes,Yes,Month-to-month,No,Credit card (automatic),88.49,4070.54,Yes
+1489-Alpha-942,Female,1,No,No,49,Yes,Yes,DSL,Yes,Yes,No,No,No,Yes,One year,No,Electronic check,83.15,4074.35,No
+5455-Alpha-943,Male,1,Yes,Yes,23,No,No phone service,DSL,No,Yes,Yes,No,No,Yes,Month-to-month,No,Credit card (automatic),57.46,1321.58,Yes
+8741-Gamma-944,Male,1,No,Yes,36,No,No phone service,Fiber optic,No,No,Yes,No,No,No,Month-to-month,No,Bank transfer (automatic),62.46,2248.56,No
+3418-Gamma-945,Female,1,No,No,31,Yes,No,DSL,Yes,No,No,No,No,Yes,Month-to-month,Yes,Bank transfer (automatic),71.29,2209.99,Yes
+9296-Gamma-946,Male,1,Yes,Yes,43,Yes,No,Fiber optic,Yes,No,Yes,Yes,Yes,Yes,One year,No,Mailed check,113.65,4886.95,Yes
+4715-Gamma-947,Female,1,Yes,No,13,No,No phone service,Fiber optic,No,No,Yes,No,No,Yes,Month-to-month,Yes,Credit card (automatic),73.03,949.39,No
+3551-Gamma-948,Male,0,Yes,No,30,Yes,Yes,DSL,No,Yes,No,No,Yes,Yes,Month-to-month,Yes,Electronic check,90.99,2729.7,Yes
+1265-Alpha-949,Female,0,Yes,Yes,40,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,No,Credit card (automatic),47.73,1909.2,No
+2948-Beta-950,Female,1,Yes,No,17,No,No phone service,Fiber optic,No,No,Yes,No,No,No,Month-to-month,Yes,Credit card (automatic),64.8,1101.6,Yes
+1516-Beta-951,Female,1,Yes,No,28,No,No phone service,DSL,No,Yes,No,No,No,Yes,Two year,No,Electronic check,53.28,1491.84,Yes
+8986-Alpha-952,Female,1,Yes,Yes,63,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Credit card (automatic),45.86,2889.18,No
+6527-Alpha-953,Female,0,No,No,27,No,No phone service,Fiber optic,Yes,No,Yes,Yes,Yes,Yes,One year,No,Electronic check,90.99,2456.73,No
+9225-Alpha-954,Female,1,No,Yes,13,No,No phone service,Fiber optic,Yes,No,Yes,No,No,Yes,Month-to-month,Yes,Bank transfer (automatic),77.96,1013.48,Yes
+6429-Beta-955,Male,0,Yes,Yes,30,No,No phone service,Fiber optic,No,Yes,Yes,No,Yes,No,One year,Yes,Bank transfer (automatic),81.12,2433.6,No
+3992-Alpha-956,Female,1,Yes,No,28,Yes,Yes,Fiber optic,Yes,Yes,Yes,Yes,No,No,Two year,No,Credit card (automatic),107.09,2998.52,No
+1336-Gamma-957,Female,0,No,No,70,Yes,No,Fiber optic,No,No,Yes,Yes,Yes,No,Month-to-month,No,Credit card (automatic),96.16,6731.2,No
+7575-Gamma-958,Male,0,Yes,Yes,53,Yes,Yes,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Mailed check,45.89,2432.17,No
+8308-Gamma-959,Female,1,No,Yes,42,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,Yes,Electronic check,34.83,1462.86,No
+4805-Alpha-960,Male,1,Yes,No,47,Yes,No,DSL,Yes,Yes,Yes,No,Yes,No,One year,Yes,Bank transfer (automatic),81.41,3826.27,Yes
+4992-Beta-961,Male,0,No,No,32,No,No phone service,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Electronic check,14.37,459.84,No
+3824-Beta-962,Male,0,Yes,Yes,55,Yes,No,Fiber optic,Yes,Yes,Yes,No,No,Yes,Two year,No,Credit card (automatic),103.84,5711.2,No
+1977-Beta-963,Male,1,No,Yes,32,Yes,No,Fiber optic,No,No,Yes,Yes,No,No,Two year,Yes,Mailed check,88.81,2841.92,Yes
+9540-Beta-964,Female,0,No,Yes,14,No,No phone service,Fiber optic,Yes,Yes,Yes,Yes,No,No,Two year,No,Bank transfer (automatic),79.9,1118.6,No
+8610-Gamma-965,Female,1,No,No,21,No,No phone service,Fiber optic,No,No,Yes,No,No,Yes,Month-to-month,No,Bank transfer (automatic),73.27,1538.67,No
+9728-Gamma-966,Male,1,No,No,61,No,No phone service,DSL,Yes,No,No,Yes,Yes,No,Month-to-month,No,Mailed check,60.03,3661.83,No
+6488-Gamma-967,Female,1,No,No,13,Yes,Yes,Fiber optic,No,Yes,No,No,Yes,No,Month-to-month,Yes,Electronic check,105.39,1370.07,Yes
+5775-Gamma-968,Male,0,No,Yes,2,No,No phone service,Fiber optic,No,Yes,No,No,No,No,Month-to-month,No,Mailed check,62.5,125.0,Yes
+5173-Gamma-969,Male,1,Yes,No,28,No,No phone service,DSL,Yes,Yes,Yes,No,No,No,Month-to-month,No,Credit card (automatic),49.04,1373.12,No
+4263-Beta-970,Male,1,No,Yes,25,No,No phone service,Fiber optic,No,No,No,Yes,Yes,Yes,One year,Yes,Bank transfer (automatic),81.51,2037.75,No
+1892-Alpha-971,Male,1,Yes,No,63,Yes,Yes,Fiber optic,No,Yes,Yes,Yes,Yes,Yes,Month-to-month,No,Bank transfer (automatic),122.23,7700.49,No
+5656-Beta-972,Male,0,Yes,No,18,No,No phone service,DSL,Yes,Yes,Yes,No,Yes,Yes,One year,No,Mailed check,75.11,1351.98,No
+9875-Gamma-973,Male,0,Yes,No,16,No,No phone service,Fiber optic,Yes,Yes,Yes,No,Yes,Yes,Month-to-month,No,Mailed check,92.12,1473.92,Yes
+3843-Alpha-974,Female,0,Yes,Yes,56,No,No phone service,Fiber optic,No,No,No,Yes,Yes,Yes,Month-to-month,Yes,Credit card (automatic),83.31,4665.36,No
+8276-Beta-975,Male,1,No,Yes,10,No,No phone service,DSL,Yes,No,No,No,No,Yes,One year,No,Credit card (automatic),52.66,526.6,No
+8244-Gamma-976,Male,1,Yes,Yes,53,No,No phone service,Fiber optic,Yes,No,Yes,Yes,No,No,One year,No,Bank transfer (automatic),72.2,3826.6,No
+5075-Gamma-977,Female,0,No,No,37,Yes,Yes,DSL,Yes,No,Yes,No,No,No,Month-to-month,No,Electronic check,76.34,2824.58,No
+9043-Beta-978,Female,1,Yes,No,43,No,No phone service,Fiber optic,No,Yes,No,No,No,No,One year,Yes,Mailed check,62.87,2703.41,No
+4590-Gamma-979,Male,0,No,No,28,Yes,Yes,DSL,Yes,Yes,Yes,Yes,No,Yes,Month-to-month,No,Credit card (automatic),94.76,2653.28,Yes
+3441-Beta-980,Male,1,No,Yes,52,Yes,No,Fiber optic,No,Yes,Yes,Yes,Yes,Yes,Month-to-month,Yes,Bank transfer (automatic),111.0,5772.0,No
+9977-Beta-981,Female,0,Yes,Yes,47,Yes,Yes,Fiber optic,Yes,Yes,No,Yes,Yes,No,Month-to-month,No,Mailed check,109.92,5166.24,Yes
+3502-Gamma-982,Male,0,Yes,No,17,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Electronic check,36.88,626.96,Yes
+7452-Alpha-983,Male,0,No,Yes,38,Yes,Yes,Fiber optic,No,No,No,Yes,No,Yes,Month-to-month,Yes,Mailed check,99.68,3787.84,No
+3655-Gamma-984,Male,0,No,Yes,49,Yes,No,DSL,No,No,No,No,No,No,One year,No,Bank transfer (automatic),54.19,2655.31,Yes
+9576-Beta-985,Male,1,Yes,Yes,17,Yes,Yes,DSL,No,No,Yes,No,No,No,Month-to-month,No,Bank transfer (automatic),70.1,1191.7,No
+1391-Beta-986,Female,0,Yes,Yes,41,No,No phone service,DSL,Yes,No,Yes,No,No,Yes,Month-to-month,Yes,Electronic check,57.39,2352.99,No
+4720-Beta-987,Female,1,No,No,8,No,No phone service,Fiber optic,No,Yes,No,Yes,No,Yes,One year,Yes,Mailed check,80.17,641.36,Yes
+2659-Beta-988,Female,0,No,No,23,No,No phone service,Fiber optic,No,Yes,No,No,No,Yes,Month-to-month,No,Electronic check,71.25,1638.75,Yes
+6775-Beta-989,Male,1,Yes,Yes,10,Yes,Yes,Fiber optic,No,Yes,Yes,Yes,No,Yes,Two year,No,Credit card (automatic),113.25,1132.5,Yes
+6472-Gamma-990,Female,1,No,No,29,No,No phone service,DSL,Yes,Yes,No,No,No,Yes,Two year,Yes,Mailed check,59.32,1720.28,No
+7191-Beta-991,Female,1,Yes,Yes,21,Yes,Yes,Fiber optic,No,No,No,Yes,Yes,Yes,One year,No,Electronic check,114.95,2413.95,No
+3178-Alpha-992,Female,0,No,Yes,20,No,No phone service,Fiber optic,No,Yes,Yes,Yes,Yes,Yes,Two year,No,Credit card (automatic),89.35,1787.0,Yes
+2082-Alpha-993,Female,0,No,Yes,43,Yes,No,Fiber optic,No,No,No,No,No,No,Month-to-month,Yes,Bank transfer (automatic),78.21,3363.03,No
+5018-Alpha-994,Male,1,No,No,24,No,No phone service,DSL,No,No,No,Yes,No,No,Month-to-month,Yes,Mailed check,45.4,1089.6,No
+4663-Alpha-995,Male,1,Yes,Yes,31,No,No phone service,Fiber optic,No,No,No,No,No,Yes,One year,Yes,Mailed check,69.68,2160.08,No
+8883-Gamma-996,Male,1,Yes,No,17,No,No phone service,Fiber optic,No,Yes,No,No,Yes,No,One year,No,Electronic check,75.96,1291.32,No
+6046-Alpha-997,Female,1,No,Yes,38,No,No phone service,DSL,No,Yes,No,Yes,Yes,No,Month-to-month,Yes,Bank transfer (automatic),60.83,2311.54,Yes
+7174-Alpha-998,Male,0,Yes,Yes,45,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Electronic check,38.32,1724.4,Yes
+3488-Alpha-999,Male,1,Yes,Yes,16,Yes,No,Fiber optic,No,No,Yes,Yes,Yes,No,Month-to-month,No,Electronic check,99.25,1588.0,Yes
