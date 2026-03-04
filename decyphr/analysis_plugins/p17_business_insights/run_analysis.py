@@ -13,6 +13,9 @@ def analyze(ddf, analysis_results: Dict[str, Any]) -> Dict[str, Any]:
     Synthesizes actionable business insights from the results of previous analysis steps.
     """
     insights = []
+    is_churn_dataset = False
+    if ddf is not None:
+        is_churn_dataset = any("churn" in str(f).lower() for f in ddf.columns)
 
     # --- 1. Correlation Insights ---
     if "p06_correlations" in analysis_results:
@@ -76,8 +79,8 @@ def analyze(ddf, analysis_results: Dict[str, Any]) -> Dict[str, Any]:
                 top_features = [f[0] for f in sorted_fi]
                 
                 # Special Context: Telco Churn
-                is_churn_dataset = any("churn" in f.lower() for f in ddf.columns) or \
-                                   (target_res.get("target_variable", "").lower() == "churn")
+                if not is_churn_dataset:
+                    is_churn_dataset = (target_res.get("target_variable", "").lower() == "churn")
 
                 if top_features:
                     insight_text = f"The primary factors driving the target variable are: {', '.join(top_features)}."
